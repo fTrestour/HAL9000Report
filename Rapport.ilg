@@ -1,0 +1,39 @@
+This is makeindex, version 2.15 [MiKTeX 2.9] (kpathsea + Thai support).
+Scanning input file Rapport...
+!! Input index error (file = Rapport, line = 1):
+   -- Unknown index keyword \documentclass[10pt].
+!! Input index error (file = Rapport, line = 3):
+   -- Unknown index keyword \usepackage[latin1].
+!! Input index error (file = Rapport, line = 4):
+   -- Unknown index keyword \usepackage[T1].
+!! Input index error (file = Rapport, line = 5):
+   -- Unknown index keyword \usepackage[francais].
+!! Input index error (file = Rapport, line = 6):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Rapport, line = 10):
+   -- Unknown index keyword \begin.
+!! Input index error (file = Rapport, line = 12):
+   -- Unknown index keyword \section.
+!! Input index error (file = Rapport, line = 14):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Rapport, line = 16):
+   -- Unknown index keyword \section.
+!! Input index error (file = Rapport, line = 18):
+   -- Unknown index keyword \begin.
+!! Input index error (file = Rapport, line = 19):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Rapport, line = 20):
+   -- Unknown index keyword \end.
+!! Input index error (file = Rapport, line = 22):
+   -- Unknown index keyword \section.
+!! Input index error (file = Rapport, line = 24):
+   -- Unknown index keyword \begin.
+!! Input index error (file = Rapport, line = 25):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Rapport, line = 26):
+   -- Unknown index keyword \end.
+!! Input index error (file = Rapport, line = 28):
+   -- Unknown index keyword \end.
+done (0 entries accepted, 17 rejected).
+Nothing written in Rapport.ind.
+Transcript written in Rapport.ilg.

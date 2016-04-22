@@ -1,0 +1,28 @@
+\documentclass[10pt]{report}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel} 
+\usepackage{setspace}
+
+
+
+\begin{document}
+
+	\section{interligne simple}
+
+	Un paragraphe.
+
+	\section{interligne intermédiaire}
+
+	\begin{onehalfspace}
+	Un autre paragraphe.
+	\end{onehalfspace}
+
+	\section{interligne double}
+
+	\begin{doublespace}
+	Encore un autre paragraphe.
+	\end{doublespace}
+
+\end{document}
