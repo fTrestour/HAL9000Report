@@ -1,6 +1,6 @@
 \documentclass[a4paper,twoside]{report}
 
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{setspace}
@@ -47,7 +47,8 @@ Ce rapport présente les avancement de ce dernier groupe sur le sujet tout au lon
 
 Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
-Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grà¢ce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
+Les réseaux de neurone sont une mod\'elisation simple du fonctionnement cérébral
+à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grà¢ce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
 \section[Déroulement]{Déroulement du projet}
@@ -89,7 +90,8 @@ La sortie du j\textsuperscript{ième} neurone est donnée par la formule :
 
 \begin{equation}\label{eqNeur}s_{j}(x)=f(\sum_{k=1}^{N} w_{j,k}*x_{k}+w_{0})\end{equation}
 
-oà¹:
+où:
+
 \begin{itemize}
   \item $s$ est la valeur de la sortie
   \item $f$ est la fonction d'activation.
@@ -216,8 +218,8 @@ ensuite s'intéresser aux Réseaux de Boltzmann Profond.
 
 \section{Les machines de Boltzmann restreintes}
 
-Les machines de Boltzmann restreintes, ou RBM, ont d'abord \acute{e}t\acute{e}
-pens\acute{e}es par P. Smolensky (1986) mais réellement mise en oeuvres et
+Les machines de Boltzmann restreintes, ou RBM, ont d'abord ete
+pensées par P. Smolensky (1986) mais réellement mise en oeuvres et
 étudiées par G.
 Hinton(2006). Nous allors présenter dans cette partie leur constitution et
 leurs fonctionnement.
