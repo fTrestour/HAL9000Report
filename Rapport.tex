@@ -224,11 +224,11 @@ pensées par P. Smolensky (1986) mais réellement mise en oeuvres et
 Hinton(2006). Nous allors présenter dans cette partie leur constitution et
 leurs fonctionnement.
 
-\subsection{Principe et théorie}
+\subsection{Principe}
 
 Les RBM sont des réseaux neuronnaux et sont donc constituées de d'entité que
-l'on nommera neurone qui possède une fonction d'activation et de synapse qui
-relient ces neurones.
+l'on nommera neurone qui possède une fonction d'activation, qui donne une
+probabilitéde l'activation du neurone, et de synapses qui relient ces neurones.
 
 Une RBM possède deux couches de neurones, une que l'on appellera couche
 visible et une autre que l'on appellera couche cachée. La couche visible
@@ -236,7 +236,21 @@ correspond à l'entrée de notre réseau, ce sont les neurones de la couches
 d'entrée auxquels ont va assigner les exemples de notre jeu de données pour
 entrainer le réseau. Au sein d'une même couche, aucun neurone n'est relié à un
 autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce
-type de réseau de Boltzmann.
+type de réseau de Boltzmann. Par contre un neurone de la couche visible
+(respectivement cachée) est connecté à tous les neurones de la couche cachée
+(respectivement visible). 
+
+On forme ainsiun graphe, les particularités de la machine restreintes font que
+l'on a 
+
+A expliquer : MRF et les propriété --> chaine de Markov
+Particularité et donc convergence --> contrastive divergence.
+
+La particularité de ce réseau est donc le fait qu'il n'est pas
+\textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
+réseaux. 
+
+
 
 
 

@@ -15,5 +15,5 @@
 \contentsline {chapter}{\numberline {4}Influence des param\`etres sur l'apprentissage}{12}
 \contentsline {part}{III\hspace {1em}Les r\'eseaux de Boltzman}{13}
 \contentsline {section}{\numberline {4.1}Les machines de Boltzmann restreintes}{14}
-\contentsline {subsection}{\numberline {4.1.1}Principe et th\'eorie}{14}
+\contentsline {subsection}{\numberline {4.1.1}Principe}{14}
 \contentsline {part}{IV\hspace {1em}Restricted Boltzmann Machine}{15}
