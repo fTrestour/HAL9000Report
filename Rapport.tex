@@ -231,30 +231,53 @@
             Hinton(2006). Nous allors présenter dans cette partie leur constitution et
             leurs fonctionnement.
 
-        \section{Principe}
+            \section{Principe}
 
-            Les RBM sont des réseaux neuronnaux et sont donc constituées de d'entité que
-            l'on nommera neurone qui possède une fonction d'activation, qui donne une
-            probabilitéde l'activation du neurone, et de synapses qui relient ces neurones.
+                Les RBM sont des réseaux neuronnaux et sont donc constituées de d'entité que
+                l'on nommera neurone qui possède une fonction d'activation, qui donne une
+                probabilitéde l'activation du neurone, et de synapses qui relient ces neurones.
 
-            Une RBM possède deux couches de neurones, une que l'on appellera couche
-            visible et une autre que l'on appellera couche cachée. La couche visible
-            correspond à l'entrée de notre réseau, ce sont les neurones de la couches
-            d'entrée auxquels ont va assigner les exemples de notre jeu de données pour
-            entrainer le réseau. Au sein d'une même couche, aucun neurone n'est relié à un
-            autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce
-            type de réseau de Boltzmann. Par contre un neurone de la couche visible
-            (respectivement cachée) est connecté à tous les neurones de la couche cachée
-            (respectivement visible). 
+                Une RBM possède deux couches de neurones, une que l'on appellera couche
+                visible et une autre que l'on appellera couche cachée. La couche visible
+                correspond à l'entrée de notre réseau, ce sont les neurones de la couches
+                d'entrée auxquels ont va assigner les exemples de notre jeu de données pour
+                entrainer le réseau. Au sein d'une même couche, aucun neurone n'est relié à un
+                autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce
+                type de réseau de Boltzmann. Par contre un neurone de la couche visible
+                (respectivement cachée) est connecté à tous les neurones de la couche cachée
+                (respectivement visible). 
 
-            On forme ainsiun graphe, les particularités de la machine restreintes font que
-            l'on a 
+                On forme ainsiun graphe, les particularités de la machine restreintes font que
+                l'on a 
 
-            A expliquer : MRF et les propriété --> chaine de Markov
-            Particularité et donc convergence --> contrastive divergence.
+                A expliquer : MRF et les propriété --> chaine de Markov
+                Particularité et donc convergence --> contrastive divergence.
 
-            La particularité de ce réseau est donc le fait qu'il n'est pas
-            \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
-            réseaux. 
+                La particularité de ce réseau est donc le fait qu'il n'est pas
+                \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
+                réseaux.
+
+
+
+        \chapter{Les Deep Belief Networks}
+
+
+
+        \chapter{Aller plus loin}
+
+            \section{La visualisation des spectres du réseau}
+
+                Lors du développement de la RBM, nous avons étés confrontés au problème de la quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux exemples qu'on lui a présenté ?\\
+
+                Suite à l'absence de réelle mesure de cette notion, l'idée nous est venue d'implémenter une mesure bien plus qualitative du phénomène : l'objectif était de visualiser l'importance que le réseau accorde à chaque pixel de l'image.\\
+
+                Dans le cas de la RBM, cela correspond tout simplement à l'ensemble des pondérations des connections entre la couche visible et la couche cachée du réseau. Ainsi, à chaque neurone de la couche cachée, on peut associer une image correspondant aux dites pondérations. Ce sont ces images que l'ont qualifie de "spectres".
+
+                Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche cachée, ces caractéristiques sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la forme "usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la représentation d'un chiffre idéal pour ce réseau.\\
+
+                L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a des chiffres pour juger de la qualité de l'apprentissage.
+
+                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc, tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toutjours dans le cas d'un réseau à un seul neurone caché).
+
 
 \end{document}
