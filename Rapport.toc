@@ -1,8 +1,8 @@
 \select@language {french}
 \contentsline {part}{I\hspace {1em}Introduction}{3}
 \contentsline {section}{\numberline {0.1}Contexte}{4}
-\contentsline {section}{\numberline {0.2}Pr\'esentation du sujet}{4}
-\contentsline {section}{\numberline {0.3}D\'eroulement}{4}
+\contentsline {section}{\numberline {0.2}Pr\IeC {\'e}sentation du sujet}{4}
+\contentsline {section}{\numberline {0.3}D\IeC {\'e}roulement}{4}
 \contentsline {part}{II\hspace {1em}Le Perceptron}{5}
 \contentsline {chapter}{\numberline {1}Architecture d'un perceptron}{6}
 \contentsline {section}{\numberline {1.1}Introduction}{6}
@@ -12,8 +12,8 @@
 \contentsline {section}{\numberline {2.1}salut}{10}
 \contentsline {section}{\numberline {2.2}c'est cool}{10}
 \contentsline {chapter}{\numberline {3}La base MNIST}{11}
-\contentsline {chapter}{\numberline {4}Influence des param\`etres sur l'apprentissage}{12}
-\contentsline {part}{III\hspace {1em}Les r\'eseaux de Boltzman}{13}
+\contentsline {chapter}{\numberline {4}Influence des param\IeC {\`e}tres sur l'apprentissage}{12}
+\contentsline {part}{III\hspace {1em}Les r\IeC {\'e}seaux de Boltzman}{13}
 \contentsline {section}{\numberline {4.1}Les machines de Boltzmann restreintes}{14}
 \contentsline {subsection}{\numberline {4.1.1}Principe}{14}
 \contentsline {part}{IV\hspace {1em}Restricted Boltzmann Machine}{15}
