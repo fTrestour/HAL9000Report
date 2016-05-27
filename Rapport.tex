@@ -18,189 +18,225 @@
 
 
 
-\title{Rapport projet long\\Ã‰quipe HAL9000}
+\title{Rapport projet long\\à‰quipe HAL9000}
 \author{Hamelain Christian, Hasan Pierre-Yves, Gaspart Quentin, Trestour Fabien}
 
 
 \begin{document}
 
 
-	\maketitle
+\maketitle
 
 
-	\tableofcontents
+\tableofcontents
 
 
-	\part{Introduction}
+\part{Introduction}
 
-		\section[Contexte]{Contexte du projet}
+\section[Contexte]{Contexte du projet}
 
-			CentraleSupÃ©lec propose Ã  ses Ã©tudiants en deuxiÃ¨me annÃ©e de participer Ã  des projets longs qui se rÃ©alisent en Ã©quipe, tout au long de l'annÃ©e sur un thÃªme mÃªlant plusieurs compÃ©tences que l'ingÃ©nieur se doit de possÃ©der.
+CentraleSupélec propose à  ses étudiants en deuxième année de participer
+à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême mêlant plusieurs compétences que l'ingénieur se doit de posséder.
 
-			Dans notre cas, c'est l'Ã©laboration de rÃ©seaux neuronaux et les mÃ©thodes de Deep Learning que 12 Ã©lÃ©ves ont Ã©tudiÃ©, rÃ©partis en 3 groupes, dont HAL9000.
+Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning que 12 éléves ont étudié, répartis en 3 groupes, dont HAL9000.
 
-			Ce rapport prÃ©sente les avancement de ce dernier groupe sur le sujet tout au long de l'annÃ©e.
+Ce rapport présente les avancement de ce dernier groupe sur le sujet tout au long de l'année.
 
 
-		\section{PrÃ©sentation du sujet}
+\section{Présentation du sujet}
 
-			Ce projet aborde le sujet du Deep Learning. Cette mÃ©thode spÃ©cifique de machine learning est dÃ©rivÃ©e du concept de rÃ©seau de neurones.
+Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
-			Les rÃ©seaux de neurone sont une modÃ©lisation simple du fonctionnement cÃ©rÃ©bral Ã  l'Ã©chelle cellulaire. Cette approche a vu le jour avec les Ã©tudes de McCulloch et Pitts dÃ¨s la fin des annÃ©es 50. MalgrÃ© certains Ã©cueils dans les annÃ©es 70, l'approche connexioniste des rÃ©seaux de neurones a su se dÃ©velopper et devenir un sujet de recherche populaire dans les derniÃ¨res annÃ©es, notament grÃ¢ce aux capacitÃ©s d'adaptabilitÃ© et de gÃ©nÃ©ralisation de ces rÃ©seaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
+Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grà¢ce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
-		\section[DÃ©roulement]{DÃ©roulement du projet}
+\section[Déroulement]{Déroulement du projet}
 
-			Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer Ã  coder des structures Ã©lÃ©mentaires afin de comprendre les enjeux du machine learning. Nous avons pour cela travaillÃ© avec la base de donnÃ©es MNIST de Yves LeCun et en JAVA. Afin de travailler en groupe de maniÃ¨re efficace, nous avons aussi utilisÃ© l'outil GIT.
+Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du machine learning. Nous avons pour cela travaillé avec la base de données MNIST de Yves LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
-			Par la suite nous nous sommes interessÃ©s aux architectures profondes, chaque groupe se penchant sur une architecture spÃ©cifique. Notre Ã©quipe s'est en particulier intÃ©ressÃ©e aux machines de Boltzmann, en commenÃ§ant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associÃ©e.
+Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commenà§ant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée.
 
-			Cette Ã©tude a Ã©tÃ© encadrÃ©e par Joanna Tomasik et Arpad Rimmel, enseignants Ã  CentraleSupÃ©lec, campus de Gif-sur-Yvette.
+Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
 
 
-	\part[Le Perceptron]{PremiÃ¨re approche du problÃ¨me : le Perceptron}
+\part[Le Perceptron]{Première approche du problème : le Perceptron}
 
 
-		\chapter{Architecture d'un perceptron}
+\chapter{Architecture d'un perceptron}
 
-			\section{Introduction}
+\section{Introduction}
 
-				Ici, l'objectif Ã©tait la reconnaissance des caractÃ¨res de la base de donnÃ©es MNIST grÃ¢ce Ã  un perceptron.
+Ici, l'objectif était la reconnaissance des caractères de la base de données MNIST grà¢ce à  un perceptron.
 
-				Le perceptron fait partie des architectures de rÃ©seaux neuronaux les plus simples. Son Ã©tude nous a donc permis de s'introduire Ã  la problÃ©matique du machine learning avant d'approfondir en Ã©tudiant des structures plus complexes.
+Le perceptron fait partie des architectures de réseaux neuronaux les plus simples. Son étude nous a donc permis de s'introduire à  la problématique du machine learning avant d'approfondir en étudiant des structures plus complexes.
 
 
-			\section{La brique de base : le neurone}
+\section{La brique de base : le neurone}
 
-				Le neurone est le composant Ã©lÃ©mentaire des rÃ©seaux neuronaux. Il est une modÃ©lisation du fonctionnement des neurones du systÃªme nerveux humains.
+Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation du fonctionnement des neurones du systême nerveux humains.
 
-				Chaque neurone reÃ§oit un signal via une entrÃ©e, qui correspond aux dendrites des systÃ¨mes biologiques. Le neurone prend en compte la valeur de toutes ses entrÃ©es et en dÃ©duit la valeur de sortie. Cette sortie est ensuite propagÃ©e par le biais d'un axone vers un autre neurone.\\
+Chaque neurone reà§oit un signal via une entrée, qui correspond aux dendrites des systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en déduit la valeur de sortie. Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
 
-				\begin{figure}
-					\begin{center}
-						\includegraphics[width=200pt]{Images/neurone-01.png}
-					\end{center}
-					\caption{Analogie entre neurone biologique et neurone formel.}
-				\end{figure}
+\begin{figure}
+\begin{center}
+\includegraphics[width=200pt]{Images/neurone-01.png}
+\end{center}
+\caption{Analogie entre neurone biologique et neurone formel.}
+\end{figure}
 
-				La sortie du j\textsuperscript{iÃ¨me} neurone est donnÃ©e par la formule :
+La sortie du j\textsuperscript{ième} neurone est donnée par la formule :
 
-				\begin{equation}\label{eqNeur}s_{j}(x)=f(\sum_{k=1}^{N} w_{j,k}*x_{k}+w_{0})\end{equation}
+\begin{equation}\label{eqNeur}s_{j}(x)=f(\sum_{k=1}^{N} w_{j,k}*x_{k}+w_{0})\end{equation}
 
-				oÃ¹:
-				\begin{itemize}
-					\item $s$ est la valeur de la sortie
-					\item $f$ est la fonction d'activation.
-					\item N est la dimension du vecteur d'entrÃ©e.
-					\item $w_{j,k}$ est la k\textsuperscript{iÃ¨me} composante du vecteur de poids $w_{j}$ du j\textsuperscript{iÃ¨me} neurone. $w_{0}$ est le biais du neurone. Cette valeur correspond au poids d'une entrÃ©e fictive valant toujours 1.
-					\item $x_{k}$ est la k\textsuperscript{iÃ¨me} composante du vecteur d'entrÃ©e $x$.\\
-				\end{itemize}
+oà¹:
+\begin{itemize}
+  \item $s$ est la valeur de la sortie
+  \item $f$ est la fonction d'activation.
+  \item N est la dimension du vecteur d'entrée.
+  \item $w_{j,k}$ est la k\textsuperscript{ième} composante du vecteur de poids $w_{j}$ du j\textsuperscript{ième} neurone. $w_{0}$ est le biais du neurone. Cette valeur correspond au poids d'une entrée fictive valant toujours 1.
+  \item $x_{k}$ est la k\textsuperscript{ième} composante du vecteur d'entrée $x$.\\
+\end{itemize}
 
-				L'entrÃ©e $x$ est un vecteur dÃ©fini par un ensemble de caractÃ©ristiques que l'on choisit pour reprÃ©senter les donnÃ©es d'entrÃ©es. Dans le cas d'une image par exemple, ce vecteur d'entrÃ©e peut Ãªtre composÃ© de la valeur de tous les pixels de l'image. D'autres reprÃ©sentations moins triviales peuvent Ãªtre choisies afin de rÃ©duire la quantitÃ© d'information Ã  traiter et de s'approcher au mieux des donnÃ©es signifiactives de la problÃ©matique traitÃ©e.\\
+L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données signifiactives de la problématique traitée.\\
 
-				La fonction d'activation permet de dÃ©finir le comportement du neurone. Selon la dÃ©finition de cette fonction on aura une sortie Ã  valeurs discrÃ¨tes ou continues, centrÃ©es en 0 ou en 0,5. Le choix de la fonction est donc Ã©troitement liÃ© avec le problÃ¨me Ã  traiter.
-				Il existe diffÃ©rents types de fonctions d'activation. Parmis les plus utilisÃ©es figurent:
-				\begin{itemize}
-					\item La fonction Ã©chelon
-						\begin{equation}
-							f(x)=\mathbf{1}_{\mathbb{R}^{*}_{+}}
-						\end{equation}
-					\item Les fonctions linÃ©aires
-						\begin{equation}
-							f(x)=\alpha*x+\beta
-						\end{equation}
-					\item La fonction sigmoÃ¯de
-						\begin{equation}
-							f(x)=\frac{1}{1+e^{-\lambda*x}}
-						\end{equation}
-					\item La fonction tangente hyperbolique
-						\begin{equation}
-							f(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
-						\end{equation}
-				\end{itemize}
+La fonction d'activation permet de définir le comportement du neurone. Selon la définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, centrées en 0 ou en 0,5. Le choix de la fonction est donc étroitement lié avec le problème à  traiter.
+Il existe différents types de fonctions d'activation. Parmis les plus utilisées figurent:
+\begin{itemize}
+  \item La fonction échelon
+  \begin{equation}
+f(x)=\mathbf{1}_{\mathbb{R}^{*}_{+}}
+\end{equation}
+\item Les fonctions linéaires
+\begin{equation}
+f(x)=\alpha*x+\beta
+\end{equation}
+\item La fonction sigmoà¯de
+\begin{equation}
+f(x)=\frac{1}{1+e^{-\lambda*x}}
+\end{equation}
+\item La fonction tangente hyperbolique
+\begin{equation}
+f(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+\end{equation}
+\end{itemize}
 
-				Le vecteur de poids du j\textsuperscript{iÃ¨me} neurone reprÃ©sente la pondÃ©ration de chacune des entrÃ©es de ce neurone. C'est ce paramÃ¨tre qui permet de modifier le rÃ©seau de neurone sans avoir Ã  modifier son architecture. Toutes les propriÃ©tÃ©s d'un rÃ©seau neuronal sont donc issues de ce vecteur de pondÃ©ration et de ses variations.
+Le vecteur de poids du j\textsuperscript{ième} neurone représente la pondération de chacune des entrées de ce neurone. C'est ce paramètre qui permet de modifier le réseau de neurone sans avoir à  modifier son architecture. Toutes les propriétés d'un réseau neuronal sont donc issues de ce vecteur de pondération et de ses variations.
 
 
-			\section{Organisation des couches}
+\section{Organisation des couches}
 
-				Il existe de nombreuses architectures de rÃ©seau de neurone. Elles peuvent Ãªtre rÃ©currentes ou non, entiÃ¨rement connectÃ©es ou seulement partiellement, organisÃ©es en couches, ... De nombreuses propriÃ©tÃ©s permettent de caractÃ©riser une architecture de rÃ©seau de neurone.
+Il existe de nombreuses architectures de réseau de neurone. Elles peuvent être récurrentes ou non, entièrement connectées ou seulement partiellement, organisées en couches, ... De nombreuses propriétés permettent de caractériser une architecture de réseau de neurone.
 
-				Le Perceptron est un modÃ¨le assez Ã©lÃ©mentaire de rÃ©seau. Il est constituÃ© en couches totalement connectÃ©es.
+Le Perceptron est un modèle assez élémentaire de réseau. Il est constitué en couches totalement connectées.
 
-				On peut distinguer trois types de couches : la couche d'entrÃ©e, les couches cachÃ©es et la couche de sortie.\\
+On peut distinguer trois types de couches : la couche d'entrée, les couches cachées et la couche de sortie.\\
 
-				La couche d'entrÃ©e est assez Ã©lÃ©mentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrÃ©e $x$. Cette couche doit donc Ãªtre constituÃ©e d'autant de neurones que le vecteur d'entrÃ©e a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identitÃ©.\\
+La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant de neurones que le vecteur d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
 
-				Les couches cachÃ©es sont celles qui effectuent les calculs. Les principales propriÃ©tÃ©s du rÃ©seau sont hÃ©ritÃ©es de cet empilement de couches. On comprend alors mieux l'intÃ©rÃªt actuel pour le Deep Learning, c'est-Ã -dire l'apprentissage des rÃ©seaux avec un grand nombre de couches cachÃ©es.
-				Le nombre de neurones dans chaque couche et les fonctions d'activation utilisÃ©es par les neurones sont choisies par le concepteur du rÃ©seau selon le problÃªme traitÃ© par le rÃ©seau.\\
+Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés du réseau sont héritées de cet empilement de couches. On comprend alors mieux l'intérêt actuel pour le Deep Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
+Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par les neurones sont choisies par le concepteur du réseau selon le problême traité par le réseau.\\
 
-				Afin d'expliciter l'importance de l'architecture du rÃ©seau, abordons l'exemple usuel du ou exclusif.
+Afin d'expliciter l'importance de l'architecture du réseau, abordons l'exemple usuel du ou exclusif.
 
-				Essayons de rÃ©aliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrÃ©es $x_{1}$ et $x_{2}$ Ã  valeurs dans \{0;1\} et une sortie $s$, elle aussi Ã  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est Ã  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par consÃ©quent un fonctionnement totalement binaire. Il s'agit donc ici de dÃ©terminer les pondÃ©rations $w_{1}$ et $w_{2}$, respectivement associÃ©es aux entrÃ©es $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
+Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi à  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement binaire. Il s'agit donc ici de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
 
-				Pour un tel problÃ¨me, le neurone agit comme un sÃ©parateur linÃ©aire de l'espace des entrÃ©es. L'Ã©quation de la droite sÃ©parant le demi-espace dÃ©finit par $s=0$ de celui dÃ©finit par $s=1$, dÃ©coule alors directement de l'Ã©quation \ref{eqNeur}:
+Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui définit par $s=1$, découle alors directement de l'équation \ref{eqNeur}:
 
-				\begin{equation}w_{2}*x_{2}+w_{1}*x_{1}+w_{0}=0\end{equation}
+\begin{equation}w_{2}*x_{2}+w_{1}*x_{1}+w_{0}=0\end{equation}
 
-				On constate ici l'intÃ©rÃªt du biais, qui permet de rÃ©aliser des sÃ©parations affines de l'espace des entrÃ©es et pas seulement des fonctions linÃ©aires.
+On constate ici l'intérêt du biais, qui permet de réaliser des séparations affines de l'espace des entrées et pas seulement des fonctions linéaires.
 
-				Les limites d'un neurone seul sont alors Ã©videntes : toutes les sÃ©parations de l'espace des entrÃ©es ne sont pas affine, et le cas du XOR en est dÃ©jÃ  une illustration.\\
+Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
 
-				Il est alors nÃ©cessaire d'introduire la structure de rÃ©seau. En prennant une couche d'entrÃ©e, une couche cachÃ©e et une couche de sortie, respectivement composÃ©es de deux, deux et un neurone, on peut contourner le problÃ¨me sus-citÃ©. Cette structure permet en fait de gÃ©nÃ©rer deux sÃ©parations de l'espace des entrÃ©es.
+Il est alors nécessaire d'introduire la structure de réseau. En prennant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
 
-				La sÃ©paration que l'on cherche Ã  effectuer est en effet de la forme:
+La séparation que l'on cherche à  effectuer est en effet de la forme:
 
-				\begin{equation}
-					f(x_{1},x_{2})=0 \Leftrightarrow
-					\left\{
-					\begin{array}{r c l}
-						x_{1}+x_{2}-0,5 &<& 0\\
-						x_{1}+x_{2}-1,5 &>& 0
-					\end{array}
-					\right.
-				\end{equation}
+\begin{equation}
+f(x_{1},x_{2})=0 \Leftrightarrow
+\left\{
+\begin{array}{r c l}
+x_{1}+x_{2}-0,5 &<& 0\\
+x_{1}+x_{2}-1,5 &>& 0
+\end{array}
+\right.
+\end{equation}
 
-				On obtient ainsi directement les valeurs de poids dÃ©sirÃ©es grÃ¢ce Ã  ces Ã©quations:
-				\begin{equation}
-					blablabla
-				\end{equation}
+On obtient ainsi directement les valeurs de poids désirées grà¢ce à  ces équations:
+\begin{equation}
+blablabla
+\end{equation}
 
-				Ce premier exemple simpliste manifeste donc la nÃ©cessitÃ© d'adapter la structure du rÃ©seau au problÃ¨me traitÃ©.\\
+Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du réseau au problème traité.\\
 
-				De maniÃ¨re plus gÃ©nÃ©rale, le nombres de neurones du rÃ©seau fait varier le nombre de poids du rÃ©seau, et donc la capacitÃ© du rÃ©seau Ã  sÃ©parer des ensembles multiples et complexes. Ainsi, un rÃ©seau sous-dimensionnÃ© mÃªne Ã  des rÃ©sultats pas assez prÃ©cis et un rÃ©seau sur-dimensionnÃ© mÃ¨ne Ã  du sur-apprentissage. On a donc environ la loi suivante:
-				\begin{equation}
-					N<\frac{1}{10}*T*dim(s)
-				\end{equation}
-				\begin{itemize}
-					\item $N$ est le nombre de neurones dans le rÃ©seau.
-					\item $T$ est le nombre de vecteurs de la base d'apprentissage.
-					\item $s$ est le vecteur de sortie.
-				\end{itemize}
+De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
+\begin{equation}
+N<\frac{1}{10}*T*dim(s)
+\end{equation}
+\begin{itemize}
+  \item $N$ est le nombre de neurones dans le réseau.
+  \item $T$ est le nombre de vecteurs de la base d'apprentissage.
+  \item $s$ est le vecteur de sortie.
+\end{itemize}
 
-				De plus, le nombre de neurones dans une couche doit Ãªtre de moins de trois fois celui de la couche prÃ©cÃ©dente.\\
+De plus, le nombre de neurones dans une couche doit être de moins de trois fois celui de la couche précédente.\\
 
-				Ces deux approximations donnent donc une premiÃ¨re idÃ©e de la structure Ã  adopter pour un rÃ©seau de neurones.
+Ces deux approximations donnent donc une première idée de la structure à  adopter pour un réseau de neurones.
 
 
 
-		\chapter{Algorithmes d'apprentissage}
+\chapter{Algorithmes d'apprentissage}
 
-			\section{salut}
+\section{salut}
 
-			123
+123
 
 
-			\section{c'est cool}
+\section{c'est cool}
 
 
-		\chapter{La base MNIST}
+\chapter{La base MNIST}
 
-		\chapter{Influence des paramÃ¨tres sur l'apprentissage}
+\chapter{Influence des paramètres sur l'apprentissage}
 
+\chapter{Les réseaux de Boltzman}
 
+Les réseaux de Boltzmann sont des réseaux qui ont un fonctionnement
+particulier que nous allons présenter dans ce chapitre. Les machines de
+Boltzmann constituent des réseaux neuronnaux. La prinipale différence entre
+les réseaux neuronnaux comme les réseaux neuronnaux de convolution (CNN) et
+les  réseaux de Boltzmann va être le fait qu'un réseaux de Boltzmann n'est
+pas \textit{feed-forward} ; comme l'était le perceptron, présenté dans ce
+rapport.
 
-	\part[Restricted Boltzmann Machine]{Approfondir le sujet : Restricted Boltzmann Machine}
+Ce rapport traitera d'abord des machines de Boltzmann restreintes en les
+présentant et en expliquant les lois qui régissent leur fonctionnement pour
+ensuite s'intéresser aux Réseaux de Boltzmann Profond.
+
+\section{Les machines de Boltzmann restreintes}
+
+Les machines de Boltzmann restreintes, ou RBM, ont d'abord été pensées par
+P. Smolensky (1986) mais réellement mise en oeuvres et étudiées par G.
+Hinton(2006). Nous allors présenter dans cette partie leur constitution et
+leurs fonctionnement.
+
+\subsection{Principe et théorie}
+
+Les RBM sont des réseaux neuronnaux et sont donc constituées de d'entité que
+l'on nommera neurone qui possède une fonction d'activation et de synapse qui
+relient ces neurones.
+
+Une RBM possède deux couches de neurones, une que l'on appellera couche
+visible et une autre que l'on appellera couche cachée. La couche visible
+correspond à l'entrée de notre réseau, ce sont les neurones de la couches
+d'entrée auxquels ont va assigner les exemples de notre jeu de données pour
+entrainer le réseau. Au sein d'une même couche, aucun neurone n'est relié à un
+autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce
+type de réseau de Boltzmann.
+
+
+
+\part[Restricted Boltzmann Machine]{Approfondir le sujet : Restricted Boltzmann Machine}
 
 \end{document}
