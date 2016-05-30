@@ -55,9 +55,9 @@
 
         \section[Déroulement]{Déroulement du projet}
 
-            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du machine learning. Nous avons pour cela travaillé avec la base de données MNIST de Yves LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
+            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
-            Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commenà§ant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée.
+            Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
 
             Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
@@ -79,7 +79,7 @@
 
                 Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation du fonctionnement des neurones du systême nerveux humains.
 
-                Chaque neurone reà§oit un signal via une entrée, qui correspond aux dendrites des systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en déduit la valeur de sortie. Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
+                Chaque neurone reçoit un signal via une entrée, qui correspond aux dendrites des systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en déduit la valeur de sortie. Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
 
                 \begin{figure}
                     \begin{center}
@@ -165,12 +165,7 @@
                         x_{1}+x_{2}-1,5 &>& 0
                         \end{array}
                     \right.
-                \end{equation}
-
-                On obtient ainsi directement les valeurs de poids désirées grâce à  ces équations:
-                \begin{equation}
-                    blablabla
-                \end{equation}
+                \end{equation}\\
 
                 Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du réseau au problème traité.\\
 
@@ -213,10 +208,10 @@
 
             Les réseaux de Boltzmann sont des réseaux qui ont un fonctionnement
             particulier que nous allons présenter dans ce chapitre. Les machines de
-            Boltzmann constituent des réseaux neuronnaux. La prinipale différence entre
+            Boltzmann constituent des réseaux neuronaux. La prinipale différence entre
             les réseaux neuronnaux comme les réseaux neuronnaux de convolution (CNN) et
-            les  réseaux de Boltzmann va être le fait qu'un réseaux de Boltzmann n'est
-            pas \textit{feed-forward} ; comme l'était le perceptron, présenté dans ce
+            les  réseaux de Boltzmann va être le fait qu'un réseau de Boltzmann n'est
+            pas \textit{feed-forward} ; comme l'était le perceptron, précédemment présenté dans ce
             rapport.
 
             Ce rapport traitera d'abord des machines de Boltzmann restreintes en les
@@ -233,21 +228,19 @@
 
             \section{Principe}
 
-                Les RBM sont des réseaux neuronnaux et sont donc constituées de d'entité que
-                l'on nommera neurone qui possède une fonction d'activation, qui donne une
-                probabilitéde l'activation du neurone, et de synapses qui relient ces neurones.
+                Les RBM sont des réseaux neuronaux qui donnent une
+                probabilité d'activation de chaque neurone.\\
 
-                Une RBM possède deux couches de neurones, une que l'on appellera couche
-                visible et une autre que l'on appellera couche cachée. La couche visible
-                correspond à l'entrée de notre réseau, ce sont les neurones de la couches
-                d'entrée auxquels ont va assigner les exemples de notre jeu de données pour
-                entrainer le réseau. Au sein d'une même couche, aucun neurone n'est relié à un
-                autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce
-                type de réseau de Boltzmann. Par contre un neurone de la couche visible
-                (respectivement cachée) est connecté à tous les neurones de la couche cachée
-                (respectivement visible). 
+                Une RBM possède deux couches de neurones : l'une sera qualifiée de couche visible et l'autre de couche cachée.
+                La couche visible correspond à l'entrée de notre réseau, ce sont les neurones de la couche d'entrée. On va leur assigner les exemples de notre jeu de données pour entrainer le réseau.\\
 
-                On forme ainsiun graphe, les particularités de la machine restreintes font que
+                Au sein d'une même couche, aucun neurone n'est relié à un
+                autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce type de réseau de Boltzmann.
+
+                Cependant, chaque neurone de la couche visible (respectivement cachée) est connecté à tous les neurones de la couche cachée
+                (respectivement visible).
+
+                On forme ainsi un graphe, les particularités de la machine restreintes font que
                 l'on a 
 
                 A expliquer : MRF et les propriété --> chaine de Markov
@@ -272,6 +265,13 @@
                 Suite à l'absence de réelle mesure de cette notion, l'idée nous est venue d'implémenter une mesure bien plus qualitative du phénomène : l'objectif était de visualiser l'importance que le réseau accorde à chaque pixel de l'image.\\
 
                 Dans le cas de la RBM, cela correspond tout simplement à l'ensemble des pondérations des connections entre la couche visible et la couche cachée du réseau. Ainsi, à chaque neurone de la couche cachée, on peut associer une image correspondant aux dites pondérations. Ce sont ces images que l'ont qualifie de "spectres".
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=50pt]{Images/spectres-01.png}
+                    \end{center}
+                    \caption{Spectres d'une RBM entraînée à 10 neurones cachés.}
+                \end{figure}
 
                 Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche cachée, ces caractéristiques sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la forme "usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la représentation d'un chiffre idéal pour ce réseau.\\
 
