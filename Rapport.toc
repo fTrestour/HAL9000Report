@@ -8,15 +8,15 @@
 \contentsline {section}{\numberline {1.1}Introduction}{6}
 \contentsline {section}{\numberline {1.2}La brique de base : le neurone}{6}
 \contentsline {section}{\numberline {1.3}Organisation des couches}{8}
-\contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{10}
-\contentsline {section}{\numberline {2.1}salut}{10}
-\contentsline {section}{\numberline {2.2}c'est cool}{10}
-\contentsline {chapter}{\numberline {3}La base MNIST}{11}
-\contentsline {chapter}{\numberline {4}Influence des param\IeC {\`e}tres sur l'apprentissage}{12}
-\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{13}
-\contentsline {chapter}{\numberline {5}Introduction}{14}
-\contentsline {chapter}{\numberline {6}Les machines de Boltzmann restreintes}{15}
-\contentsline {section}{\numberline {6.1}Principe}{15}
-\contentsline {chapter}{\numberline {7}Les Deep Belief Networks}{16}
-\contentsline {chapter}{\numberline {8}Aller plus loin}{17}
-\contentsline {section}{\numberline {8.1}La visualisation des spectres du r\IeC {\'e}seau}{17}
+\contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{11}
+\contentsline {section}{\numberline {2.1}salut}{11}
+\contentsline {section}{\numberline {2.2}c'est cool}{11}
+\contentsline {chapter}{\numberline {3}La base MNIST}{12}
+\contentsline {chapter}{\numberline {4}Influence des param\IeC {\`e}tres sur l'apprentissage}{13}
+\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}
+\contentsline {chapter}{\numberline {5}Introduction}{15}
+\contentsline {chapter}{\numberline {6}Les machines de Boltzmann restreintes}{16}
+\contentsline {section}{\numberline {6.1}Principe}{16}
+\contentsline {chapter}{\numberline {7}Les Deep Belief Networks}{17}
+\contentsline {chapter}{\numberline {8}Aller plus loin}{18}
+\contentsline {section}{\numberline {8.1}La visualisation des spectres du r\IeC {\'e}seau}{18}

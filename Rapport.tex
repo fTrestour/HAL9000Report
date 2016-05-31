@@ -134,14 +134,14 @@
 
                 Le Perceptron est un modèle assez élémentaire de réseau. Il est constitué en couches totalement connectées.
 
-                On peut distinguer trois types de couches : la couche d'entrée, les couches cachées et la couche de sortie.\\
-
                 \begin{figure}
                     \begin{center}
                         \includegraphics[width=200pt]{Images/perceptron-01.png}
                     \end{center}
                     \caption{Architecture d'un perceptron multi-couches.}
                 \end{figure}
+
+                On peut distinguer trois types de couches : la couche d'entrée, les couches cachées et la couche de sortie.\\
 
                 La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant de neurones que le vecteur d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
 
@@ -152,11 +152,25 @@
 
                 Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi à  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement binaire. Il s'agit donc ici de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
 
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=100px]{Images/xor-01.png}
+                    \end{center}
+                    \caption{Fonction XOR à réaliser par le perceptron.}
+                \end{figure}
+
                 Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui définit par $s=1$, découle alors directement de l'équation \ref{eqNeur}:
 
                 \begin{equation}w_{2}*x_{2}+w_{1}*x_{1}+w_{0}=0\end{equation}
 
                 On constate ici l'intérêt du biais, qui permet de réaliser des séparations affines de l'espace des entrées et pas seulement des fonctions linéaires.
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=100px]{Images/biais-01.png}
+                    \end{center}
+                    \caption{Intérêt de l'introduction d'un biais.}
+                \end{figure}
 
                 Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
 
