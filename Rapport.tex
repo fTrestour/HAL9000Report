@@ -208,16 +208,34 @@
 
         \chapter{Algorithmes d'apprentissage}
 
-            \section{salut}
+            \section{L'objectif des algorithmes d'apprentissage}
 
-                123
+                L'objectif des algorithmes d'apprentissage est simple : optimiser les poids du réseau de neurones afin qu'il "apprenne".
+
+                Les poids sont en effet la seule variable disponible après avoir définit l'architecture du réseau (il existe des algorithmes permettant de modifier l'architecture durant l'apprentissage mais on ne les étudiera pas ici). On va donc les modifier progressivement, après avoir présenté au réseau un nombre fixé d'exemples, afin que le réseau réagisse au mieux au stimulations qui lui sont présentées.\\
+
+                Il existe en réalité deux types d'algorithmes d'apprentissage.\\
+
+                Le premier cas est celui de l'apprentissage supervisé. Il nécessite de connaître "l'étiquette" des exemples entrés dans le réseau pour effectuer l'apprentissage.
+
+                On observe ainsi quelle est la réponse proposée par le réseau après propagation de l'entrée et on la compare à l'étiquette, correspondant à la réponse attendue. On peut alors "récompenser" les comportements positifs en renforçant les connections mises en jeu lors de cette propagation, ou "punir" les mauvais comportements en affaiblissant ces dernières.
+
+                On s'appuie alors sur une classification a priori des données : les classes sont crées par le concepteur du problème et du réseau. Cela est à double tranchant. En effet, les classes choisies seront a priori plus pertinente vis-à-vis du résultat attendu  mais pas nécessairement vis-à-vis des données et de la structure du réseau.\\
+
+                Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En pratique cela se manifeste par l'absence d'étiquettes dans les bases d'appentissage.
+
+                Ce genre d'apprentissage revient plus ou moins à mettre en concurrence les différentes classes de données à chaque présentation d'exemple. Ainsi, la classe qui correspond la mieux à l'entrée devient la sortie et la classe est modifiée pour ressembler encore plus à l'entrée qui a permis l'activation.
+
+                Au final, dans ce cas, la définition de chaque classe n'est pas explicite : c'est le réseau qui détecte lui même une structure de classe et il l'amplifie durant l'apprentissage afin d'améliorer la classification qu'il a détecté. Les classes ne sont alors pas forcément celles que l'on attend mais plutôt les classes les plus "naturelles" étant données la base d'apprentissage et l'architecture du réseau. En ce sens les algorithmes d'apprentissage s'approchent de la notion de "clustering".
 
 
-            \section{c'est cool}
+            \section{La méthode de rétropropagation du gradient}
+
+                
 
 
 
-        \chapter{Influence des paramètres sur l'apprentissage}
+        \chapter{Influence des paramètres sur l'apprentissage.}
 
 
 

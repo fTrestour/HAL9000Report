@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 19:21
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -595,68 +595,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
 [10]
 Chapitre 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+
+ []
+
 [11
 
-]
+] [12]
 Chapitre 3.
-[12
+[13
 
-] [13
+] [14
 
 ]
 Chapitre 4.
-[14
+[15
 
 ]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
 
  []
 
-[15
+[16
 
 ]
 Chapitre 6.
-[16
+[17
 
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
-<Images/spectres-01.png, id=81, 28.105pt x 28.105pt>
+<Images/spectres-01.png, id=84, 28.105pt x 28.105pt>
 File: Images/spectres-01.png Graphic file (type png)
 
 <use Images/spectres-01.png>
-Package pdftex.def Info: Images/spectres-01.png used on input line 291.
+Package pdftex.def Info: Images/spectres-01.png used on input line 309.
 (pdftex.def)             Requested size: 50.0pt x 50.0057pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
-[17
+[18
 
- <./Images/spectres-01.png>] [18]
+ <./Images/spectres-01.png>] [19]
 Annexe A.
-[19
+[20
 
 ]
 Annexe B.
-[20
+[21
 
 ] (Rapport.aux) ) 
 Here is how much of TeX's memory you used:
@@ -692,9 +707,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (20 pages, 356280 bytes).
+Output written on Rapport.pdf (21 pages, 361331 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
+ 524 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
