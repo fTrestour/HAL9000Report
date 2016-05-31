@@ -16,8 +16,8 @@
 \contentsline {chapter}{\numberline {4}Introduction}{15}
 \contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}
 \contentsline {section}{\numberline {5.1}Principe}{16}
-\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{17}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{18}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{18}
-\contentsline {chapter}{\numberline {A}La base MNIST.}{20}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{21}
+\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{18}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{19}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{19}
+\contentsline {chapter}{\numberline {A}La base MNIST.}{21}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{22}
