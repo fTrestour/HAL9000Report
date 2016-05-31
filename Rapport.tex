@@ -271,17 +271,35 @@
                 Les RBM sont des réseaux neuronaux qui donnent une
                 probabilité d'activation de chaque neurone.\\
 
-                Une RBM possède deux couches de neurones : l'une sera qualifiée de couche visible et l'autre de couche cachée.
-                La couche visible correspond à l'entrée de notre réseau, ce sont les neurones de la couche d'entrée. On va leur assigner les exemples de notre jeu de données pour entrainer le réseau.\\
+                Une RBM possède deux couches de neurones : l'une sera qualifiée 
+                de couche visible et l'autre de couche cachée.
+                La couche visible correspond à l'entrée de notre réseau, ce sont
+                les neurones de la couche d'entrée. On va leur assigner les
+                valeurs des exemples de notre jeu de données pour entrainer le
+                réseau.\\
 
                 Au sein d'une même couche, aucun neurone n'est relié à un
-                autre, c'est ce caractère restreint qui donne sa particularité et son nom à ce type de réseau de Boltzmann.
-
-                Cependant, chaque neurone de la couche visible (respectivement cachée) est connecté à tous les neurones de la couche cachée
-                (respectivement visible).
-
-                On forme ainsi un graphe, les particularités de la machine restreintes font que
-                l'on a 
+                autre, c'est ce caractère restreint qui donne sa particularité 
+                et son nom à ce type de réseau de Boltzmann.
+                Cependant, chaque neurone de la couche visible (respectivement
+                cachée) est connecté à tous les neurones de la couche cachée 
+                (respectivement visible). 
+                
+                On forme alors un graphe, non orienté, qui est un
+                modèle de la distribution de probabilité. Chaque neurone est une variable aléatoire
+                qui prend sa valeur dans \begin{math}{0;1}\end{math}. Le fait
+                qu'aucun neurone \textit{v} ne soit connecté aux autres de la
+                couche traduit le fait que les variables aléatoires associées
+                sont indépendantes.
+                
+                La probabilité qu'un neurone \begin{math}v_{i}\end{math} de la
+                couche visible soit activé est 
+                On introduit maintenant l'échantillonage de Gibbs, qui est un
+                algorithme de la classe des Metropolis-Hasting. Cet algorithme
+                est un Monte Carlo d'une chaine de Markov dont l'idée principale
+                est d'échantillonner les variables en se basant sur la valeur
+                des autres variables. C'est une marche aléatoire sur les chaînes
+                de Markov.
 
                 A expliquer : MRF et les propriété --> chaine de Markov
                 Particularité et donc convergence --> contrastive divergence.
