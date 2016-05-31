@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 18:35
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -601,60 +601,64 @@ Chapitre 2.
 Chapitre 3.
 [12
 
+] [13
+
 ]
 Chapitre 4.
-[13
-
-] [14
+[14
 
 ]
 Chapitre 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+
+ []
+
 [15
 
 ]
 Chapitre 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
-
- []
-
 [16
 
 ]
 Chapitre 7.
-[17
 
-]
-Chapitre 8.
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
-<Images/spectres-01.png, id=84, 28.105pt x 28.105pt>
+<Images/spectres-01.png, id=81, 28.105pt x 28.105pt>
 File: Images/spectres-01.png Graphic file (type png)
 
 <use Images/spectres-01.png>
-Package pdftex.def Info: Images/spectres-01.png used on input line 292.
+Package pdftex.def Info: Images/spectres-01.png used on input line 291.
 (pdftex.def)             Requested size: 50.0pt x 50.0057pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-[18
+[17
 
- <./Images/spectres-01.png>] [19] (Rapport.aux) ) 
+ <./Images/spectres-01.png>] [18]
+Annexe A.
+[19
+
+]
+Annexe B.
+[20
+
+] (Rapport.aux) ) 
 Here is how much of TeX's memory you used:
  3732 strings out of 493634
  47252 string characters out of 3141314
@@ -663,34 +667,34 @@ Here is how much of TeX's memory you used:
  23332 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,7n,30p,855b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ftres\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\ftres\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users
-\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk>
- <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-rm0700.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecbx1440.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecbx2074.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\ftres\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\ftres\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\User
-s\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
-> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm1728.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (19 pages, 354736 bytes).
+ <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecti1000.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\ftres\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\ftres\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\f
+tres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <
+C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx
+1000.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecrm1000.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecbx1200.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\ftres\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\ftres\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msbm7.pfb>
+Output written on Rapport.pdf (20 pages, 356280 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
+ 515 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
