@@ -1,3 +1,4 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 20:28
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -611,7 +612,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
 [11
 
-] [12]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+[12]
 Chapitre 3.
 [13
 
@@ -624,12 +630,12 @@ Chapitre 4.
 ]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--271
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--274
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
@@ -642,12 +648,12 @@ Chapitre 6.
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
@@ -655,10 +661,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 303--304
 File: Images/spectres-01.png Graphic file (type png)
 
 <use Images/spectres-01.png>
-Package pdftex.def Info: Images/spectres-01.png used on input line 309.
+Package pdftex.def Info: Images/spectres-01.png used on input line 311.
 (pdftex.def)             Requested size: 50.0pt x 50.0057pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
@@ -706,7 +712,7 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (21 pages, 361331 bytes).
+Output written on Rapport.pdf (21 pages, 361595 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
