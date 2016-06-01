@@ -37,8 +37,8 @@
 
         \section[Contexte]{Contexte du projet}
 
-            CentraleSupélec propose à  ses étudiants en deuxième année de participer
-            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême mêlant plusieurs compétences que l'ingénieur se doit de posséder.
+            CentraleSupélec propose à  ses étudiants en deuxième année de participer
+            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême mêlant plusieurs compétences que l'ingénieur se doit de posséder.
 
             Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning que 12 éléves ont étudié, répartis en 3 groupes, dont HAL9000.
 
@@ -50,16 +50,16 @@
             Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
             Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral
-            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
+            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
         \section[Déroulement]{Déroulement du projet}
 
-            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
+            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
             Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
 
-            Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
+            Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
 
 
@@ -70,9 +70,9 @@
 
             \section{Introduction}
 
-                Ici, l'objectif était la reconnaissance des caractères de la base de données MNIST grâce à  un perceptron.
+                Ici, l'objectif était la reconnaissance des caractères de la base de données MNIST grâce à  un perceptron.
 
-                Le perceptron fait partie des architectures de réseaux neuronaux les plus simples. Son étude nous a donc permis de s'introduire à  la problématique du machine learning avant d'approfondir en étudiant des structures plus complexes.
+                Le perceptron fait partie des architectures de réseaux neuronaux les plus simples. Son étude nous a donc permis de s'introduire à  la problématique du machine learning avant d'approfondir en étudiant des structures plus complexes.
 
 
             \section{La brique de base : le neurone}
@@ -102,9 +102,9 @@
                     \item $x_{k}$ est la k\textsuperscript{ième} composante du vecteur d'entrée $x$.\\
                 \end{itemize}
 
-                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données signifiactives de la problématique traitée.\\
+                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données signifiactives de la problématique traitée.\\
 
-                La fonction d'activation permet de définir le comportement du neurone. Selon la définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, centrées en 0 ou en 0,5. Le choix de la fonction est donc étroitement lié avec le problème à  traiter.
+                La fonction d'activation permet de définir le comportement du neurone. Selon la définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, centrées en 0 ou en 0,5. Le choix de la fonction est donc étroitement lié avec le problème à  traiter.
                 Il existe différents types de fonctions d'activation. Parmis les plus utilisées figurent:
                 \begin{itemize}
                     \item La fonction échelon
@@ -125,7 +125,7 @@
                     \end{equation}
                 \end{itemize}
 
-                Le vecteur de poids du j\textsuperscript{ième} neurone représente la pondération de chacune des entrées de ce neurone. C'est ce paramètre qui permet de modifier le réseau de neurone sans avoir à  modifier son architecture. Toutes les propriétés d'un réseau neuronal sont donc issues de ce vecteur de pondération et de ses variations.
+                Le vecteur de poids du j\textsuperscript{ième} neurone représente la pondération de chacune des entrées de ce neurone. C'est ce paramètre qui permet de modifier le réseau de neurone sans avoir à  modifier son architecture. Toutes les propriétés d'un réseau neuronal sont donc issues de ce vecteur de pondération et de ses variations.
 
 
             \section{Organisation des couches}
@@ -145,12 +145,12 @@
 
                 La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant de neurones que le vecteur d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
 
-                Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés du réseau sont héritées de cet empilement de couches. On comprend alors mieux l'intérêt actuel pour le Deep Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
+                Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés du réseau sont héritées de cet empilement de couches. On comprend alors mieux l'intérêt actuel pour le Deep Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
                 Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par les neurones sont choisies par le concepteur du réseau selon le problême traité par le réseau.\\
 
                 Afin d'expliciter l'importance de l'architecture du réseau, abordons l'exemple usuel du ou exclusif.
 
-                Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi à  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement binaire. Il s'agit donc ici de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
+                Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi à  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement binaire. Il s'agit donc ici de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
 
                 \begin{figure}
                     \begin{center}
@@ -172,11 +172,11 @@
                     \caption{Intérêt de l'introduction d'un biais.}
                 \end{figure}
 
-                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
+                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
 
                 Il est alors nécessaire d'introduire la structure de réseau. En prennant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
 
-                La séparation que l'on cherche à  effectuer est en effet de la forme:
+                La séparation que l'on cherche à  effectuer est en effet de la forme:
 
                 \begin{equation}
                     f(x_{1},x_{2})=0 \Leftrightarrow
@@ -190,7 +190,7 @@
 
                 Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du réseau au problème traité.\\
 
-                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
+                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
                 \begin{equation}
                     N<\frac{1}{10}*T*dim(s)
                 \end{equation}
@@ -202,7 +202,7 @@
 
                 De plus, le nombre de neurones dans une couche doit être de moins de trois fois celui de la couche précédente.\\
 
-                Ces deux approximations donnent donc une première idée de la structure à  adopter pour un réseau de neurones.
+                Ces deux approximations donnent donc une première idée de la structure à  adopter pour un réseau de neurones.
 
 
 
@@ -276,14 +276,14 @@
                 La couche visible correspond à l'entrée de notre réseau, ce sont
                 les neurones de la couche d'entrée. On va leur assigner les
                 valeurs des exemples de notre jeu de données pour entrainer le
-                réseau.\\
+                réseau.
 
                 Au sein d'une même couche, aucun neurone n'est relié à un
                 autre, c'est ce caractère restreint qui donne sa particularité 
                 et son nom à ce type de réseau de Boltzmann.
                 Cependant, chaque neurone de la couche visible (respectivement
                 cachée) est connecté à tous les neurones de la couche cachée 
-                (respectivement visible). 
+                (respectivement visible).\\
                 
                 On forme alors un graphe, non orienté, qui est un
                 modèle de la distribution de probabilité. Chaque neurone est une variable aléatoire
@@ -293,8 +293,11 @@
                 sont indépendantes.
                 
                 La probabilité qu'un neurone \begin{math}v_{i}\end{math} de la
-                couche visible soit activé est 
-                On introduit maintenant l'échantillonage de Gibbs, qui est un
+                couche visible soit activé est \begin{equation}p( v_{i} =1 \mid H) = \sigma(\sum_{j=1}^{m} w_{i,j} * h_{j} + b_{i}) \end{equation}
+
+ En notant \textit{$w_{i}$} le poids de la synapse reliant les neurones \textit{$v_{i}$} à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.
+        
+	     On introduit maintenant l'échantillonage de Gibbs, qui est un
                 algorithme de la classe des Metropolis-Hasting. Cet algorithme
                 est un Monte Carlo d'une chaine de Markov dont l'idée principale
                 est d'échantillonner les variables en se basant sur la valeur
