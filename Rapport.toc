@@ -11,13 +11,16 @@
 \contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{11}
 \contentsline {section}{\numberline {2.1}L'objectif des algorithmes d'apprentissage}{11}
 \contentsline {section}{\numberline {2.2}La m\IeC {\'e}thode de r\IeC {\'e}tropropagation du gradient}{12}
-\contentsline {chapter}{\numberline {3}Influence des param\IeC {\`e}tres sur l'apprentissage.}{13}
-\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}
-\contentsline {chapter}{\numberline {4}Introduction}{15}
-\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}
-\contentsline {section}{\numberline {5.1}Principe}{16}
-\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{18}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{19}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{19}
-\contentsline {chapter}{\numberline {A}La base MNIST.}{21}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{22}
+\contentsline {subsection}{\numberline {2.2.1}Initialisation des poids}{12}
+\contentsline {subsection}{\numberline {2.2.2}Calcul des variations de poids}{12}
+\contentsline {subsection}{\numberline {2.2.3}Potentielle modification de l'algorithme}{13}
+\contentsline {chapter}{\numberline {3}Influence des param\IeC {\`e}tres sur l'apprentissage.}{14}
+\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{15}
+\contentsline {chapter}{\numberline {4}Introduction}{16}
+\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{17}
+\contentsline {section}{\numberline {5.1}Principe}{17}
+\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{19}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{20}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{20}
+\contentsline {chapter}{\numberline {A}La base MNIST.}{22}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{23}

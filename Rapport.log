@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  31 MAY 2016 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  5 JUN 2016 13:00
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -617,72 +617,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-[12]
-Chapitre 3.
-[13
 
-] [14
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+[13]
+Chapitre 3.
+[14
+
+] [15
 
 ]
 Chapitre 4.
-[15
+[16
 
 ]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
+Underfull \hbox (badness 10000) in paragraph at lines 326--332
 
  []
 
-[16
-
-]
-Chapitre 6.
 [17
+
+] [18]
+Chapitre 6.
+[19
 
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
-<Images/spectres-01.png, id=84, 28.105pt x 28.105pt>
-File: Images/spectres-01.png Graphic file (type png)
+<Images/filters-01.png, id=91, 86.724pt x 69.25874pt>
+File: Images/filters-01.png Graphic file (type png)
 
-<use Images/spectres-01.png>
-Package pdftex.def Info: Images/spectres-01.png used on input line 311.
-(pdftex.def)             Requested size: 50.0pt x 50.0057pt.
+<use Images/filters-01.png>
+Package pdftex.def Info: Images/filters-01.png used on input line 381.
+(pdftex.def)             Requested size: 200.0pt x 159.73135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
-[18
-
- <./Images/spectres-01.png>] [19]
-Annexe A.
 [20
+
+] [21 <./Images/filters-01.png>]
+Annexe A.
+[22
 
 ]
 Annexe B.
-[21
+[23
 
 ] (Rapport.aux) ) 
 Here is how much of TeX's memory you used:
  3732 strings out of 493634
- 47252 string characters out of 3141314
- 109944 words of memory out of 3000000
+ 47247 string characters out of 3141314
+ 110944 words of memory out of 3000000
  7040 multiletter control sequences out of 15000+200000
  23332 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -712,9 +727,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (21 pages, 361595 bytes).
+Output written on Rapport.pdf (23 pages, 396223 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
+ 543 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

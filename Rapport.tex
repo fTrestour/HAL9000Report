@@ -236,6 +236,58 @@
                 Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones sont ainsi corrigés en fonction de cette responsabilité.
 
 
+                \subsection{Initialisation des poids}
+
+                    Les valeurs sont initailisées au départ de manière aléatoire,avec des valeurs centrées en 0.
+
+                    Le choix de l'intervalle possible est très important : un intervalle trop petit va beaucoup ralentir l'apprentissage tandis qu'un intervalle trop grand donne des données trop éparses qui rendent plus difficile l'apprentissage.
+
+                    Ainsi, l'intervalle choisi est les suivant:
+
+                    \begin{equation}
+                        \forall i, w_{i}\in [\frac{-2.4}{N_{i}}, \frac{-2.4}{N_{i}}]
+                    \end{equation}
+
+                    où $N_{i}$ est le nombre d'entrées du neurone.
+
+
+                \subsection{Calcul des variations de poids}
+
+                    Les exemples sont présentés consécutivement au perceptron, et à chaque nouvel exemple on calcul les nouvelles variations de poids.\\
+
+                    Une fois l'enrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire entre les poids $w$ et les entrées $x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
+
+                    \begin{equation}
+                        \forall i, e_{i}^{sortie} = f'(h_{i}^{sortie})*(y_{i}^{theorique}-y_{i}^{obtenue})
+                    \end{equation}
+
+                    On propage ensuite l'erreur de la couche $n$ vers la couche $n-1$ en assignant à chaque neurone sa responsabilité dans l'erreur commise $e^{sortie}$:
+
+                    \begin{equation}
+                        \forall j, e^{(n-1)}_{j} = f'(h_{j}^{(n-1)})*\sum_{k} w_{i,j}*e_{i}^{(n)}
+                    \end{equation}
+
+                    Une fois le calcul de l'erreur retropropagé pour toutes les couches du réseau, il ne reste plus qu'à assigner les différentes variations de poids selon un taux d'apprentissage $\lambda$:
+
+                    \begin{equation}
+                        \Delta w_{i,j}^{(n)} = \lambda e_{i}^{(n)}x_{j}^{(n-1)}
+                    \end{equation}
+
+
+                \subsection{Potentielle modification de l'algorithme}
+
+                    L'une des modifications possibles de cet algorithme est l'ajout d'une inertie à la modification des poids.\\
+
+                    La variation de poids devient alors:
+
+                    \begin{equation}
+                        \Delta w_{i,j}^{(n)}(t) = \lambda e_{i}^{(n)}x_{j}^{(n-1)} + \alpha \Delta w_{i,j}^{(n)}(t-1)
+                    \end{equation}
+
+                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des vrariations de poids précédentes sur les variations de poids actuelles.\\
+
+                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélerer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
+
 
         \chapter{Influence des paramètres sur l'apprentissage.}
 
@@ -326,16 +378,16 @@
 
                 \begin{figure}
                     \begin{center}
-                        \includegraphics[width=50pt]{Images/spectres-01.png}
+                        \includegraphics[width=200pt]{Images/filters-01.png}
                     \end{center}
-                    \caption{Spectres d'une RBM entraînée à 10 neurones cachés.}
+                    \caption{Spectre d'une RBM entraînée à vingt neurones cachés.}
                 \end{figure}
 
                 Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche cachée, ces caractéristiques sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la forme "usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la représentation d'un chiffre idéal pour ce réseau.\\
 
                 L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a des chiffres pour juger de la qualité de l'apprentissage.
 
-                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc, tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toutjours dans le cas d'un réseau à un seul neurone caché).
+                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
 
 
     \appendix
