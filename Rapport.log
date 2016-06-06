@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  5 JUN 2016 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  6 JUN 2016 14:48
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -663,12 +663,12 @@ Chapitre 6.
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
@@ -676,10 +676,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--376
 File: Images/filters-01.png Graphic file (type png)
 
 <use Images/filters-01.png>
-Package pdftex.def Info: Images/filters-01.png used on input line 381.
+Package pdftex.def Info: Images/filters-01.png used on input line 382.
 (pdftex.def)             Requested size: 200.0pt x 159.73135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
@@ -727,9 +727,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (23 pages, 396223 bytes).
+Output written on Rapport.pdf (23 pages, 395838 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
+ 542 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
