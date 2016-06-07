@@ -19,6 +19,7 @@
 \contentsline {chapter}{\numberline {4}Introduction}{16}
 \contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{17}
 \contentsline {section}{\numberline {5.1}Principe}{17}
+\contentsline {section}{\numberline {5.2}Les lois d'apprentissage}{18}
 \contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{19}
 \contentsline {chapter}{\numberline {7}Aller plus loin}{20}
 \contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{20}

@@ -361,7 +361,24 @@
                 réseau.
 
 
-				
+            \section{Les lois d'apprentissage}
+
+                Un point critique de l'implémentation d'une RBM est comme bien souvent la loi d'apprentissage.
+                Si l'on trouve dans la littérature plusieurs solutions, la forme générale du calcul est la suivante :
+
+                \begin{equation}
+                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
+                \end{equation}
+                
+                où \begin{math}\alpha\end{math} est le \textit{learning rate}
+
+                Dans ce calcul, on distingue l'échantillonnage de la machine à partir des données (data), de l'échantillonnage de la machine après la reconstruction par pas de Gibbs, \begin{math}<v_{i}h_{j}>_{model}\end{math}.\\
+                
+                Pour extraire des informations à partir de l'\textit{input}, il est important de ne pas reconstruire les deux couches depuis les \textit{inputs}.
+                Ainsi le calcul du produit\begin{math}<v_{i}h_{j}>_{data}\end{math} s'obtient par l'état de l'entité visible \begin{math}v_{i}\end{math} et l'évaluation de l'entité cachée sous forme réelle :\begin{math}p(h_{j}|v^{(0)})\end{math}.
+
+
+                				
 
         \chapter{Les Deep Belief Networks}
 
