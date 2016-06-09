@@ -396,7 +396,7 @@
 
                 \begin{figure}
                     \begin{center}
-                        \includegraphics[width=200pt]{Images/filters-01.png}
+                        \includegraphics[width=150pt]{Images/filters-01.png}
                     \end{center}
                     \caption{Spectre d'une RBM entraînée à vingt neurones cachés.}
                 \end{figure}
@@ -405,14 +405,35 @@
 
                 L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a des chiffres pour juger de la qualité de l'apprentissage.
 
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=75pt]{Images/spectres-01.png}
+                    \end{center}
+                    \caption{Spectre d'une RBM ayant apprise la "forme" 4.}
+                \end{figure}
+
                 Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
 
 
     \appendix
 
-        \chapter{La base MNIST.}
+        \chapter{La base MNIST}
 
-        \chapter{Présentation du code.}
+            \section{Présentation de la base de donées}
+
+                La base de données MNIST est 
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics{Images/mnist-01.png}
+                    \end{center}
+                    \caption{Exemples de chiffres de la base de donnée MNIST.}
+                \end{figure}
+
+
+            \section{Limites de cette base}
+
+        \chapter{Présentation du code}
 
 
 \end{document}

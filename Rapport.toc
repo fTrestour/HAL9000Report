@@ -23,5 +23,7 @@
 \contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{19}
 \contentsline {chapter}{\numberline {7}Aller plus loin}{20}
 \contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{20}
-\contentsline {chapter}{\numberline {A}La base MNIST.}{22}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{23}
+\contentsline {chapter}{\numberline {A}La base MNIST}{22}
+\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{22}
+\contentsline {section}{\numberline {A.2}Limites de cette base}{22}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{24}

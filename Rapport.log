@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  6 JUN 2016 23:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  7 JUN 2016 10:36
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -682,7 +682,7 @@ File: Images/filters-01.png Graphic file (type png)
 
 <use Images/filters-01.png>
 Package pdftex.def Info: Images/filters-01.png used on input line 399.
-(pdftex.def)             Requested size: 200.0pt x 159.73135pt.
+(pdftex.def)             Requested size: 150.0pt x 119.79799pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
@@ -690,20 +690,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
 [20
 
-] [21 <./Images/filters-01.png>]
+ <./Images/filters-01.png>]
+<Images/spectres-01.png, id=96, 28.105pt x 28.105pt>
+File: Images/spectres-01.png Graphic file (type png)
+
+<use Images/spectres-01.png>
+Package pdftex.def Info: Images/spectres-01.png used on input line 410.
+(pdftex.def)             Requested size: 75.0pt x 75.00877pt.
+ [21 <./Images/spectres-01.png>]
 Annexe A.
+<Images/mnist-01.png, id=101, 351.714pt x 233.07076pt>
+File: Images/mnist-01.png Graphic file (type png)
+
+<use Images/mnist-01.png>
+Package pdftex.def Info: Images/mnist-01.png used on input line 428.
+(pdftex.def)             Requested size: 351.71315pt x 233.07018pt.
+
+Overfull \hbox (6.71315pt too wide) in paragraph at lines 428--429
+ [] 
+ []
+
 [22
 
-]
+] [23 <./Images/mnist-01.png>]
 Annexe B.
-[23
+[24
 
 ] (Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 3732 strings out of 493634
- 47247 string characters out of 3141314
+ 3742 strings out of 493634
+ 47476 string characters out of 3141314
  110944 words of memory out of 3000000
- 7040 multiletter control sequences out of 15000+200000
+ 7048 multiletter control sequences out of 15000+200000
  23332 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,7n,30p,855b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -732,9 +750,9 @@ type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (23 pages, 404562 bytes).
+Output written on Rapport.pdf (24 pages, 455932 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
+ 559 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
