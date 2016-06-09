@@ -452,7 +452,7 @@
 
                 En effet, une première limite apparaît assez rapidement quand on travaille avec MNIST : cette base n'est pas "universelle". Les caractères utilisés dans la base de donnée sont fortement connotés anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos RBM.
 
-                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.
+                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
 
                 \begin{figure}
                     \centering
@@ -469,6 +469,14 @@
                     \end{subfigure}
                     \caption{Exemple d'une situation de litige entre notation anglosaxone et française.}
                 \end{figure}
+
+                Une autre limite apparaît aussi : c'est celle de la simplicité de la base de donnée.
+
+                La reconnaissance de caractères est en effet une tâche simpliste en comparaison avec certains des problèmes auxquels peuvent être confrontés les réseaux issus du deep learning. Cela se constate par les résultats très bons obtenus pour des réseaux peu complexes, tel que notre perceptron qui atteignait les 3\% d'erreur sur MNIST.
+
+                Il devient alors nécessaire de trouver un test plus discriminatoire de la qualité des réseaux.\\
+
+                Faute de temps nous n'avons pas eu la possiblité d'approfondir ce point de vue mais semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
         \chapter{Présentation du code}
 

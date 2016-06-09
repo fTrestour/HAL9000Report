@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  9 JUN 2016 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.19)  9 JUN 2016 19:30
 entering extended mode
 **C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
 (C:/Users/ftres/Documents/GitHub/HAL9000Report/Rapport.tex
@@ -902,6 +902,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
 <Images/mnist-02.png, id=275, 19.87425pt x 21.681pt>
 File: Images/mnist-02.png Graphic file (type png)
  <use Images/mnist-02.png>
@@ -917,22 +922,27 @@ Package pdftex.def Info: Images/mnist-03.png used on input line 467.
  [21
 
 ] [22 <./Images/mnist-01.png> <./Images/mnist-02.png> <./Images/mnist-03.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+
+ []
+
+[23]
 Annexe B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
-[23
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
+[24
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
  (Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 476.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 484.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 484.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 195FCA067002DAB4E8981EF3C34D980E;1730.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 476.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 484.
  ) 
 Here is how much of TeX's memory you used:
- 8684 strings out of 493634
- 126903 string characters out of 3141314
+ 8685 strings out of 493634
+ 126910 string characters out of 3141314
  218704 words of memory out of 3000000
  11854 multiletter control sequences out of 15000+200000
  24410 words of font info for 66 fonts, out of 3000000 for 9000
@@ -965,9 +975,9 @@ onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Rapport.pdf (24 pages, 488015 bytes).
+Output written on Rapport.pdf (25 pages, 490880 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
+ 810 PDF objects out of 1000 (max. 8388607)
+ 76 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

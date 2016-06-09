@@ -26,4 +26,4 @@
 \contentsline {chapter}{\numberline {A}La base MNIST}{21}{appendix.A}
 \contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{21}{section.A.1}
 \contentsline {section}{\numberline {A.2}Limites de cette base}{21}{section.A.2}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{23}{appendix.B}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{24}{appendix.B}
