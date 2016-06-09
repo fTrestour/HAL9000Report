@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside]{report}
+\documentclass[a4paper,oneside]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -9,6 +9,10 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
 
 
 
@@ -421,7 +425,18 @@
 
             \section{Présentation de la base de donées}
 
-                La base de données MNIST est 
+                La base de données MNIST, Mixed Mixed National Institute of Standards and Technology, est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. Lea base est organisée de la manière suivante:
+
+                \begin{itemize}
+                    \item La base d'apprentissage est constituée de 60000 images.
+                    \item La base de test est conctituée de 10000 images.
+                    \item Chaque image est constituée de 28*28 pixels en nuances de gris.
+                    \item Chaque image est normalisée.\\
+                \end{itemize}
+
+                Cette base est aujourd'hui devenue une référence permettant de tester les algorithmes d'apprentissages ou de reconnaissance de forme divers et variés. Cet aspect facilite ainsi la comparaison de nos résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\
+
+                On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}
 
                 \begin{figure}
                     \begin{center}
@@ -432,6 +447,28 @@
 
 
             \section{Limites de cette base}
+
+                Cette base, malgré tous ses avantages, n'est cependant pas parfaite.\\
+
+                En effet, une première limite apparaît assez rapidement quand on travaille avec MNIST : cette base n'est pas "universelle". Les caractères utilisés dans la base de donnée sont fortement connotés anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos RBM.
+
+                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.
+
+                \begin{figure}
+                    \centering
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-02.png}
+                        \caption{"1" en français}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-03.png}
+                        \caption{"1" anglosaxon}
+                    \end{subfigure}
+                    \caption{Exemple d'une situation de litige entre notation anglosaxone et française.}
+                \end{figure}
 
         \chapter{Présentation du code}
 
