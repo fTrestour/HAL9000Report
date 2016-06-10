@@ -1,23 +1,29 @@
 \select@language {french}
-\contentsline {part}{I\hspace {1em}Introduction}{3}
-\contentsline {section}{\numberline {0.1}Contexte}{4}
-\contentsline {section}{\numberline {0.2}Pr\IeC {\'e}sentation du sujet}{4}
-\contentsline {section}{\numberline {0.3}D\IeC {\'e}roulement}{4}
-\contentsline {part}{II\hspace {1em}Le Perceptron}{5}
-\contentsline {chapter}{\numberline {1}Architecture d'un perceptron}{6}
-\contentsline {section}{\numberline {1.1}Introduction}{6}
-\contentsline {section}{\numberline {1.2}La brique de base : le neurone}{6}
-\contentsline {section}{\numberline {1.3}Organisation des couches}{8}
-\contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{11}
-\contentsline {section}{\numberline {2.1}L'objectif des algorithmes d'apprentissage}{11}
-\contentsline {section}{\numberline {2.2}La m\IeC {\'e}thode de r\IeC {\'e}tropropagation du gradient}{12}
-\contentsline {chapter}{\numberline {3}Influence des param\IeC {\`e}tres sur l'apprentissage.}{13}
-\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}
-\contentsline {chapter}{\numberline {4}Introduction}{15}
-\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}
-\contentsline {section}{\numberline {5.1}Principe}{16}
-\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{18}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{19}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{19}
-\contentsline {chapter}{\numberline {A}La base MNIST.}{21}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{22}
+\contentsline {part}{I\hspace {1em}Introduction}{2}{part.1}
+\contentsline {section}{\numberline {0.1}Contexte}{3}{section.0.1}
+\contentsline {section}{\numberline {0.2}Pr\IeC {\'e}sentation du sujet}{3}{section.0.2}
+\contentsline {section}{\numberline {0.3}D\IeC {\'e}roulement}{3}{section.0.3}
+\contentsline {part}{II\hspace {1em}Le Perceptron}{4}{part.2}
+\contentsline {chapter}{\numberline {1}Architecture d'un perceptron}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}La brique de base : le neurone}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Organisation des couches}{7}{section.1.3}
+\contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}L'objectif des algorithmes d'apprentissage}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}La m\IeC {\'e}thode de r\IeC {\'e}tropropagation du gradient}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Initialisation des poids}{11}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Calcul des variations de poids}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Potentielle modification de l'algorithme}{12}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Influence des param\IeC {\`e}tres sur l'apprentissage.}{13}{chapter.3}
+\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}{part.3}
+\contentsline {chapter}{\numberline {4}Introduction}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}{chapter.5}
+\contentsline {section}{\numberline {5.1}Principe}{16}{section.5.1}
+\contentsline {section}{\numberline {5.2}Les lois d'apprentissage}{17}{section.5.2}
+\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{18}{chapter.6}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{19}{section.7.1}
+\contentsline {chapter}{\numberline {A}La base MNIST}{21}{appendix.A}
+\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{21}{section.A.1}
+\contentsline {section}{\numberline {A.2}Limites de cette base}{21}{section.A.2}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{24}{appendix.B}

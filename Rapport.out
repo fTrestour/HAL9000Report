@@ -1,0 +1,25 @@
+\BOOKMARK [-1][-]{part.1}{I Introduction}{}% 1
+\BOOKMARK [0][-]{section.0.1}{Contexte}{part.1}% 2
+\BOOKMARK [1][-]{section.0.2}{Pr\351sentation du sujet}{section.0.1}% 3
+\BOOKMARK [1][-]{section.0.3}{D\351roulement}{section.0.1}% 4
+\BOOKMARK [-1][-]{part.2}{II Le Perceptron}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Architecture d'un perceptron}{part.2}% 6
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{La brique de base : le neurone}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Organisation des couches}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Algorithmes d'apprentissage}{part.2}% 10
+\BOOKMARK [1][-]{section.2.1}{L'objectif des algorithmes d'apprentissage}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{La m\351thode de r\351tropropagation du gradient}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Influence des param\350tres sur l'apprentissage.}{part.2}% 13
+\BOOKMARK [-1][-]{part.3}{III Machines de Boltzmann}{}% 14
+\BOOKMARK [0][-]{chapter.4}{Introduction}{part.3}% 15
+\BOOKMARK [0][-]{chapter.5}{Les machines de Boltzmann restreintes}{part.3}% 16
+\BOOKMARK [1][-]{section.5.1}{Principe}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{Les lois d'apprentissage}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Les Deep Belief Networks}{part.3}% 19
+\BOOKMARK [0][-]{chapter.7}{Aller plus loin}{part.3}% 20
+\BOOKMARK [1][-]{section.7.1}{La visualisation des spectres du r\351seau}{chapter.7}% 21
+\BOOKMARK [0][-]{appendix.A}{La base MNIST}{part.3}% 22
+\BOOKMARK [1][-]{section.A.1}{Pr\351sentation de la base de don\351es}{appendix.A}% 23
+\BOOKMARK [1][-]{section.A.2}{Limites de cette base}{appendix.A}% 24
+\BOOKMARK [0][-]{appendix.B}{Pr\351sentation du code}{part.3}% 25

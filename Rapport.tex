@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside]{report}
+\documentclass[a4paper,oneside]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -9,6 +9,10 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
 
 
 
@@ -236,6 +240,58 @@
                 Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones sont ainsi corrigés en fonction de cette responsabilité.
 
 
+                \subsection{Initialisation des poids}
+
+                    Les valeurs sont initailisées au départ de manière aléatoire,avec des valeurs centrées en 0.
+
+                    Le choix de l'intervalle possible est très important : un intervalle trop petit va beaucoup ralentir l'apprentissage tandis qu'un intervalle trop grand donne des données trop éparses qui rendent plus difficile l'apprentissage.
+
+                    Ainsi, l'intervalle choisi est les suivant:
+
+                    \begin{equation}
+                        \forall i, w_{i}\in [\frac{-2.4}{N_{i}}, \frac{-2.4}{N_{i}}]
+                    \end{equation}
+
+                    où $N_{i}$ est le nombre d'entrées du neurone.
+
+
+                \subsection{Calcul des variations de poids}
+
+                    Les exemples sont présentés consécutivement au perceptron, et à chaque nouvel exemple on calcul les nouvelles variations de poids.\\
+
+                    Une fois l'enrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire entre les poids $w$ et les entrées $x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
+
+                    \begin{equation}
+                        \forall i, e_{i}^{sortie} = f'(h_{i}^{sortie})*(y_{i}^{theorique}-y_{i}^{obtenue})
+                    \end{equation}
+
+                    On propage ensuite l'erreur de la couche $n$ vers la couche $n-1$ en assignant à chaque neurone sa responsabilité dans l'erreur commise $e^{sortie}$:
+
+                    \begin{equation}
+                        \forall j, e^{(n-1)}_{j} = f'(h_{j}^{(n-1)})*\sum_{k} w_{i,j}*e_{i}^{(n)}
+                    \end{equation}
+
+                    Une fois le calcul de l'erreur retropropagé pour toutes les couches du réseau, il ne reste plus qu'à assigner les différentes variations de poids selon un taux d'apprentissage $\lambda$:
+
+                    \begin{equation}
+                        \Delta w_{i,j}^{(n)} = \lambda e_{i}^{(n)}x_{j}^{(n-1)}
+                    \end{equation}
+
+
+                \subsection{Potentielle modification de l'algorithme}
+
+                    L'une des modifications possibles de cet algorithme est l'ajout d'une inertie à la modification des poids.\\
+
+                    La variation de poids devient alors:
+
+                    \begin{equation}
+                        \Delta w_{i,j}^{(n)}(t) = \lambda e_{i}^{(n)}x_{j}^{(n-1)} + \alpha \Delta w_{i,j}^{(n)}(t-1)
+                    \end{equation}
+
+                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des vrariations de poids précédentes sur les variations de poids actuelles.\\
+
+                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélerer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
+
 
         \chapter{Influence des paramètres sur l'apprentissage.}
 
@@ -309,9 +365,27 @@
 
                 La particularité de ce réseau est donc le fait qu'il n'est pas
                 \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
-                réseaux.
+                réseau.
 
 
+            \section{Les lois d'apprentissage}
+
+                Un point critique de l'implémentation d'une RBM est comme bien souvent la loi d'apprentissage.
+                Si l'on trouve dans la littérature plusieurs solutions, la forme générale du calcul est la suivante :
+
+                \begin{equation}
+                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
+                \end{equation}
+                
+                où \begin{math}\alpha\end{math} est le \textit{learning rate}
+
+                Dans ce calcul, on distingue l'échantillonnage de la machine à partir des données (data), de l'échantillonnage de la machine après la reconstruction par pas de Gibbs, \begin{math}<v_{i}h_{j}>_{model}\end{math}.\\
+                
+                Pour extraire des informations à partir de l'\textit{input}, il est important de ne pas reconstruire les deux couches depuis les \textit{inputs}.
+                Ainsi le calcul du produit\begin{math}<v_{i}h_{j}>_{data}\end{math} s'obtient par l'état de l'entité visible \begin{math}v_{i}\end{math} et l'évaluation de l'entité cachée sous forme réelle :\begin{math}p(h_{j}|v^{(0)})\end{math}.
+
+
+                				
 
         \chapter{Les Deep Belief Networks}
 
@@ -329,23 +403,85 @@
 
                 \begin{figure}
                     \begin{center}
-                        \includegraphics[width=50pt]{Images/spectres-01.png}
+                        \includegraphics[width=150pt]{Images/filters-01.png}
                     \end{center}
-                    \caption{Spectres d'une RBM entraînée à 10 neurones cachés.}
+                    \caption{Spectre d'une RBM entraînée à vingt neurones cachés.}
                 \end{figure}
 
                 Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche cachée, ces caractéristiques sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la forme "usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la représentation d'un chiffre idéal pour ce réseau.\\
 
                 L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a des chiffres pour juger de la qualité de l'apprentissage.
 
-                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc, tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toutjours dans le cas d'un réseau à un seul neurone caché).
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=75pt]{Images/spectres-01.png}
+                    \end{center}
+                    \caption{Spectre d'une RBM ayant apprise la "forme" 4.}
+                \end{figure}
+
+                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
 
 
     \appendix
 
-        \chapter{La base MNIST.}
+        \chapter{La base MNIST}
 
-        \chapter{Présentation du code.}
+            \section{Présentation de la base de donées}
+
+                La base de données MNIST, Mixed Mixed National Institute of Standards and Technology, est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. Lea base est organisée de la manière suivante:
+
+                \begin{itemize}
+                    \item La base d'apprentissage est constituée de 60000 images.
+                    \item La base de test est conctituée de 10000 images.
+                    \item Chaque image est constituée de 28*28 pixels en nuances de gris.
+                    \item Chaque image est normalisée.\\
+                \end{itemize}
+
+                Cette base est aujourd'hui devenue une référence permettant de tester les algorithmes d'apprentissages ou de reconnaissance de forme divers et variés. Cet aspect facilite ainsi la comparaison de nos résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\
+
+                On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics{Images/mnist-01.png}
+                    \end{center}
+                    \caption{Exemples de chiffres de la base de donnée MNIST.}
+                \end{figure}
+
+
+            \section{Limites de cette base}
+
+                Cette base, malgré tous ses avantages, n'est cependant pas parfaite.\\
+
+                En effet, une première limite apparaît assez rapidement quand on travaille avec MNIST : cette base n'est pas "universelle". Les caractères utilisés dans la base de donnée sont fortement connotés anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos RBM.
+
+                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
+
+                \begin{figure}
+                    \centering
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-02.png}
+                        \caption{"1" en français}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-03.png}
+                        \caption{"1" anglosaxon}
+                    \end{subfigure}
+                    \caption{Exemple d'une situation de litige entre notation anglosaxone et française.}
+                \end{figure}
+
+                Une autre limite apparaît aussi : c'est celle de la simplicité de la base de donnée.
+
+                La reconnaissance de caractères est en effet une tâche simpliste en comparaison avec certains des problèmes auxquels peuvent être confrontés les réseaux issus du deep learning. Cela se constate par les résultats très bons obtenus pour des réseaux peu complexes, tel que notre perceptron qui atteignait les 3\% d'erreur sur MNIST.
+
+                Il devient alors nécessaire de trouver un test plus discriminatoire de la qualité des réseaux.\\
+
+                Faute de temps nous n'avons pas eu la possiblité d'approfondir ce point de vue mais semble nécessaire pour tester les réseaux dans un domaine plus complexe.
+
+        \chapter{Présentation du code}
 
 
 \end{document}
