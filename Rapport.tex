@@ -325,7 +325,7 @@ de la structure du réseau.\\
                 Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce 
 genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En 
 pratique cela se manifeste 
-par l'absence d'étiquettes dans les bases d'appentissage.
+par l'absence d'étiquettes dans les bases d'apprentissage.
 
                 Ce genre d'apprentissage revient plus ou moins à mettre en concurrence les différentes 
 classes de données à chaque présentation d'exemple. Ainsi, la classe qui correspond la 
@@ -452,7 +452,7 @@ $\alpha$ est bien choisit.
             Hinton(2006). Nous allors présenter dans cette partie leur constitution et
             leurs fonctionnement.
 
-            \section{Éléments de preuve et fonctionnement}
+            \section{Éléments de preuve et présentation}
 
                 Les RBM sont des réseaux neuronaux qui donnent une
                 probabilité d'activation de chaque neurone.\\
@@ -483,7 +483,7 @@ $\alpha$ est bien choisit.
 \sigma(\sum_{j=1}^{m} w_{i,j} * h_{j} + b_{i}) \end{equation}
 
 				En notant \textit{$w_{i}$} le poids de la synapse reliant les neurones \textit{$v_{i}$} 
-à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.
+à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.\\
         
 					Puisque la probabilité  d'activation du neurone \textit{$v_{i}$} d'une couche dépend 
 uniquement de la valeur des états des neurones de l'autre couche et uniquement au 
@@ -507,36 +507,36 @@ Ces deux propriété d'apériodicité et de irréductibilité permettent de prou
 
 Une preuve plus rigoureuse à été proposé par Fischer et Igel (\textit{An Introduction to Restricted Boltzmann Machines} (2012).\\
 
-Pour faire l'apprentissage,
-
-Une chaîne de Markov peut prendre du temps à converger et dans le cas des RBM qui peuvent 
-avoir plusieurs centaines de neurones par couche, les pas de Gibbs, c'est-à-dire l'échantillonnage
- des états des neurones au sein d'une même couche, peut être très calculatoire. Il est alors proposé par 
-Hinton en 2006 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
- fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
-méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).\\
-
-On appellera donc \textit{$v_{data}$} les valeurs d'entrée qui sont affectées aux neurones de la couche \textit{V} et on placera en exposant entre parenthèse
-le nombre de pas de Gibbs :  \textit{$v^{5}$} signifie que l'on a fait 5 pas de Gibbs.
-
-                La particularité de ce réseau est donc le fait qu'il n'est pas
+ La particularité de ce réseau est donc le fait qu'il n'est pas
                 \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
                 réseau, le réseau arrive à une distribution stationnaire qu'après des allers-retours (c'est-à-dire des échantillonnage) entre
 les deux couches.
 
+\section{Loi d'apprentissage}
 
-            \section{Les lois d'apprentissage}
+Pour faire l'apprentissage, on va entraîner le réseau sur les différents exemple, la première différence avec l'implémentation du perceptron est
+que l'on va  échantillonner les états des neurones à chaque fois, on travaille avec des données binaires et non réelles, nous avons décidé 
+d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel n'était pas blanc.
+On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire de probabilité
+ qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
+\begin{figure}[!h]
+                    \begin{center}
+                        \includegraphics[width=200pt]{Images/Gibbs.png}
+                    \end{center}
+                    \caption{Pas de Gibbs}
+\end{figure}\\
+
+Une fois la distribution stationnaire atteintes on obtient deux ensembles de valeurs : l'état des couches \textit{V} et  \textit{H}
+qui correspond à l'\textit{input}, que l'on peut appeler \begin{math}<v_{i}h_{j}>_{data}\end{math} ou \begin{math}<v_{i}^{0}h_{j}^{0}>\end{math}, et l'état des couches \textit{V} et  \textit{H} une fois la distribution stationnaire atteinte notée \begin{math}<v_{i}h_{j}>_{model}\end{math} ou \begin{math}<v_{i}^{\infty}h_{j}^{\infty}>\end{math}. A partir de ces deux distribution, on peut modifier les poids et les biais du réseau selon la loi :
+                \begin{equation}
+                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
+                \end{equation}
+                où \begin{math}\alpha\end{math} est le \textit{learning rate}\\
 
                 Un point critique de l'implémentation d'une RBM est comme bien souvent la loi 
 d'apprentissage.
                 Si l'on trouve dans la littérature plusieurs solutions, la forme générale du calcul 
-est la suivante :
-
-                \begin{equation}
-                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
-                \end{equation}
-                
-                où \begin{math}\alpha\end{math} est le \textit{learning rate}
+est celle présentée ci-dessus.\\
 
                 Dans ce calcul, on distingue l'échantillonnage de la machine à partir des données 
 (data), de l'échantillonnage de la machine après la reconstruction par pas de Gibbs, 
@@ -549,9 +549,17 @@ l'état de l'entité visible \begin{math}v_{i}\end{math} et l'évaluation de l'e
 cachée sous forme réelle 
 : \begin{math}p(h_{j}|v^{(0)})\end{math}.\\
 
-Dans notre cas, nous avons choisi de faire 3 pas de Gibbs : la couche visible \textit{V} est initialisée par les valeurs de l'exemple pour
- l'apprentissage. Les neurones ne pouvant que prendre des valeurs binaires nous avons décidé 
-d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel était non nulle.
+Une chaîne de Markov peut prendre du temps à converger et dans le cas des RBM qui peuvent 
+avoir plusieurs centaines de neurones par couche, les pas de Gibbs, c'est-à-dire l'échantillonnage
+ des états des neurones au sein d'une même couche, peut être très calculatoire. Il est alors proposé par 
+Hinton en 2006 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
+ fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
+méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).
+Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
+
+
+
+
 
 
 
@@ -564,6 +572,8 @@ d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel é
         \chapter{Aller plus loin}
 
             \section{La visualisation des spectres du réseau}
+
+\subsection{Cas de la RBM}
 
                 Lors du développement de la RBM, nous avons étés confrontés au problème de la 
 quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux 
@@ -611,7 +621,25 @@ des chiffres pour juger de la qualité de l'apprentissage.
                 Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est 
 une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera 
 au négatif d'un des 
-exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
+exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).\\
+
+Pour faire cette visualisation, on cherche uniquement à connaître les neurones qui activent le neurone de la couche caché. 
+Une méthode de visualisation serait donc de chercher les valeurs binaires  des neurones de la couche visible pour 
+activer le neurone désiré. Puisque le réseau n'est pas orienté, on peut directement affecter la valeur 1 au neurone \textit{$h_{j}$} 
+de la couche caché qui correspond au filtre que l'on veut voir et 0 aux autres. On fait alors un pas de Gibbs vers la couche visible. Pour obtenir un meilleur résultat, 
+on peut directement travailler avec la valeur de la sigmoïde des neurones de la couche visible.
+
+\subsection{Cas du DBN}
+
+Dans le cas du DBN, il est plus compliqué d'obtenir une image du fait de l'architecture profonde. On va donc choisir le neurone de la couche dont  on veut observer le filtre ou ce qu'on pourrait appeler la carte d'activation. Pour cela on assigne la valeur 0 à tout les neurones du réseau et on va faire un unique pas de Gibbs jusqu'à la couche d'entrée du réseau en échantillonnant la valeur des neurones des couches par lesquelles on passe.\\
+
+Cette méthode a donc un inconvénient : on a une chance de perdre de l'information. Nous avons alors testé deux options : la première est de changer la nature du réseau et de travailler avec les probabilités comme valeur de l'état du réseau. Cette méthode n'a pas été concluante. Nous sommes alors venus à considérer une autre méthode, dans l'esprit du réseau. \\
+
+Cette méthode est la suivante : on initialise les valeurs des neurones du réseau entraîné à 0 sauf pour le filtre que l'on souhaite visualiser qui est à l'état 1. On va ensuite effectuer plusieurs pas de Gibbs au sein de la \textbf{même} RBM. Ainsi on va obtenir une distribution des états qui correspond à l'activation du filtre désiré mais aussi d'autres filtres. Ce procédé permet de réduire le nombre de neurones de la couche précédente qui ne serait pas dan l'état voulu. On procède ainsi jusqu'à la première RBM où l'on utilise la méthode exposée dans la partie correspondante.\\
+
+Cette méthode est simplement expérimentale mais produit des résultats plus probant. Dans la littérature les méthodes de visualisation sont peu détaillées mais semble être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est à dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
+
+
 
 
     \appendix
