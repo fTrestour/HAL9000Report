@@ -18,12 +18,12 @@
 \contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}{part.3}
 \contentsline {chapter}{\numberline {4}Introduction}{15}{chapter.4}
 \contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}Principe}{16}{section.5.1}
+\contentsline {section}{\numberline {5.1}\IeC {\'E}l\IeC {\'e}ments de preuve et fonctionnement}{16}{section.5.1}
 \contentsline {section}{\numberline {5.2}Les lois d'apprentissage}{17}{section.5.2}
-\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{18}{chapter.6}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{19}{chapter.7}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{19}{section.7.1}
-\contentsline {chapter}{\numberline {A}La base MNIST}{21}{appendix.A}
-\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{21}{section.A.1}
-\contentsline {section}{\numberline {A.2}Limites de cette base}{21}{section.A.2}
+\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{19}{chapter.6}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{20}{chapter.7}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{20}{section.7.1}
+\contentsline {chapter}{\numberline {A}La base MNIST}{22}{appendix.A}
+\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{22}{section.A.1}
+\contentsline {section}{\numberline {A.2}Limites de cette base}{22}{section.A.2}
 \contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{24}{appendix.B}
