@@ -1,4 +1,4 @@
-\documentclass[a4paper,oneside]{report}
+\documentclass[a4paper,twoside]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -9,10 +9,6 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{caption}
-\usepackage{subcaption}
-
 
 
 
@@ -42,47 +38,28 @@
         \section[Contexte]{Contexte du projet}
 
             CentraleSupélec propose à  ses étudiants en deuxième année de participer
-            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême 
-mêlant plusieurs compétences que l'ingénieur se doit de posséder.
+            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême mêlant plusieurs compétences que l'ingénieur se doit de posséder.
 
-            Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning 
-que 12 éléves ont étudié, répartis en 3 groupes, dont HAL9000.
+            Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning que 12 éléves ont étudié, répartis en 3 groupes, dont HAL9000.
 
-            Ce rapport présente les avancement de ce dernier groupe sur le sujet tout au long de 
-l'année.
+            Ce rapport présente les avancement de ce dernier groupe sur le sujet tout au long de l'année.
 
 
         \section{Présentation du sujet}
 
-            Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning 
-est dérivée du concept de réseau de neurones.
+            Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
             Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral
-            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts 
-dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche 
-connexioniste des réseaux de 
-neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, 
-notament grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font 
-d'excellents 
-candidats pour des applications telles que la reconnaissance d'image ou la classification.
+            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
         \section[Déroulement]{Déroulement du projet}
 
-            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et 
-commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep 
-learning. Nous avons pour 
-cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de 
-manière efficace, nous avons aussi utilisé l'outil GIT.
+            Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
-            Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se 
-penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux 
-machines de Boltzmann, en 
-commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning 
-associée, les Deep Belief Networks.
+            Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
 
-            Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  
-CentraleSupélec, campus de Gif-sur-Yvette.
+            Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
 
 
@@ -93,24 +70,16 @@ CentraleSupélec, campus de Gif-sur-Yvette.
 
             \section{Introduction}
 
-                Ici, l'objectif était la reconnaissance des caractères de la base de données MNIST 
-grâce à  un perceptron.
+                Ici, l'objectif était la reconnaissance des caractères de la base de données MNIST grâce à  un perceptron.
 
-                Le perceptron fait partie des architectures de réseaux neuronaux les plus simples. Son 
-étude nous a donc permis de s'introduire à  la problématique du machine learning avant 
-d'approfondir en étudiant 
-des structures plus complexes.
+                Le perceptron fait partie des architectures de réseaux neuronaux les plus simples. Son étude nous a donc permis de s'introduire à  la problématique du machine learning avant d'approfondir en étudiant des structures plus complexes.
 
 
             \section{La brique de base : le neurone}
 
-                Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation 
-du fonctionnement des neurones du systême nerveux humains.
+                Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation du fonctionnement des neurones du systême nerveux humains.
 
-                Chaque neurone reçoit un signal via une entrée, qui correspond aux dendrites des 
-systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en 
-déduit la valeur de sortie. 
-Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
+                Chaque neurone reçoit un signal via une entrée, qui correspond aux dendrites des systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en déduit la valeur de sortie. Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
 
                 \begin{figure}
                     \begin{center}
@@ -121,8 +90,7 @@ Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone
 
                 La sortie du j\textsuperscript{ième} neurone est donnée par la formule :
 
-                \begin{equation}\label{eqNeur}s_{j}(x)=f(\sum_{k=1}^{N} 
-w_{j,k}*x_{k}+w_{0})\end{equation}
+                \begin{equation}\label{eqNeur}s_{j}(x)=f(\sum_{k=1}^{N} w_{j,k}*x_{k}+w_{0})\end{equation}
 
                 où:
 
@@ -130,26 +98,14 @@ w_{j,k}*x_{k}+w_{0})\end{equation}
                     \item $s$ est la valeur de la sortie
                     \item $f$ est la fonction d'activation.
                     \item N est la dimension du vecteur d'entrée.
-                    \item $w_{j,k}$ est la k\textsuperscript{ième} composante du vecteur de poids 
-$w_{j}$ du j\textsuperscript{ième} neurone. $w_{0}$ est le biais du neurone. Cette 
-valeur correspond au poids d'une 
-entrée fictive valant toujours 1.
+                    \item $w_{j,k}$ est la k\textsuperscript{ième} composante du vecteur de poids $w_{j}$ du j\textsuperscript{ième} neurone. $w_{0}$ est le biais du neurone. Cette valeur correspond au poids d'une entrée fictive valant toujours 1.
                     \item $x_{k}$ est la k\textsuperscript{ième} composante du vecteur d'entrée $x$.\\
                 \end{itemize}
 
-                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on 
-choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, 
-ce vecteur d'entrée peut être 
-composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent 
-être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des 
-données signifiactives de la problématique traitée.\\
+                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données signifiactives de la problématique traitée.\\
 
-                La fonction d'activation permet de définir le comportement du neurone. Selon la 
-définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, 
-centrées en 0 ou en 0,5. Le choix de 
-la fonction est donc étroitement lié avec le problème à  traiter.
-                Il existe différents types de fonctions d'activation. Parmis les plus utilisées 
-figurent:
+                La fonction d'activation permet de définir le comportement du neurone. Selon la définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, centrées en 0 ou en 0,5. Le choix de la fonction est donc étroitement lié avec le problème à  traiter.
+                Il existe différents types de fonctions d'activation. Parmis les plus utilisées figurent:
                 \begin{itemize}
                     \item La fonction échelon
                     \begin{equation}
@@ -169,22 +125,14 @@ figurent:
                     \end{equation}
                 \end{itemize}
 
-                Le vecteur de poids du j\textsuperscript{ième} neurone représente la pondération de 
-chacune des entrées de ce neurone. C'est ce paramètre qui permet de modifier le réseau 
-de neurone sans avoir à  
-modifier son architecture. Toutes les propriétés d'un réseau neuronal sont donc issues de ce vecteur 
-de pondération et de ses variations.
+                Le vecteur de poids du j\textsuperscript{ième} neurone représente la pondération de chacune des entrées de ce neurone. C'est ce paramètre qui permet de modifier le réseau de neurone sans avoir à  modifier son architecture. Toutes les propriétés d'un réseau neuronal sont donc issues de ce vecteur de pondération et de ses variations.
 
 
             \section{Organisation des couches}
 
-                Il existe de nombreuses architectures de réseau de neurone. Elles peuvent être 
-récurrentes ou non, entièrement connectées ou seulement partiellement, organisées en 
-couches, ... De nombreuses 
-propriétés permettent de caractériser une architecture de réseau de neurone.
+                Il existe de nombreuses architectures de réseau de neurone. Elles peuvent être récurrentes ou non, entièrement connectées ou seulement partiellement, organisées en couches, ... De nombreuses propriétés permettent de caractériser une architecture de réseau de neurone.
 
-                Le Perceptron est un modèle assez élémentaire de réseau. Il est constitué en couches 
-totalement connectées.
+                Le Perceptron est un modèle assez élémentaire de réseau. Il est constitué en couches totalement connectées.
 
                 \begin{figure}
                     \begin{center}
@@ -193,33 +141,16 @@ totalement connectées.
                     \caption{Architecture d'un perceptron multi-couches.}
                 \end{figure}
 
-                On peut distinguer trois types de couches : la couche d'entrée, les couches cachées et 
-la couche de sortie.\\
+                On peut distinguer trois types de couches : la couche d'entrée, les couches cachées et la couche de sortie.\\
 
-                La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la 
-valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant 
-de neurones que le vecteur 
-d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
+                La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant de neurones que le vecteur d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
 
-                Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés 
-du réseau sont héritées de cet empilement de couches. On comprend alors mieux 
-l'intérêt actuel pour le Deep 
-Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
-                Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par 
-les neurones sont choisies par le concepteur du réseau selon le problême traité par le 
-réseau.\\
+                Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés du réseau sont héritées de cet empilement de couches. On comprend alors mieux l'intérêt actuel pour le Deep Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
+                Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par les neurones sont choisies par le concepteur du réseau selon le problême traité par le réseau.\\
 
-                Afin d'expliciter l'importance de l'architecture du réseau, abordons l'exemple usuel 
-du ou exclusif.
+                Afin d'expliciter l'importance de l'architecture du réseau, abordons l'exemple usuel du ou exclusif.
 
-                Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura 
-deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi 
-à  valeurs dans \{0;1\}. On 
-prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire 
-$\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement 
-binaire. Il s'agit donc ici 
-de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et 
-$x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
+                Essayons de réaliser avec un unique neurone la fonction logique XOR. Ce neurone aura deux entrées $x_{1}$ et $x_{2}$ à  valeurs dans \{0;1\} et une sortie $s$, elle aussi à  valeurs dans \{0;1\}. On prendra comme fonction d'activation la fonction de Heaviside, c'est à  dire $\mathbf{1}_{\mathbb{R}^{*}_{+}}$. Ce neurone aura par conséquent un fonctionnement totalement binaire. Il s'agit donc ici de déterminer les pondérations $w_{1}$ et $w_{2}$, respectivement associées aux entrées $x_{1}$ et $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
 
                 \begin{figure}
                     \begin{center}
@@ -228,15 +159,11 @@ $x_{2}$, qui conviennent pour obtenir en sortie la valeur $x_{1}\oplus x_{2}$.\\
                     \caption{Fonction XOR à réaliser par le perceptron.}
                 \end{figure}
 
-                Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des 
-entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui 
-définit par $s=1$, découle alors 
-directement de l'équation \ref{eqNeur}:
+                Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui définit par $s=1$, découle alors directement de l'équation \ref{eqNeur}:
 
                 \begin{equation}w_{2}*x_{2}+w_{1}*x_{1}+w_{0}=0\end{equation}
 
-                On constate ici l'intérêt du biais, qui permet de réaliser des séparations affines de 
-l'espace des entrées et pas seulement des fonctions linéaires.
+                On constate ici l'intérêt du biais, qui permet de réaliser des séparations affines de l'espace des entrées et pas seulement des fonctions linéaires.
 
                 \begin{figure}
                     \begin{center}
@@ -245,15 +172,9 @@ l'espace des entrées et pas seulement des fonctions linéaires.
                     \caption{Intérêt de l'introduction d'un biais.}
                 \end{figure}
 
-                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de 
-l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une 
-illustration.\\
+                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
 
-                Il est alors nécessaire d'introduire la structure de réseau. En prennant une couche 
-d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, 
-deux et un neurone, on peut 
-contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de 
-l'espace des entrées.
+                Il est alors nécessaire d'introduire la structure de réseau. En prennant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
 
                 La séparation que l'on cherche à  effectuer est en effet de la forme:
 
@@ -267,14 +188,9 @@ l'espace des entrées.
                     \right.
                 \end{equation}\\
 
-                Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du 
-réseau au problème traité.\\
+                Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du réseau au problème traité.\\
 
-                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de 
-poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et 
-complexes. Ainsi, un réseau 
-sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du 
-sur-apprentissage. On a donc environ la loi suivante:
+                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
                 \begin{equation}
                     N<\frac{1}{10}*T*dim(s)
                 \end{equation}
@@ -284,11 +200,9 @@ sur-apprentissage. On a donc environ la loi suivante:
                     \item $s$ est le vecteur de sortie.
                 \end{itemize}
 
-                De plus, le nombre de neurones dans une couche doit être de moins de trois fois celui 
-de la couche précédente.\\
+                De plus, le nombre de neurones dans une couche doit être de moins de trois fois celui de la couche précédente.\\
 
-                Ces deux approximations donnent donc une première idée de la structure à  adopter pour 
-un réseau de neurones.
+                Ces deux approximations donnent donc une première idée de la structure à  adopter pour un réseau de neurones.
 
 
 
@@ -296,70 +210,38 @@ un réseau de neurones.
 
             \section{L'objectif des algorithmes d'apprentissage}
 
-                L'objectif des algorithmes d'apprentissage est simple : optimiser les poids du réseau 
-de neurones afin qu'il "apprenne".
+                L'objectif des algorithmes d'apprentissage est simple : optimiser les poids du réseau de neurones afin qu'il "apprenne".
 
-                Les poids sont en effet la seule variable disponible après avoir définit 
-l'architecture du réseau (il existe des algorithmes permettant de modifier 
-l'architecture durant l'apprentissage mais on ne les 
-étudiera pas ici). On va donc les modifier progressivement, après avoir présenté au réseau un nombre 
-fixé d'exemples, afin que le réseau réagisse au mieux au stimulations qui lui sont présentées.\\
+                Les poids sont en effet la seule variable disponible après avoir définit l'architecture du réseau (il existe des algorithmes permettant de modifier l'architecture durant l'apprentissage mais on ne les étudiera pas ici). On va donc les modifier progressivement, après avoir présenté au réseau un nombre fixé d'exemples, afin que le réseau réagisse au mieux au stimulations qui lui sont présentées.\\
 
                 Il existe en réalité deux types d'algorithmes d'apprentissage.\\
 
-                Le premier cas est celui de l'apprentissage supervisé. Il nécessite de connaître 
-"l'étiquette" des exemples entrés dans le réseau pour effectuer l'apprentissage.
+                Le premier cas est celui de l'apprentissage supervisé. Il nécessite de connaître "l'étiquette" des exemples entrés dans le réseau pour effectuer l'apprentissage.
 
-                On observe ainsi quelle est la réponse proposée par le réseau après propagation de 
-l'entrée et on la compare à l'étiquette, correspondant à la réponse attendue. On peut 
-alors "récompenser" les 
-comportements positifs en renforçant les connections mises en jeu lors de cette propagation, ou 
-"punir" les mauvais comportements en affaiblissant ces dernières.
+                On observe ainsi quelle est la réponse proposée par le réseau après propagation de l'entrée et on la compare à l'étiquette, correspondant à la réponse attendue. On peut alors "récompenser" les comportements positifs en renforçant les connections mises en jeu lors de cette propagation, ou "punir" les mauvais comportements en affaiblissant ces dernières.
 
-                On s'appuie alors sur une classification a priori des données : les classes sont crées 
-par le concepteur du problème et du réseau. Cela est à double tranchant. En effet, les 
-classes choisies seront a 
-priori plus pertinente vis-à-vis du résultat attendu  mais pas nécessairement vis-à-vis des données et 
-de la structure du réseau.\\
+                On s'appuie alors sur une classification a priori des données : les classes sont crées par le concepteur du problème et du réseau. Cela est à double tranchant. En effet, les classes choisies seront a priori plus pertinente vis-à-vis du résultat attendu  mais pas nécessairement vis-à-vis des données et de la structure du réseau.\\
 
-                Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce 
-genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En 
-pratique cela se manifeste 
-par l'absence d'étiquettes dans les bases d'apprentissage.
+                Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En pratique cela se manifeste par l'absence d'étiquettes dans les bases d'appentissage.
 
-                Ce genre d'apprentissage revient plus ou moins à mettre en concurrence les différentes 
-classes de données à chaque présentation d'exemple. Ainsi, la classe qui correspond la 
-mieux à l'entrée devient 
-la sortie et la classe est modifiée pour ressembler encore plus à l'entrée qui a permis l'activation.
+                Ce genre d'apprentissage revient plus ou moins à mettre en concurrence les différentes classes de données à chaque présentation d'exemple. Ainsi, la classe qui correspond la mieux à l'entrée devient la sortie et la classe est modifiée pour ressembler encore plus à l'entrée qui a permis l'activation.
 
-                Au final, dans ce cas, la définition de chaque classe n'est pas explicite : c'est le 
-réseau qui détecte lui même une structure de classe et il l'amplifie durant 
-l'apprentissage afin d'améliorer la 
-classification qu'il a détecté. Les classes ne sont alors pas forcément celles que l'on attend mais 
-plutôt les classes les plus "naturelles" étant données la base d'apprentissage et l'architecture du 
-réseau. En ce sens les algorithmes d'apprentissage s'approchent de la notion de "clustering".
+                Au final, dans ce cas, la définition de chaque classe n'est pas explicite : c'est le réseau qui détecte lui même une structure de classe et il l'amplifie durant l'apprentissage afin d'améliorer la classification qu'il a détecté. Les classes ne sont alors pas forcément celles que l'on attend mais plutôt les classes les plus "naturelles" étant données la base d'apprentissage et l'architecture du réseau. En ce sens les algorithmes d'apprentissage s'approchent de la notion de "clustering".
 
 
             \section{La méthode de rétropropagation du gradient}
 
-                La rétropropagation du gradient correspond à une descente de gradient dans l'espace 
-des poids.\\
+                La rétropropagation du gradient correspond à une descente de gradient dans l'espace des poids.\\
 
-                Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité 
-dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones 
-sont ainsi corrigés en 
-fonction de cette responsabilité.
+                Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones sont ainsi corrigés en fonction de cette responsabilité.
+                \section{test}
 
 
                 \subsection{Initialisation des poids}
 
-                    Les valeurs sont initailisées au départ de manière aléatoire,avec des valeurs 
-centrées en 0.
+                    Les valeurs sont initailisées au départ de manière aléatoire,avec des valeurs centrées en 0.
 
-                    Le choix de l'intervalle possible est très important : un intervalle trop petit va 
-beaucoup ralentir l'apprentissage tandis qu'un intervalle trop grand donne des 
-données trop éparses qui rendent 
-plus difficile l'apprentissage.
+                    Le choix de l'intervalle possible est très important : un intervalle trop petit va beaucoup ralentir l'apprentissage tandis qu'un intervalle trop grand donne des données trop éparses qui rendent plus difficile l'apprentissage.
 
                     Ainsi, l'intervalle choisi est les suivant:
 
@@ -372,29 +254,21 @@ plus difficile l'apprentissage.
 
                 \subsection{Calcul des variations de poids}
 
-                    Les exemples sont présentés consécutivement au perceptron, et à chaque nouvel 
-exemple on calcul les nouvelles variations de poids.\\
+                    Les exemples sont présentés consécutivement au perceptron, et à chaque nouvel exemple on calcul les nouvelles variations de poids.\\
 
-                    Une fois l'enrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. 
-Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire 
-entre les poids $w$ et les entrées 
-$x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
+                    Une fois l'enrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire entre les poids $w$ et les entrées $x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
 
                     \begin{equation}
-                        \forall i, e_{i}^{sortie} = 
-f'(h_{i}^{sortie})*(y_{i}^{theorique}-y_{i}^{obtenue})
+                        \forall i, e_{i}^{sortie} = f'(h_{i}^{sortie})*(y_{i}^{theorique}-y_{i}^{obtenue})
                     \end{equation}
 
-                    On propage ensuite l'erreur de la couche $n$ vers la couche $n-1$ en assignant à 
-chaque neurone sa responsabilité dans l'erreur commise $e^{sortie}$:
+                    On propage ensuite l'erreur de la couche $n$ vers la couche $n-1$ en assignant à chaque neurone sa responsabilité dans l'erreur commise $e^{sortie}$:
 
                     \begin{equation}
                         \forall j, e^{(n-1)}_{j} = f'(h_{j}^{(n-1)})*\sum_{k} w_{i,j}*e_{i}^{(n)}
                     \end{equation}
 
-                    Une fois le calcul de l'erreur retropropagé pour toutes les couches du réseau, il 
-ne reste plus qu'à assigner les différentes variations de poids selon un taux 
-d'apprentissage $\lambda$:
+                    Une fois le calcul de l'erreur retropropagé pour toutes les couches du réseau, il ne reste plus qu'à assigner les différentes variations de poids selon un taux d'apprentissage $\lambda$:
 
                     \begin{equation}
                         \Delta w_{i,j}^{(n)} = \lambda e_{i}^{(n)}x_{j}^{(n-1)}
@@ -403,29 +277,128 @@ d'apprentissage $\lambda$:
 
                 \subsection{Potentielle modification de l'algorithme}
 
-                    L'une des modifications possibles de cet algorithme est l'ajout d'une inertie à la 
-modification des poids.\\
+                    L'une des modifications possibles de cet algorithme est l'ajout d'une inertie à la modification des poids.\\
 
                     La variation de poids devient alors:
 
                     \begin{equation}
-                        \Delta w_{i,j}^{(n)}(t) = \lambda e_{i}^{(n)}x_{j}^{(n-1)} + \alpha \Delta 
-w_{i,j}^{(n)}(t-1)
+                        \Delta w_{i,j}^{(n)}(t) = \lambda e_{i}^{(n)}x_{j}^{(n-1)} + \alpha \Delta w_{i,j}^{(n)}(t-1)
                     \end{equation}
 
-                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle 
-[0;1] et ajoute ainsi une influence des vrariations de poids précédentes sur les 
-variations de poids actuelles.\\
+                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des vrariations de poids précédentes sur les variations de poids actuelles.\\
 
-                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans 
-des configurations plus optimales. Cela peut aussi accélerer la convergence de 
-l'apprentissage si le coefficient 
-$\alpha$ est bien choisit.
+                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélerer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
 
 
         \chapter{Influence des paramètres sur l'apprentissage.}
 
 
+\section{Paramètres perceptron}
+
+\subsection{la méthode de la quantité de mouvement}
+La méthode de la quantité de mouvement est une méthode utile pour éviter que l'algorithme de backpropagation ne tombe dans un minimal local et n'en sorte pas. Un apprentissage efficace passera le minimum local et doit converger vers les poids idéaux de toutes les synapses pour que le réseau fasse le moins d'erreur possible. Cette méthode est donc parfois nécessaire pour améliorer les performances d'apprentissage du réseau. Cependant, elle ne devra pas être trop élevé afin de ne pas causer de trop grandes oscillations de valeur qui rendront la convergence impossible.
+L'équation d'update des poids est la suivante:
+\begin{equation}
+\Delta w_{ij}[n]= \Delta w_{ij}[n]+ \alpha \Delta w_{ij}[n-1]
+\end{equation}
+
+
+
+ Ici l'étude de cette méthode n'a pas été étudiée, néanmoins, il reste la possibilité dans notre code de pouvoir modifier la valeur du facteur $\alpha$ qui correspond à la variable \texttt{momentumfactor} 
+ 
+ 
+ \subsection{le learning rate}
+ Le learning rate est le paramètre qui va le plus déterminer la tendance ou non d'un perceptron d'évoluer en fonction des exemples que l'on va lui mettre en entrée. Plus le learning rate sera grand, plus les poids des 
+synapses vont évoluer de façon rapide. Encore une fois il y a un compromis à faire entre vitesse d'apprentissage et la stabilité d'apprentissage. Dans notre code, nous avons choisi un learning rate de 0,1 qui semble être un bon compromis.
+
+\newpage
+\subsection{Structure du réseau}
+
+\paragraph{Perceptron optimum dans notre cas}
+
+Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données Mnist, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1 pourcent et de 2.6 pourcents en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes_error_longue.jpg} 
+		\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnist nombre d'exemples vs pourcentage d'erreurs}
+	\end{center}
+\end{figure}
+
+
+On peut s'apercevoir que l'erreur de learning continue légèrement à décroite tandis que l'erreur de test qui elle ne dimunie plus et sature très vite à partir de 600.000 exemples. On peut confirmer cette impression par le graphe de l'erreur quadratique de test et de learning où le même phénomène se reproduit plus clairement.
+(Voir figure 2)  
+
+
+\begin{figure}[!h]
+	\begin{center}
+	\includegraphics[width=17cm,height=10cm]{Images/courbes_quaderror_longue.jpg} 
+	\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnistnombre d'exemples vs erreur quadratique} 
+	\end{center}
+\end{figure}
+
+\newpage
+\paragraph{étude de la vaiation de la structure}
+Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisament bon en termes de rapidité de calcul mais ce perceptron reste à 3.4 pourcents d'errurs en test soit près de 1 pourcent de plus qu'un perceptron à 3 couches (voir figure 3). Nous avons aussi essayer un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats pas suffisament intéressant pour continuer à élever le nombre de couches. 
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes2couches.jpg} 
+		\caption{Control with both motors(100$\%$-100$\%$)} 
+	\end{center}
+\end{figure}
+
+\newpage
+En revenant au perceptron à 3 couches et vu que le nombre de neurones d'entrée et le nombre de neurones de sorties sont fixés par le problème  :
+\begin{itemize}
+\item 784 neurones d'entrées vu que c'est le nombre de pixel d'un image de la librairie mnist.
+\item 10 neurones de sorties vu que c'est le nombre de classes.
+
+
+Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de learning au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu' à la fin plus la courbe à de neurones intermédiaires, meilleur est le taux d'erreur. L'erreur du perceptron avec 50 neurones est le plus élevé même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires à le meilleur taux d'erreur mais pour un temps de calcul accrus. On gardera donc celui avec 90 neurones intermédiaires au vu du fait qu'avec une intialisation plus favorable fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
+\end{itemize}
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes3couche.jpg} 
+		\caption{Pourcentage d'erreurs de learning pour 3 couches intermédiaires différentes.}
+	\end{center}
+\end{figure}
+
+Il est donc à noter que plus on augmente le nombre de neurones par rapport à la loi géométrique déterminée précédemment, plus on augmente le temps de calcul sans améliorer nécessairement les résultats. Tandis que si on diminue le nombre de neurones intermédiaires en dessous de 50, plus on dégrade nos résultats, ce qui est forcément peu à notre avantage.
+
+\newpage
+\paragraph{}
+On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus au moins simulaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que au fur et à mesure de l'apprentissage l'erreur de test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter plus visiblement alors que celle de learning reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes3couches50.jpg} 
+		\caption{pourcentage d'erreur de learning(bleu) et de test(orange) lors de l'apprentissage} 
+	\end{center}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes3couches50_quaderror.jpg} 
+		\caption{erreur quadratique de learning(bleu) et de test(orange) lors de l'apprentissage}  
+	\end{center}
+\end{figure}
+
+\paragraph{étude supplémentaire possible}
+
+Une étude statistique de l'apprentissage aurait pu être intéressane, malheureusement le temps nous a manqué pour la réaliser. A la figure 7, on peut apercevoir une courbe moyennés sur 4 trajectoires de l'apprentissage de notre perceptron. A partie d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiances, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=17cm,height=10cm]{Images/courbes_moyennes.jpg} 
+		\caption{Courbes du pourcentage d'erreurs de test et de learning moyennés sur 4 éxecutions} 
+	\end{center}
+\end{figure}
+
+
+
+
+
+
+\newpage
 
 
     \part[Machines de Boltzmann]{Approfondir le sujet : les machines de Boltzmann.}
@@ -452,7 +425,7 @@ $\alpha$ est bien choisit.
             Hinton(2006). Nous allors présenter dans cette partie leur constitution et
             leurs fonctionnement.
 
-            \section{Éléments de preuve et présentation}
+            \section{Principe}
 
                 Les RBM sont des réseaux neuronaux qui donnent une
                 probabilité d'activation de chaque neurone.\\
@@ -462,14 +435,14 @@ $\alpha$ est bien choisit.
                 La couche visible correspond à l'entrée de notre réseau, ce sont
                 les neurones de la couche d'entrée. On va leur assigner les
                 valeurs des exemples de notre jeu de données pour entrainer le
-                réseau.
+                réseau.\\
 
                 Au sein d'une même couche, aucun neurone n'est relié à un
                 autre, c'est ce caractère restreint qui donne sa particularité 
                 et son nom à ce type de réseau de Boltzmann.
                 Cependant, chaque neurone de la couche visible (respectivement
                 cachée) est connecté à tous les neurones de la couche cachée 
-                (respectivement visible).\\
+                (respectivement visible). 
                 
                 On forme alors un graphe, non orienté, qui est un
                 modèle de la distribution de probabilité. Chaque neurone est une variable aléatoire
@@ -479,147 +452,25 @@ $\alpha$ est bien choisit.
                 sont indépendantes.
                 
                 La probabilité qu'un neurone \begin{math}v_{i}\end{math} de la
-                couche visible soit activé est \begin{equation}p( v_{i} =1 \mid H) = 
-\sigma(\sum_{j=1}^{m} w_{i,j} * h_{j} + b_{i}) \end{equation}
-
-				En notant \textit{$w_{i}$} le poids de la synapse reliant les neurones \textit{$v_{i}$} 
-à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.\\
-        
-					Puisque la probabilité  d'activation du neurone \textit{$v_{i}$} d'une couche dépend 
-uniquement de la valeur des états des neurones de l'autre couche et uniquement au 
-moment où l'on souhaite 
-échantillonner, l'ensemble des probabilité d'activation des neurones aux instants \textit{t} forme 
-un champ de Markov en prenant pour variable aléatoire de Markov la valeur de l'état des neurones.\\
-
-	     On introduit maintenant l'échantillonnage de Gibbs, qui est un
+                couche visible soit activé est 
+                On introduit maintenant l'échantillonage de Gibbs, qui est un
                 algorithme de la classe des Metropolis-Hasting. Cet algorithme
-                est un Monte-Carlo qui permet d'échantillonner un probabilité jointe dont l'idée principale
-                est d'échantillonner les états des variables en se basant sur la valeur des états
-                des autres variables grâce à la probabilité conditionnelle qui les relie. C'est une marche aléatoire sur les chaînes de Markov.
-Les neurones d'une même couche sont indépendants on peut donc mettre à jour une couche 
-entière d'un coup ce qui rend l'échantillonnage plus rapide et plus simple à réaliser. \\
+                est un Monte Carlo d'une chaine de Markov dont l'idée principale
+                est d'échantillonner les variables en se basant sur la valeur
+                des autres variables. C'est une marche aléatoire sur les chaînes
+                de Markov.
 
-Par ailleurs on peut démontrer que tout les neurones peuvent prendre les valeur 0 ou 1
- en un seul échantillonnage et que toutes les combinaisons d'état des neurones de la RBM 
-sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. Par ailleurs la la chaîne de Markov est apériodique. 
-Ces deux propriété d'apériodicité et de irréductibilité permettent de prouver que le RBM
- possède une distribution stationnaire vers laquelle elle converge. 
+                A expliquer : MRF et les propriété --> chaine de Markov
+                Particularité et donc convergence --> contrastive divergence.
 
-Une preuve plus rigoureuse à été proposé par Fischer et Igel (\textit{An Introduction to Restricted Boltzmann Machines} (2012).\\
-
- La particularité de ce réseau est donc le fait qu'il n'est pas
+                La particularité de ce réseau est donc le fait qu'il n'est pas
                 \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
-                réseau, le réseau arrive à une distribution stationnaire qu'après des allers-retours (c'est-à-dire des échantillonnage) entre
-les deux couches.
-
-\section{Loi d'apprentissage}
-
-Pour faire l'apprentissage, on va entraîner le réseau sur les différents exemple, la première différence avec l'implémentation du perceptron est
-que l'on va  échantillonner les états des neurones à chaque fois, on travaille avec des données binaires et non réelles, nous avons décidé 
-d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel n'était pas blanc.
-On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire de probabilité
- qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
-\begin{figure}[!h]
-                    \begin{center}
-                        \includegraphics[width=200pt]{Images/Gibbs.png}
-                    \end{center}
-                    \caption{Pas de Gibbs}
-\end{figure}\\
-
-Une fois la distribution stationnaire atteintes on obtient deux ensembles de valeurs : l'état des couches \textit{V} et  \textit{H}
-qui correspond à l'\textit{input}, que l'on peut appeler \begin{math}<v_{i}h_{j}>_{data}\end{math} ou \begin{math}<v_{i}^{0}h_{j}^{0}>\end{math}, et l'état des couches \textit{V} et  \textit{H} une fois la distribution stationnaire atteinte notée \begin{math}<v_{i}h_{j}>_{model}\end{math} ou \begin{math}<v_{i}^{\infty}h_{j}^{\infty}>\end{math}. A partir de ces deux distribution, on peut modifier les poids et les biais du réseau selon la loi :
-                \begin{equation}
-                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
-                \end{equation}
-                où \begin{math}\alpha\end{math} est le \textit{learning rate}\\
-
-                Un point critique de l'implémentation d'une RBM est comme bien souvent la loi 
-d'apprentissage.
-                Si l'on trouve dans la littérature plusieurs solutions, la forme générale du calcul 
-est celle présentée ci-dessus.\\
-
-                Dans ce calcul, on distingue l'échantillonnage de la machine à partir des données 
-(data), de l'échantillonnage de la machine après la reconstruction par pas de Gibbs, 
-\begin{math}<v_{i}h_{j}>_{model}\end{math}.\\
-                
-                Pour extraire des informations à partir de l'\textit{input}, il est important de ne 
-pas reconstruire les deux couches depuis les \textit{inputs}.
-                Ainsi le calcul du produit \begin{math}<v_{i}h_{j}>_{data}\end{math} s'obtient par 
-l'état de l'entité visible \begin{math}v_{i}\end{math} et l'évaluation de l'entité 
-cachée sous forme réelle 
-: \begin{math}p(h_{j}|v^{(0)})\end{math}.\\
-
-Une chaîne de Markov peut prendre du temps à converger et dans le cas des RBM qui peuvent 
-avoir plusieurs centaines de neurones par couche, les pas de Gibbs, c'est-à-dire l'échantillonnage
- des états des neurones au sein d'une même couche, peut être très calculatoire. Il est alors proposé par 
-Hinton en 2006 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
- fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
-méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).
-Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
+                réseau.
 
 
-
-
-
-
-
-                				
+				
 
         \chapter{Les Deep Belief Networks}
-
-
-	\section{Principe des Deep Boltzmann Machines}
-
-		Nous avons présenté dans le chapitre précédent les \textit{restricted boltzmann machines} avec leur utilisation parallélisée. 
-		Nous verrons dans ce chapitre une nouvelle façon d'utiliser ses machines, en série. Après la description d'une configuration intéressante pour l'apprentissage, nous présenterons nos résultats obtenus sur la base MNIST.\\
-
-
-		En effet, le concept de \textit{Deep Boltzmann Machine}(DBM) repose sur l'utilisation en cascade des RBM(figure 6.1). La couche cachée de la première machine correspond à la couche visible de la suivante, et ainsi de suite. Nous avons vu qu'une RBM permet l'extraction des informations pertinentes de l'\textit{input}, ainsi l'intérêt majeur de cette structure est l'extraction successive des \textit{features} de l'\textit{input}, afin d'obtenir une identification de plus en plus fine.
-
-                \begin{figure}
-                    \begin{center}
-                        \includegraphics[width=200px]{Images/DBN.png}
-                    \end{center}
-                    \caption{Mise en cascade des RBM.}
-                \end{figure}
-
-
-	\section{Spécificité de l'apprentissage}
-
-
-		L'apprentissage d'une DBM se fait en deux étapes: d'abord non supervisé puis supervisé.
-		Contrairement au perceptron présenté précédemment, nous ne disposons pas pour une \textit{Deep Boltzmann Machine} d'une sortie nous donnant le label attendu. Il est donc nécessaire d'ajouter au bout des machines de 					Boltzmann en cascade une ou plusieurs\textit{ layers} en \textit{feed-forward} menant vers une \textit{output layer} de 10 neurones.\\
-
-L'apprentissage non-supervisé est destiné à entraîner les machines de Boltzmann. Pour se faire, il s'agit de faire l'apprentissage sur la première machine isolément, puis construire la couche cachée de la machine avec un pas de Gibbs depuis l'input. Ainsi, on obtient l'input nécessaire à l'apprentissage pour la machine suivante, et par itérations successives, il est possible de faire l'apprentissage sur toutes les machines.\\
-
-L'apprentissage supervisé fait office de \textit{fine-tuning}: il entraîne le perceptron situé à la fin de la chaîne, après les machines de Boltzmann. Il s'opère par rétro-propagation, dont nous avons décrit plus haut le fonctionnement.
-
-
-		\section{Résultats}
-
-	
-Le réseau que nous avons entraîné sur la base MNIST avait une configuration comportant 5 layers, dont l'output layer. Les entités sont réparties en 784, 500, 500, 2000 et enfin 10 entités, soit 3 RBM et 1 perceptron à deux couches.\\
-
-Les paramètres choisis sont les suivants:\\
-
-\begin{tabular}{ll}
-   \textit{Learning rate}: &0.1\\
-	\textit{Gibbs steps}: & 2\\
-	\textit{Number of sets of training}:& 5 (soit 300.000 exemples)\\
-\end{tabular}\\
-
-Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exception des biais de l'\textit{input layer}, initialisés à \begin{math}log[p_{i}/(1 - p_{i}]\end{math}, avec \begin{math}p_{i}\end{math} la proportion d'\textit{inputs} pour lesquels l'entité visible \begin{math}v_{i}\end{math} est activée.\\
-
-Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesure de l'apprentissage et sur une partie d'exemples de test. Les résultats figurent sur la figure 6.2.
-
-                \begin{figure}
-                    \begin{center}
-                        \includegraphics[width=450px]{Images/courbeDBM.jpg}
-                    \end{center}
-                    \caption{Courbe d'apprentissage de la Deep Boltzmann Machine.}
-                \end{figure}
-
-On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide initialement, puis qui tend à diminuer après quelques époques. L'allure est conforme au résultat attendu, même si on l'on aurait pu souhaiter une meilleure convergence.
 
 
 
@@ -627,151 +478,65 @@ On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide
 
             \section{La visualisation des spectres du réseau}
 
-\subsection{Cas de la RBM}
+                Lors du développement de la RBM, nous avons étés confrontés au problème de la quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux exemples qu'on lui a présenté ?\\
 
-                Lors du développement de la RBM, nous avons étés confrontés au problème de la 
-quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux 
-exemples qu'on lui a présenté ?\\
+                Suite à l'absence de réelle mesure de cette notion, l'idée nous est venue d'implémenter une mesure bien plus qualitative du phénomène : l'objectif était de visualiser l'importance que le réseau accorde à chaque pixel de l'image.\\
 
-                Suite à l'absence de réelle mesure de cette notion, l'idée nous est venue 
-d'implémenter une mesure bien plus qualitative du phénomène : l'objectif était de 
-visualiser l'importance que le réseau 
-accorde à chaque pixel de l'image.\\
-
-                Dans le cas de la RBM, cela correspond tout simplement à l'ensemble des pondérations 
-des connections entre la couche visible et la couche cachée du réseau. Ainsi, à chaque 
-neurone de la couche cachée, 
-on peut associer une image correspondant aux dites pondérations. Ce sont ces images que l'ont qualifie 
-de "spectres".
+                Dans le cas de la RBM, cela correspond tout simplement à l'ensemble des pondérations des connections entre la couche visible et la couche cachée du réseau. Ainsi, à chaque neurone de la couche cachée, on peut associer une image correspondant aux dites pondérations. Ce sont ces images que l'ont qualifie de "spectres".
 
                 \begin{figure}
                     \begin{center}
-                        \includegraphics[width=150pt]{Images/filters-01.png}
+                        \includegraphics[width=200pt]{Images/filters-01.png}
                     \end{center}
                     \caption{Spectre d'une RBM entraînée à vingt neurones cachés.}
                 \end{figure}
 
-                Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans 
-une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche 
-cachée, ces caractéristiques 
-sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de 
-nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du 
-caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A 
-contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la 
-forme 
-"usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la 
-représentation d'un chiffre idéal pour ce réseau.\\
+                Ces spectres représentent les caractéristiques que le réseau essaie de détecter dans une image pour y reconnaître un caractère. Selon le nombre de neurones dans la couche cachée, ces caractéristiques sont assez différentes. En effet, plus il y a de neurones cachés, plus le réseau pourra détecter de nombreuses caractéristiques précises, qui une fois assemblées formeront la représentation du caractère complet. Ces caractéristiques peuvent être, par exemple, des angles ou des boucles. A contrario, quand le réseau a peu de neurones cachés, ces spectres sont beaucoup plus proches de la forme "usuelle" du caractère associé. Ainsi, avec un seul neurone caché, on obtient très exactement la représentation d'un chiffre idéal pour ce réseau.\\
 
-                L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a 
-des chiffres pour juger de la qualité de l'apprentissage.
+                L'intérêt d'une telle initiative est simple : utiliser l'intuition visuelle qu'on a des chiffres pour juger de la qualité de l'apprentissage.
 
-                \begin{figure}
-                    \begin{center}
-                        \includegraphics[width=75pt]{Images/spectres-01.png}
-                    \end{center}
-                    \caption{Spectre d'une RBM ayant apprise la "forme" 4.}
-                \end{figure}
+                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
 
-                Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est 
-une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera 
-au négatif d'un des 
-exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).\\
+\section{Discrimination grâce aux RBM}
 
-Pour faire cette visualisation, on cherche uniquement à connaître les neurones qui activent le neurone de la couche caché. 
-Une méthode de visualisation serait donc de chercher les valeurs binaires  des neurones de la couche visible pour 
-activer le neurone désiré. Puisque le réseau n'est pas orienté, on peut directement affecter la valeur 1 au neurone \textit{$h_{j}$} 
-de la couche caché qui correspond au filtre que l'on veut voir et 0 aux autres. On fait alors un pas de Gibbs vers la couche visible. Pour obtenir un meilleur résultat, 
-on peut directement travailler avec la valeur de la sigmoïde des neurones de la couche visible.
+La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données Mnist, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
 
-\subsection{Cas du DBN}
+\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendemment les unes des autres. c'est à dire que chaque RBM ne sera entrainé que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
 
-Dans le cas du DBN, il est plus compliqué d'obtenir une image du fait de l'architecture profonde. On va donc choisir le neurone de la couche dont  on veut observer le filtre ou ce qu'on pourrait appeler la carte d'activation. Pour cela on assigne la valeur 0 à tout les neurones du réseau et on va faire un unique pas de Gibbs jusqu'à la couche d'entrée du réseau en échantillonnant la valeur des neurones des couches par lesquelles on passe.\\
-
-Cette méthode a donc un inconvénient : on a une chance de perdre de l'information. Nous avons alors testé deux options : la première est de changer la nature du réseau et de travailler avec les probabilités comme valeur de l'état du réseau. Cette méthode n'a pas été concluante. Nous sommes alors venus à considérer une autre méthode, dans l'esprit du réseau. \\
-
-Cette méthode est la suivante : on initialise les valeurs des neurones du réseau entraîné à 0 sauf pour le filtre que l'on souhaite visualiser qui est à l'état 1. On va ensuite effectuer plusieurs pas de Gibbs au sein de la \textbf{même} RBM. Ainsi on va obtenir une distribution des états qui correspond à l'activation du filtre désiré mais aussi d'autres filtres. Ce procédé permet de réduire le nombre de neurones de la couche précédente qui ne serait pas dan l'état voulu. On procède ainsi jusqu'à la première RBM où l'on utilise la méthode exposée dans la partie correspondante.\\
-
-Cette méthode est simplement expérimentale mais produit des résultats plus probant. Dans la littérature les méthodes de visualisation sont peu détaillées mais semble être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est à dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
+\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exmple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.
 
 
 
+\subsection{Résultats}
+
+Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courbe de l'erreur de learning en fonction du learning rate. On a éxécuter 20 fois le programme pour un learning rate donné. On obtient la courbe à la figure 8
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
+		\caption{erreur de learning en fonction du learning rate} 
+	\end{center}
+\end{figure}
+
+On aperçoit donc un plateau aux alentours des 42 pourcents au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25 pourcents d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.
 
     \appendix
 
-        \chapter{La base MNIST}
+        \chapter{La base MNIST.}
 
-            \section{Présentation de la base de donées}
+        \chapter{Présentation du code.}
+        
+\section{Code du perceptron}
 
-                La base de données MNIST, Mixed Mixed National Institute of Standards and Technology, 
-est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. Lea base 
-est organisée de la manière 
-suivante:
+\paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur Mnist d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int
 
-                \begin{itemize}
-                    \item La base d'apprentissage est constituée de 60000 images.
-                    \item La base de test est conctituée de 10000 images.
-                    \item Chaque image est constituée de 28*28 pixels en nuances de gris.
-                    \item Chaque image est normalisée.\\
-                \end{itemize}
+\paragraph*{la classe Perceptron} Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défault. Il est à noté que un perceptron ne peut par marcher si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
 
-                Cette base est aujourd'hui devenue une référence permettant de tester les algorithmes 
-d'apprentissages ou de reconnaissance de forme divers et variés. Cet aspect facilite 
-ainsi la comparaison de nos 
-résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\
+\paragraph*{Pour faire passer un exemple:} Il suffit d'utiliser la fonction \texttt{public void setNormalizedInputs (double[] x, double max)} pour mettre les entrées normalisées à l'entrée du perceptron puis d'utiliser la fonction \texttt{fire} pour calculer les sorties liées à l'exemple.
 
-                On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}
+\paragraph*{Pour l'apprentissage: } Il suffit de lancer la fonction \texttt{public void launch(NeuralNetwork N, double learningRate, Input I)} de la classe BackPropagation sur le perceptron N, pour un learningRate donné, l'apprentissage se fesant sur l'input I.  
 
-                \begin{figure}
-                    \begin{center}
-                        \includegraphics{Images/mnist-01.png}
-                    \end{center}
-                    \caption{Exemples de chiffres de la base de donnée MNIST.}
-                \end{figure}
-
-
-            \section{Limites de cette base}
-
-                Cette base, malgré tous ses avantages, n'est cependant pas parfaite.\\
-
-                En effet, une première limite apparaît assez rapidement quand on travaille avec MNIST 
-: cette base n'est pas "universelle". Les caractères utilisés dans la base de donnée 
-sont fortement connotés 
-anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos RBM.
-
-                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il 
-s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
-
-                \begin{figure}
-                    \centering
-                    \begin{subfigure}[b]{0.3\textwidth}
-                        \centering
-                        \includegraphics{Images/mnist-02.png}
-                        \caption{"1" en français}
-                    \end{subfigure}
-                    \hfill
-                    \begin{subfigure}[b]{0.3\textwidth}
-                        \centering
-                        \includegraphics{Images/mnist-03.png}
-                        \caption{"1" anglosaxon}
-                    \end{subfigure}
-                    \caption{Exemple d'une situation de litige entre notation anglosaxone et française.}
-                \end{figure}
-
-                Une autre limite apparaît aussi : c'est celle de la simplicité de la base de donnée.
-
-                La reconnaissance de caractères est en effet une tâche simpliste en comparaison avec 
-certains des problèmes auxquels peuvent être confrontés les réseaux issus du deep 
-learning. Cela se constate par 
-les résultats très bons obtenus pour des réseaux peu complexes, tel que notre perceptron qui 
-atteignait les 3\% d'erreur sur MNIST.
-
-                Il devient alors nécessaire de trouver un test plus discriminatoire de la qualité des 
-réseaux.\\
-
-                Faute de temps nous n'avons pas eu la possiblité d'approfondir ce point de vue mais 
-semble nécessaire pour tester les réseaux dans un domaine plus complexe.
-
-        \chapter{Présentation du code}
+\paragraph*{Pour déterminer la classe à laquelle appartient votre input:} Vous devez utiliser la fonction \texttt{public double[] getOutputs()} de Perceptron.java et déterminer par la méthode du maximum de vraisemblance le résultat.
 
 
 \end{document}
