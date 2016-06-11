@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=latex 2016.5.31)  11 JUN 2016 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.6)  11 JUN 2016 18:49
 entering extended mode
 **./Rapport.tex
 (Rapport.tex
@@ -508,16 +508,24 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
-File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count136
 ))
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+Package: hyperref 2016/05/21 v6.83p Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -526,8 +534,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -541,12 +549,12 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -573,63 +581,55 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen117
-\Hy@linkcounter=\count136
-\Hy@pagecounter=\count137
+\Hy@linkcounter=\count137
+\Hy@pagecounter=\count138
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count138
+\Hy@SavedSpaceFactor=\count139
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4446.
-Package hyperref Info: Link nesting OFF on input line 4451.
-Package hyperref Info: Hyper index ON on input line 4454.
-Package hyperref Info: Plain pages OFF on input line 4461.
-Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count139
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count140
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5044.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen118
-\Fld@menulength=\count140
+\Fld@menulength=\count141
 \Field@Width=\dimen119
 \Fld@charsize=\dimen120
-Package hyperref Info: Hyper figures OFF on input line 6298.
-Package hyperref Info: Link nesting OFF on input line 6303.
-Package hyperref Info: Hyper index ON on input line 6306.
-Package hyperref Info: backreferencing OFF on input line 6313.
-Package hyperref Info: Link coloring OFF on input line 6318.
-Package hyperref Info: Link coloring with OCG OFF on input line 6323.
-Package hyperref Info: PDF/A mode OFF on input line 6328.
-LaTeX Info: Redefining \ref on input line 6368.
-LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count141
-\c@Item=\count142
-\c@Hfootnote=\count143
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count142
+\c@Item=\count143
+\c@Hfootnote=\count144
 )
 
-Package hyperref Message: Driver (default): hdvips.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hdvips.def"
-File: hdvips.def 2016/05/05 v6.83n Hyperref driver for dvips
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pdfmark.def"
-File: pdfmark.def 2016/05/05 v6.83n Hyperref definitions for pdfmark specials
-\pdf@docset=\toks23
-\pdf@box=\box28
-\pdf@toks=\toks24
-\pdf@defaulttoks=\toks25
-\HyField@AnnotCount=\count144
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
 \Fld@listcount=\count145
 \c@bookmark@seq@number=\count146
 
@@ -639,7 +639,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip53
-))
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -681,16 +681,41 @@ LaTeX Font Info:    ... okay on input line 28.
 LaTeX Info: Redefining \degres on input line 28.
 LaTeX Info: Redefining \dots on input line 28.
 LaTeX Info: Redefining \up on input line 28.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count150
+\scratchdimen=\dimen128
+\scratchbox=\box28
+\nofMPsegments=\count151
+\nofMParguments=\count152
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count153
+\MPscratchDim=\dimen129
+\MPnumerator=\count154
+\makeMPintoPDFobject=\count155
+\everyMPtoPDFconversion=\toks24
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 28.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count150
+\c@section@level=\count156
 )
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
@@ -723,11 +748,16 @@ Overfull \hbox (50.80333pt too wide) in paragraph at lines 35--35
 
 [1
 
-] (Rapport.toc)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (Rapport.toc)
 \tf@toc=\write4
 \openout4 = `Rapport.toc'.
 
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40     \part
+              {Introduction} [1
 
 ] [2
 
@@ -745,21 +775,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--114
 
  []
 
+<Images/neurone-01.png, id=157, 477.9456pt x 507.8172pt>
+File: Images/neurone-01.png Graphic file (type png)
 
-! LaTeX Error: Cannot determine size of graphic in Images/neurone-01.png (no Bo
-undingBox).
+<use Images/neurone-01.png>
+Package pdftex.def Info: Images/neurone-01.png used on input line 117.
+(pdftex.def)             Requested size: 200.0pt x 212.49915pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...phics[width=200pt]{Images/neurone-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/neurone-01.png Graphic file (type eps)
-<Images/neurone-01.png>
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -771,22 +793,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--146
 
 [5
 
-] [6]
+] [6 <./Images/neurone-01.png>]
+<Images/perceptron-01.png, id=189, 757.83125pt x 476.78125pt>
+File: Images/perceptron-01.png Graphic file (type png)
 
-! LaTeX Error: Cannot determine size of graphic in Images/perceptron-01.png (no
- BoundingBox).
+<use Images/perceptron-01.png>
+Package pdftex.def Info: Images/perceptron-01.png used on input line 191.
+(pdftex.def)             Requested size: 200.0pt x 125.82262pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.191 ...cs[width=200pt]{Images/perceptron-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/perceptron-01.png Graphic file (type eps)
-<Images/perceptron-01.png>
 Underfull \hbox (badness 10000) in paragraph at lines 196--198
 
  []
@@ -806,37 +820,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--223
 
  []
 
-[7]
+<Images/xor-01.png, id=190, 456.70625pt x 456.70625pt>
+File: Images/xor-01.png Graphic file (type png)
+ <use Images/xor-01.png>
+Package pdftex.def Info: Images/xor-01.png used on input line 226.
+(pdftex.def)             Requested size: 100.37537pt x 100.37114pt.
 
-! LaTeX Error: Cannot determine size of graphic in Images/xor-01.png (no Boundi
-ngBox).
+[7 <./Images/perceptron-01.png (PNG copy)>]
+<Images/biais-01.png, id=197, 456.70625pt x 456.70625pt>
+File: Images/biais-01.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.226 ...egraphics[width=100px]{Images/xor-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use Images/biais-01.png>
+Package pdftex.def Info: Images/biais-01.png used on input line 243.
+(pdftex.def)             Requested size: 100.37537pt x 100.37114pt.
 
-File: Images/xor-01.png Graphic file (type eps)
-<Images/xor-01.png>
-
-! LaTeX Error: Cannot determine size of graphic in Images/biais-01.png (no Boun
-dingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.243 ...raphics[width=100px]{Images/biais-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/biais-01.png Graphic file (type eps)
-<Images/biais-01.png>
 Underfull \hbox (badness 10000) in paragraph at lines 248--251
 
  []
@@ -846,12 +843,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
-
+[8 <./Images/xor-01.png (PNG copy)> <./Images/biais-01.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 287--289
 
  []
@@ -918,6 +915,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 467--473
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 485--487
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 488--493
 
  []
@@ -934,12 +936,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
+<Images/Gibbs.png, id=250, 385.44pt x 145.29282pt>
+File: Images/Gibbs.png Graphic file (type png)
+ <use Images/Gibbs.png>
+Package pdftex.def Info: Images/Gibbs.png used on input line 524.
+(pdftex.def)             Requested size: 200.0pt x 75.39085pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--518
+Underfull \hbox (badness 10000) in paragraph at lines 517--528
 
  []
 
-[17]
+[17 <./Images/Gibbs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 533--535
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--540
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 541--544
 
  []
@@ -951,157 +968,227 @@ Underfull \hbox (badness 10000) in paragraph at lines 545--551
 
 [18]
 Chapitre 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--575
+
+ []
+
+<Images/DBN.png, id=262, 235.6002pt x 176.8206pt>
+File: Images/DBN.png Graphic file (type png)
+ <use Images/DBN.png>
+Package pdftex.def Info: Images/DBN.png used on input line 581.
+(pdftex.def)             Requested size: 200.75073pt x 150.66783pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
+
+ []
+
 [19
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--610
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
+
+ []
+
+<Images/courbeDBM.jpg, id=269, 1196.21906pt x 643.6547pt>
+File: Images/courbeDBM.jpg Graphic file (type jpg)
+
+<use Images/courbeDBM.jpg>
+Package pdftex.def Info: Images/courbeDBM.jpg used on input line 617.
+(pdftex.def)             Requested size: 451.68915pt x 243.03955pt.
+
+Overfull \hbox (106.68915pt too wide) in paragraph at lines 617--618
+ [] 
+ []
+
+[20 <./Images/DBN.png>] [21 <./Images/courbeDBM.jpg>]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--571
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--576
+Underfull \hbox (badness 10000) in paragraph at lines 636--640
 
  []
 
+<Images/filters-01.png, id=282, 86.724pt x 69.25874pt>
+File: Images/filters-01.png Graphic file (type png)
 
-! LaTeX Error: Cannot determine size of graphic in Images/filters-01.png (no Bo
-undingBox).
+<use Images/filters-01.png>
+Package pdftex.def Info: Images/filters-01.png used on input line 649.
+(pdftex.def)             Requested size: 150.0pt x 119.79799pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.585 ...phics[width=150pt]{Images/filters-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/filters-01.png Graphic file (type eps)
-<Images/filters-01.png>
-Underfull \hbox (badness 10000) in paragraph at lines 590--600
-
- []
-
-
-! LaTeX Error: Cannot determine size of graphic in Images/spectres-01.png (no B
-oundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.606 ...phics[width=75pt]{Images/spectres-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/spectres-01.png Graphic file (type eps)
-<Images/spectres-01.png> [20
-
-] [21]
-Annexe A.
-
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 635--639
-
- []
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 640.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (10.36465pt too wide) in paragraph at lines 640--641
-[][]\T1/cmr/m/n/10 On peut trou-ver cette base à l'adresse : [][][][] 
- []
-
-
-! LaTeX Error: Cannot determine size of graphic in Images/mnist-01.png (no Boun
-dingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.644 ...    \includegraphics{Images/mnist-01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/mnist-01.png Graphic file (type eps)
-<Images/mnist-01.png>
-Underfull \hbox (badness 10000) in paragraph at lines 652--653
+Underfull \hbox (badness 10000) in paragraph at lines 654--664
 
  []
 
 [22
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 659--661
+ <./Images/filters-01.png>]
+<Images/spectres-01.png, id=290, 28.105pt x 28.105pt>
+File: Images/spectres-01.png Graphic file (type png)
+
+<use Images/spectres-01.png>
+Package pdftex.def Info: Images/spectres-01.png used on input line 670.
+(pdftex.def)             Requested size: 75.0pt x 75.00877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--679
 
  []
 
 
-! LaTeX Error: Cannot determine size of graphic in Images/mnist-02.png (no Boun
-dingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.666 ...    \includegraphics{Images/mnist-02.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/mnist-02.png Graphic file (type eps)
-<Images/mnist-02.png>
-
-! LaTeX Error: Cannot determine size of graphic in Images/mnist-03.png (no Boun
-dingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.672 ...    \includegraphics{Images/mnist-03.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Images/mnist-03.png Graphic file (type eps)
-<Images/mnist-03.png>
-Underfull \hbox (badness 10000) in paragraph at lines 686--688
+Underfull \hbox (badness 10000) in paragraph at lines 688--689
 
  []
 
-[23]
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--691
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--693
+
+ []
+
+[23 <./Images/spectres-01.png>] [24]
+Annexe A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--721
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 722.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+<Images/mnist-01.png, id=304, 351.714pt x 233.07076pt>
+File: Images/mnist-01.png Graphic file (type png)
+
+<use Images/mnist-01.png>
+Package pdftex.def Info: Images/mnist-01.png used on input line 726.
+(pdftex.def)             Requested size: 351.71315pt x 233.07018pt.
+
+Overfull \hbox (6.71315pt too wide) in paragraph at lines 726--727
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--743
+
+ []
+
+<Images/mnist-02.png, id=305, 19.87425pt x 21.681pt>
+File: Images/mnist-02.png Graphic file (type png)
+ <use Images/mnist-02.png>
+Package pdftex.def Info: Images/mnist-02.png used on input line 748.
+(pdftex.def)             Requested size: 19.87419pt x 21.68094pt.
+
+<Images/mnist-03.png, id=306, 22.28325pt x 23.48775pt>
+File: Images/mnist-03.png Graphic file (type png)
+
+<use Images/mnist-03.png>
+Package pdftex.def Info: Images/mnist-03.png used on input line 754.
+(pdftex.def)             Requested size: 22.28317pt x 23.48767pt.
+ [25
+
+] [26 <./Images/mnist-01.png> <./Images/mnist-02.png> <./Images/mnist-03.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 768--770
+
+ []
+
+[27]
 Annexe B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 695.
-[24
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 777.
+[28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 695.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 777.
  (Rapport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 695.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 695.
-Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: A0FA07B37049B35E6E2EA904FF3B8A7E;1764.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 695.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 777.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 777.
+
+
+Package rerunfilecheck Warning: File `Rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Rapport.out':
+(rerunfilecheck)             Before: A0FA07B37049B35E6E2EA904FF3B8A7E;1764
+(rerunfilecheck)             After:  B6A575C12FB053824D92B6C03921E6F2;1988.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 777.
  ) 
 Here is how much of TeX's memory you used:
- 8315 strings out of 493336
- 120055 string characters out of 3139295
- 219475 words of memory out of 3000000
- 11714 multiletter control sequences out of 15000+200000
+ 8937 strings out of 493335
+ 129324 string characters out of 3139249
+ 223129 words of memory out of 3000000
+ 12225 multiletter control sequences out of 15000+200000
  24410 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,39p,1236b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,39p,642b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecrm0900.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ectt1000.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Christian\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Christian\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Us
+ers\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0
+700.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx1440.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Christian\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Chris
+tian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <
+C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx2488.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm1200.pk> <C:\Users\Christian\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm7.pfb>
+Output written on Rapport.pdf (29 pages, 703911 bytes).
+PDF statistics:
+ 874 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on Rapport.dvi (25 pages, 72856 bytes).

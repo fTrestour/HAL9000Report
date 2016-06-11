@@ -568,6 +568,60 @@ Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
         \chapter{Les Deep Belief Networks}
 
 
+	\section{Principe des Deep Boltzmann Machines}
+
+		Nous avons présenté dans le chapitre précédent les \textit{restricted boltzmann machines} avec leur utilisation parallélisée. 
+		Nous verrons dans ce chapitre une nouvelle façon d'utiliser ses machines, en série. Après la description d'une configuration intéressante pour l'apprentissage, nous présenterons nos résultats obtenus sur la base MNIST.\\
+
+
+		En effet, le concept de \textit{Deep Boltzmann Machine}(DBM) repose sur l'utilisation en cascade des RBM(figure 6.1). La couche cachée de la première machine correspond à la couche visible de la suivante, et ainsi de suite. Nous avons vu qu'une RBM permet l'extraction des informations pertinentes de l'\textit{input}, ainsi l'intérêt majeur de cette structure est l'extraction successive des \textit{features} de l'\textit{input}, afin d'obtenir une identification de plus en plus fine.
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=200px]{Images/DBN.png}
+                    \end{center}
+                    \caption{Mise en cascade des RBM.}
+                \end{figure}
+
+
+	\section{Spécificité de l'apprentissage}
+
+
+		L'apprentissage d'une DBM se fait en deux étapes: d'abord non supervisé puis supervisé.
+		Contrairement au perceptron présenté précédemment, nous ne disposons pas pour une \textit{Deep Boltzmann Machine} d'une sortie nous donnant le label attendu. Il est donc nécessaire d'ajouter au bout des machines de 					Boltzmann en cascade une ou plusieurs\textit{ layers} en \textit{feed-forward} menant vers une \textit{output layer} de 10 neurones.\\
+
+L'apprentissage non-supervisé est destiné à entraîner les machines de Boltzmann. Pour se faire, il s'agit de faire l'apprentissage sur la première machine isolément, puis construire la couche cachée de la machine avec un pas de Gibbs depuis l'input. Ainsi, on obtient l'input nécessaire à l'apprentissage pour la machine suivante, et par itérations successives, il est possible de faire l'apprentissage sur toutes les machines.\\
+
+L'apprentissage supervisé fait office de \textit{fine-tuning}: il entraîne le perceptron situé à la fin de la chaîne, après les machines de Boltzmann. Il s'opère par rétro-propagation, dont nous avons décrit plus haut le fonctionnement.
+
+
+		\section{Résultats}
+
+	
+Le réseau que nous avons entraîné sur la base MNIST avait une configuration comportant 5 layers, dont l'output layer. Les entités sont réparties en 784, 500, 500, 2000 et enfin 10 entités, soit 3 RBM et 1 perceptron à deux couches.\\
+
+Les paramètres choisis sont les suivants:\\
+
+\begin{tabular}{ll}
+   \textit{Learning rate}: &0.1\\
+	\textit{Gibbs steps}: & 2\\
+	\textit{Number of sets of training}:& 5 (soit 300.000 exemples)\\
+\end{tabular}\\
+
+Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exception des biais de l'\textit{input layer}, initialisés à \begin{math}log[p_{i}/(1 - p_{i}]\end{math}, avec \begin{math}p_{i}\end{math} la proportion d'\textit{inputs} pour lesquels l'entité visible \begin{math}v_{i}\end{math} est activée.\\
+
+Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesure de l'apprentissage et sur une partie d'exemples de test. Les résultats figurent sur la figure 6.2.
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=450px]{Images/courbeDBM.jpg}
+                    \end{center}
+                    \caption{Courbe d'apprentissage de la Deep Boltzmann Machine.}
+                \end{figure}
+
+On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide initialement, puis qui tend à diminuer après quelques époques. L'allure est conforme au résultat attendu, même si on l'on aurait pu souhaiter une meilleure convergence.
+
+
 
         \chapter{Aller plus loin}
 

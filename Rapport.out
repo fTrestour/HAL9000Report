@@ -14,12 +14,15 @@
 \BOOKMARK [-1][-]{part.3}{III Machines de Boltzmann}{}% 14
 \BOOKMARK [0][-]{chapter.4}{Introduction}{part.3}% 15
 \BOOKMARK [0][-]{chapter.5}{Les machines de Boltzmann restreintes}{part.3}% 16
-\BOOKMARK [1][-]{section.5.1}{\311l\351ments de preuve et fonctionnement}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{Les lois d'apprentissage}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.1}{\311l\351ments de preuve et pr\351sentation}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{Loi d'apprentissage}{chapter.5}% 18
 \BOOKMARK [0][-]{chapter.6}{Les Deep Belief Networks}{part.3}% 19
-\BOOKMARK [0][-]{chapter.7}{Aller plus loin}{part.3}% 20
-\BOOKMARK [1][-]{section.7.1}{La visualisation des spectres du r\351seau}{chapter.7}% 21
-\BOOKMARK [0][-]{appendix.A}{La base MNIST}{part.3}% 22
-\BOOKMARK [1][-]{section.A.1}{Pr\351sentation de la base de don\351es}{appendix.A}% 23
-\BOOKMARK [1][-]{section.A.2}{Limites de cette base}{appendix.A}% 24
-\BOOKMARK [0][-]{appendix.B}{Pr\351sentation du code}{part.3}% 25
+\BOOKMARK [1][-]{section.6.1}{Principe des Deep Boltzmann Machines}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.2}{Sp\351cificit\351 de l'apprentissage}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.3}{R\351sultats}{chapter.6}% 22
+\BOOKMARK [0][-]{chapter.7}{Aller plus loin}{part.3}% 23
+\BOOKMARK [1][-]{section.7.1}{La visualisation des spectres du r\351seau}{chapter.7}% 24
+\BOOKMARK [0][-]{appendix.A}{La base MNIST}{part.3}% 25
+\BOOKMARK [1][-]{section.A.1}{Pr\351sentation de la base de don\351es}{appendix.A}% 26
+\BOOKMARK [1][-]{section.A.2}{Limites de cette base}{appendix.A}% 27
+\BOOKMARK [0][-]{appendix.B}{Pr\351sentation du code}{part.3}% 28

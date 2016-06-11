@@ -18,12 +18,17 @@
 \contentsline {part}{III\hspace {1em}Machines de Boltzmann}{14}{part.3}
 \contentsline {chapter}{\numberline {4}Introduction}{15}{chapter.4}
 \contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}\IeC {\'E}l\IeC {\'e}ments de preuve et fonctionnement}{16}{section.5.1}
-\contentsline {section}{\numberline {5.2}Les lois d'apprentissage}{17}{section.5.2}
+\contentsline {section}{\numberline {5.1}\IeC {\'E}l\IeC {\'e}ments de preuve et pr\IeC {\'e}sentation}{16}{section.5.1}
+\contentsline {section}{\numberline {5.2}Loi d'apprentissage}{17}{section.5.2}
 \contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{19}{chapter.6}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{20}{chapter.7}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{20}{section.7.1}
-\contentsline {chapter}{\numberline {A}La base MNIST}{22}{appendix.A}
-\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{22}{section.A.1}
-\contentsline {section}{\numberline {A.2}Limites de cette base}{22}{section.A.2}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{24}{appendix.B}
+\contentsline {section}{\numberline {6.1}Principe des Deep Boltzmann Machines}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}Sp\IeC {\'e}cificit\IeC {\'e} de l'apprentissage}{19}{section.6.2}
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{20}{section.6.3}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{22}{chapter.7}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{22}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Cas de la RBM}{22}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Cas du DBN}{23}{subsection.7.1.2}
+\contentsline {chapter}{\numberline {A}La base MNIST}{25}{appendix.A}
+\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{25}{section.A.1}
+\contentsline {section}{\numberline {A.2}Limites de cette base}{25}{section.A.2}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code}{28}{appendix.B}
