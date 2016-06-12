@@ -481,11 +481,11 @@ sont atteignables en un nombre fini d'échantillonnage ce qui montre que la cha�
 Ces deux propriété d'apériodicité et de irréductibilité permettent de prouver que le RBM
  possède une distribution stationnaire vers laquelle elle converge. 
 
-               Une preuve plus rigoureuse à été proposé par Fischer et Igel (\textit{An Introduction to Restricted Boltzmann Machines} (2012).\\
+               Une preuve plus rigoureuse à été proposé par Fischer et Igel (\textit{An Introduction to Restricted Boltzmann Machines} (2012)).\\
 
  La particularité de ce réseau est donc le fait qu'il n'est pas
                 \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
-               réseau, le réseau arrive à une distribution stationnaire qu'après des allers-retours (c'est-à-dire des échantillonnage) entre
+               réseau, le réseau arrive à une distribution stationnaire qu'après des allers-retours (c'est-à-dire des échantillonnages) entre
 les deux couches.
 
 \section{Loi d'apprentissage}
@@ -656,11 +656,24 @@ Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courb
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
-		\caption{erreur de learning en fonction du learning rate} 
 	\end{center}
+\caption{erreur de learning en fonction du learning rate} 
 \end{figure}
 
-On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.
+On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.\\
+
+\newpage
+
+\section{Reconnaissance d'image}
+
+Dans le cadre de la présentation des projets longs, dont fait partie ce projet, aux élèves de première année, nous avons proposé une application ludique de notre code : la reconnaissance d'image. En partant de notre réseau déjà entraîné, on place en entrée une image de même type que les exemples qui ont servi à entrainer le DBN : des images de $28 \times 28$ pixel en niveaux de gris. Ces images sont tracées à l'aide de l'application Paint avec un pinceau de taille 1. En utilisant une dalle tactile, on peut obtenir des exemples de chiffres proches de ceux qu'aurait tracé la même personne avec un stylo.\\
+Proposer de nouveaux exemples au réseau est une manière de le tester et de prendre connaissance des limites de l'entraînement : si la base de données est peu importantes, les résultats sur des exemples qui n'ont pas été traités comme ceux des ensembles d'apprentissage ou de test vont être peu probant.\\
+
+Les résultats n'ont pas été très concluant, le réseau a montré des difficultés à reconnaître des chiffres pourtant pu ambigus. En observant les erreurs, on a pu s'apercevoir que certaines de ces erreurs sont dues à la base de données. Parmi ces erreurs on a mettre en avant le fait que des pays différents peuvent avoir des graphies bien distinctes sur certains chiffres comme les 1 ou les 7. Cet aspect est aussi développé dans l'annexe A.\\
+
+Une autre limitation pour cette application est aussi apparue : les exemples tracés à la main étaient parfois trop différents de ceux des ensembles de la base de données mais cette fois-ci en terme de position et de taille. Les fichiers de la base MNIST étant donné en byte, nous n'avons pas cherché à les afficher pour prendre connaissance des exemples. 
+
+Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaîtrai pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est top imposant, le réseau ne parvient pas à le reconnaître.
 
     \appendix
 
@@ -684,16 +697,16 @@ suivante:
 d'apprentissages ou de reconnaissance de forme divers et variés. Cet aspect facilite 
 ainsi la comparaison de nos 
 résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\   
-On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}
+On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}\\
 
-                \begin{figure}
+                \begin{figure}[!h]
                     \begin{center}
-                        \includegraphics{Images/mnist-01.png}
+                        \includegraphics[width = 270pt]{Images/mnist-01.png}
                     \end{center}
                     \caption{Exemples de chiffres de la base de donnée MNIST.}
                 \end{figure}
 
-
+\newpage
             \section{Limites de cette base}
 
                 Cette base, malgré tous ses avantages, n'est cependant pas parfaite.\\
@@ -706,7 +719,7 @@ anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos R
                 L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il 
 s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
 
-                \begin{figure}
+                \begin{figure}[!h]
                     \centering
                     \begin{subfigure}[b]{0.3\textwidth}
                         \centering
@@ -749,6 +762,8 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 \paragraph*{Pour l'apprentissage: } Il suffit de lancer la fonction \texttt{public void launch(NeuralNetwork N, double learningRate, Input I)} de la classe BackPropagation sur le perceptron N, pour un learningRate donné, l'apprentissage se faisant sur l'input I.  
 
 \paragraph*{Pour déterminer la classe à laquelle appartient votre input:} Vous devez utiliser la fonction \texttt{public double[] getOutputs()} de Perceptron.java et déterminer par la méthode du maximum de vraisemblance le résultat.
+
+\section{Code de la RBM}
 
 
 \end{document}
