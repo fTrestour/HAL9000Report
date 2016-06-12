@@ -40,9 +40,9 @@
         \section[Contexte]{Contexte du projet}
 
             CentraleSupélec propose à  ses étudiants en deuxième année de participer
-            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thême mêlant plusieurs compétences que l'ingénieur se doit de posséder.
+            à  des projets longs qui se réalisent en équipe, tout au long de l'année sur un thème mêlant plusieurs compétences que l'ingénieur se doit de posséder.
 
-            Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning que 12 éléves ont étudié, répartis en 3 groupes, dont HAL9000.
+            Dans notre cas, c'est l'élaboration de réseaux neuronaux et les méthodes de Deep Learning que 12 élèves ont étudié, répartis en 3 groupes, dont HAL9000.
 
             Ce rapport présente les avancement de ce dernier groupe sur le sujet tout au long de l'année.
 
@@ -52,14 +52,14 @@
             Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
             Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral
-            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notament grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
+            à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notamment grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
         \section[Déroulement]{Déroulement du projet}
 
             Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
-            Par la suite nous nous sommes interessés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
+            Par la suite nous nous sommes intéressés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
 
             Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
@@ -79,7 +79,7 @@
 
             \section{La brique de base : le neurone}
 
-                Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation du fonctionnement des neurones du systême nerveux humains.
+                Le neurone est le composant élémentaire des réseaux neuronaux. Il est une modélisation du fonctionnement des neurones du système nerveux humains.
 
                 Chaque neurone reçoit un signal via une entrée, qui correspond aux dendrites des systèmes biologiques. Le neurone prend en compte la valeur de toutes ses entrées et en déduit la valeur de sortie. Cette sortie est ensuite propagée par le biais d'un axone vers un autre neurone.\\
 
@@ -104,10 +104,10 @@
                     \item $x_{k}$ est la k\textsuperscript{ième} composante du vecteur d'entrée $x$.\\
                 \end{itemize}
 
-                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données signifiactives de la problématique traitée.\\
+                L'entrée $x$ est un vecteur défini par un ensemble de caractéristiques que l'on choisit pour représenter les données d'entrées. Dans le cas d'une image par exemple, ce vecteur d'entrée peut être composé de la valeur de tous les pixels de l'image. D'autres représentations moins triviales peuvent être choisies afin de réduire la quantité d'information à  traiter et de s'approcher au mieux des données significatives de la problématique traitée.\\
 
                 La fonction d'activation permet de définir le comportement du neurone. Selon la définition de cette fonction on aura une sortie à  valeurs discrètes ou continues, centrées en 0 ou en 0,5. Le choix de la fonction est donc étroitement lié avec le problème à  traiter.
-                Il existe différents types de fonctions d'activation. Parmis les plus utilisées figurent:
+                Il existe différents types de fonctions d'activation. Parmi les plus utilisées figurent:
                 \begin{itemize}
                     \item La fonction échelon
                     \begin{equation}
@@ -148,7 +148,7 @@
                 La couche d'entrée est assez élémentaire. C'est tout simplement une couche dont la valeur sera le vecteur d'entrée $x$. Cette couche doit donc être constituée d'autant de neurones que le vecteur d'entrée a de dimensions. Les neurones de cette couche ont pour fonction d'activation l'identité.\\
 
                 Les couches cachées sont celles qui effectuent les calculs. Les principales propriétés du réseau sont héritées de cet empilement de couches. On comprend alors mieux l'intérêt actuel pour le Deep Learning, c'est-à -dire l'apprentissage des réseaux avec un grand nombre de couches cachées.
-                Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par les neurones sont choisies par le concepteur du réseau selon le problême traité par le réseau.\\
+                Le nombre de neurones dans chaque couche et les fonctions d'activation utilisées par les neurones sont choisies par le concepteur du réseau selon le problème traité par le réseau.\\
 
                 Afin d'expliciter l'importance de l'architecture du réseau, abordons l'exemple usuel du ou exclusif.
 
@@ -176,7 +176,7 @@
 
                 Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
 
-                Il est alors nécessaire d'introduire la structure de réseau. En prennant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
+                Il est alors nécessaire d'introduire la structure de réseau. En prenant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
 
                 La séparation que l'on cherche à  effectuer est en effet de la forme:
 
@@ -192,7 +192,7 @@
 
                 Ce premier exemple simpliste manifeste donc la nécessité d'adapter la structure du réseau au problème traité.\\
 
-                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mêne à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
+                De manière plus générale, le nombres de neurones du réseau fait varier le nombre de poids du réseau, et donc la capacité du réseau à  séparer des ensembles multiples et complexes. Ainsi, un réseau sous-dimensionné mène à  des résultats pas assez précis et un réseau sur-dimensionné mène à  du sur-apprentissage. On a donc environ la loi suivante:
                 \begin{equation}
                     N<\frac{1}{10}*T*dim(s)
                 \end{equation}
@@ -224,7 +224,7 @@
 
                 On s'appuie alors sur une classification a priori des données : les classes sont crées par le concepteur du problème et du réseau. Cela est à double tranchant. En effet, les classes choisies seront a priori plus pertinente vis-à-vis du résultat attendu  mais pas nécessairement vis-à-vis des données et de la structure du réseau.\\
 
-                Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En pratique cela se manifeste par l'absence d'étiquettes dans les bases d'appentissage.
+                Le second cas est celui de l'apprentissage non supervisé. Comme l'indique son nom, ce genre d'apprentissage n'a pas besoin d'une intervention extérieure pour apprendre. En pratique cela se manifeste par l'absence d'étiquettes dans les bases d'apprentissage.
 
                 Ce genre d'apprentissage revient plus ou moins à mettre en concurrence les différentes classes de données à chaque présentation d'exemple. Ainsi, la classe qui correspond la mieux à l'entrée devient la sortie et la classe est modifiée pour ressembler encore plus à l'entrée qui a permis l'activation.
 
@@ -241,7 +241,7 @@
 
                 \subsection{Initialisation des poids}
 
-                    Les valeurs sont initailisées au départ de manière aléatoire,avec des valeurs centrées en 0.
+                    Les valeurs sont initialisées de manière aléatoire, avec des valeurs centrées en 0.
 
                     Le choix de l'intervalle possible est très important : un intervalle trop petit va beaucoup ralentir l'apprentissage tandis qu'un intervalle trop grand donne des données trop éparses qui rendent plus difficile l'apprentissage.
 
@@ -258,7 +258,7 @@
 
                     Les exemples sont présentés consécutivement au perceptron, et à chaque nouvel exemple on calcul les nouvelles variations de poids.\\
 
-                    Une fois l'enrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire entre les poids $w$ et les entrées $x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
+                    Une fois l'entrée propagée dans le réseau, on obtient une sortie $y^{obtenue}$. Notons par ailleurs la sortie théorique $y^{theorique}$ et $h$ le produit scalaire entre les poids $w$ et les entrées $x$. Nous pouvons alors calculer l'erreur commise par le réseau, pour chaque neurone de sortie :
 
                     \begin{equation}
                         \forall i, e_{i}^{sortie} = f'(h_{i}^{sortie})*(y_{i}^{theorique}-y_{i}^{obtenue})
@@ -287,9 +287,9 @@
                         \Delta w_{i,j}^{(n)}(t) = \lambda e_{i}^{(n)}x_{j}^{(n-1)} + \alpha \Delta w_{i,j}^{(n)}(t-1)
                     \end{equation}
 
-                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des vrariations de poids précédentes sur les variations de poids actuelles.\\
+                    Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des variations de poids précédentes sur les variations de poids actuelles.\\
 
-                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélerer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
+                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélérer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
 
 
         \chapter{Influence des paramètres sur l'apprentissage.}
@@ -318,7 +318,7 @@ synapses vont évoluer de façon rapide. Encore une fois il y a un compromis à 
 
 \paragraph{Perceptron optimum dans notre cas}
 
-Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données Mnist, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1 pourcent et de 2.6 pourcents en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
+Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données Mnist, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1\% et de 2.6\% en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
 
 \begin{figure}[!h]
 	\begin{center}
@@ -328,20 +328,20 @@ Une des meilleures structure du réseau que nous avons trouvé pour le perceptro
 \end{figure}
 
 
-On peut s'apercevoir que l'erreur de learning continue légèrement à décroite tandis que l'erreur de test qui elle ne dimunie plus et sature très vite à partir de 600.000 exemples. On peut confirmer cette impression par le graphe de l'erreur quadratique de test et de learning où le même phénomène se reproduit plus clairement.
+On peut s'apercevoir que l'erreur de learning continue légèrement à décroitre tandis que l'erreur de test qui elle ne diminue plus et sature très vite à partir de 600.000 exemples. On peut confirmer cette impression par le graphe de l'erreur quadratique de test et de learning où le même phénomène se reproduit plus clairement.
 (Voir figure 2)  
 
 
 \begin{figure}[!h]
 	\begin{center}
 	\includegraphics[width=17cm,height=10cm]{Images/courbes_quaderror_longue.jpg} 
-	\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnistnombre d'exemples vs erreur quadratique} 
+	\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnist - nombre d'exemples vs erreur quadratique} 
 	\end{center}
 \end{figure}
 
 \newpage
-\paragraph{étude de la vaiation de la structure}
-Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisament bon en termes de rapidité de calcul mais ce perceptron reste à 3.4 pourcents d'errurs en test soit près de 1 pourcent de plus qu'un perceptron à 3 couches (voir figure 3). Nous avons aussi essayer un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats pas suffisament intéressant pour continuer à élever le nombre de couches. 
+\paragraph{étude de la variation de la structure}
+Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisamment bon en termes de rapidité de calcul mais ce perceptron reste à 3.4\% d'erreur en test soit près de 1\% de plus qu'un perceptron à 3 couches (voir figure 3). Nous avons aussi essayer un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats pas suffisamment intéressant pour continuer à élever le nombre de couches. 
 
 \begin{figure}[!h]
 	\begin{center}
@@ -357,7 +357,7 @@ En revenant au perceptron à 3 couches et vu que le nombre de neurones d'entrée
 \item 10 neurones de sorties vu que c'est le nombre de classes.
 
 
-Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de learning au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu' à la fin plus la courbe à de neurones intermédiaires, meilleur est le taux d'erreur. L'erreur du perceptron avec 50 neurones est le plus élevé même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires à le meilleur taux d'erreur mais pour un temps de calcul accrus. On gardera donc celui avec 90 neurones intermédiaires au vu du fait qu'avec une intialisation plus favorable fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
+Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de learning au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu' à la fin plus la courbe à de neurones intermédiaires, meilleur est le taux d'erreur. L'erreur du perceptron avec 50 neurones est le plus élevé même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires à le meilleur taux d'erreur mais pour un temps de calcul accrus. On gardera donc celui avec 90 neurones intermédiaires au vu du fait qu'avec une initialisation plus favorable fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
 \end{itemize}
 \begin{figure}[!h]
 	\begin{center}
@@ -370,7 +370,7 @@ Il est donc à noter que plus on augmente le nombre de neurones par rapport à l
 
 \newpage
 \paragraph{}
-On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus au moins simulaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que au fur et à mesure de l'apprentissage l'erreur de test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter plus visiblement alors que celle de learning reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
+On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus au moins similaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que au fur et à mesure de l'apprentissage l'erreur de test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter plus visiblement alors que celle de learning reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width=17cm,height=10cm]{Images/courbes3couches50.jpg} 
@@ -386,12 +386,12 @@ On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire
 
 \paragraph{étude supplémentaire possible}
 
-Une étude statistique de l'apprentissage aurait pu être intéressane, malheureusement le temps nous a manqué pour la réaliser. A la figure 7, on peut apercevoir une courbe moyennés sur 4 trajectoires de l'apprentissage de notre perceptron. A partie d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiances, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
+Une étude statistique de l'apprentissage aurait pu être intéressante, malheureusement le temps nous a manqué pour la réaliser. A la figure 7, on peut apercevoir une courbe moyennés sur 4 trajectoires de l'apprentissage de notre perceptron. A partie d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiances, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
 
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width=17cm,height=10cm]{Images/courbes_moyennes.jpg} 
-		\caption{Courbes du pourcentage d'erreurs de test et de learning moyennés sur 4 éxecutions} 
+		\caption{Courbes du pourcentage d'erreurs de test et de learning moyennées sur 4 exécutions} 
 	\end{center}
 \end{figure}
 
@@ -467,7 +467,7 @@ moment où l'on souhaite
 un champ de Markov en prenant pour variables aléatoires la valeur de l'état de chaque neurones.\\
 
 
-                On introduit maintenant l'échantillonage de Gibbs, qui est un
+                On introduit maintenant l'échantillonnage de Gibbs, qui est un
                 algorithme de la classe des Metropolis-Hasting. Cet algorithme
                est un Monte-Carlo qui permet d'échantillonner un probabilité jointe dont l'idée principale
                 est d'échantillonner les états des variables en se basant sur la valeur des états
@@ -647,11 +647,11 @@ La discrimination est un principe qui consiste à construire autant de Restricte
 
 \paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. c'est à dire que chaque RBM ne sera entrainé que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
 
-\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exmple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.\\
+\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exemple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.\\
 
 \subsection{Résultats}
 
-Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courbe de l'erreur de learning en fonction du learning rate. On a éxécuter 20 fois le programme pour un learning rate donné. On obtient la courbe à la figure 8
+Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courbe de l'erreur de learning en fonction du learning rate. On a exécuté 20 fois le programme pour un learning rate donné. On obtient la courbe à la figure 8.
 
 \begin{figure}[!h]
 	\begin{center}
@@ -660,7 +660,7 @@ Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courb
 	\end{center}
 \end{figure}
 
-On aperçoit donc un plateau aux alentours des 42 pourcents au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25 pourcents d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.
+On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.
 
     \appendix
 
@@ -675,7 +675,7 @@ suivante:
 
                 \begin{itemize}
                     \item La base d'apprentissage est constituée de 60000 images.
-                    \item La base de test est conctituée de 10000 images.
+                    \item La base de test est constituée de 10000 images.
                     \item Chaque image est constituée de 28*28 pixels en nuances de gris.
                     \item Chaque image est normalisée.\\
                 \end{itemize}
@@ -733,7 +733,7 @@ atteignait les 3\% d'erreur sur MNIST.
   Il devient alors nécessaire de trouver un test plus discriminatoire de la qualité des 
 réseaux.\\
 
- Faute de temps nous n'avons pas eu la possiblité d'approfondir ce point de vue mais 
+ Faute de temps nous n'avons pas eu la possibilité d'approfondir ce point de vue mais 
 semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
         \chapter{Présentation du code.}
@@ -742,11 +742,11 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
 \paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur Mnist d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int
 
-\paragraph*{la classe Perceptron} Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défault. Il est à noté que un perceptron ne peut par marcher si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
+\paragraph*{la classe Perceptron} Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défaut. Il est à noté que un perceptron ne peut par marcher si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
 
 \paragraph*{Pour faire passer un exemple:} Il suffit d'utiliser la fonction \texttt{public void setNormalizedInputs (double[] x, double max)} pour mettre les entrées normalisées à l'entrée du perceptron puis d'utiliser la fonction \texttt{fire} pour calculer les sorties liées à l'exemple.
 
-\paragraph*{Pour l'apprentissage: } Il suffit de lancer la fonction \texttt{public void launch(NeuralNetwork N, double learningRate, Input I)} de la classe BackPropagation sur le perceptron N, pour un learningRate donné, l'apprentissage se fesant sur l'input I.  
+\paragraph*{Pour l'apprentissage: } Il suffit de lancer la fonction \texttt{public void launch(NeuralNetwork N, double learningRate, Input I)} de la classe BackPropagation sur le perceptron N, pour un learningRate donné, l'apprentissage se faisant sur l'input I.  
 
 \paragraph*{Pour déterminer la classe à laquelle appartient votre input:} Vous devez utiliser la fonction \texttt{public double[] getOutputs()} de Perceptron.java et déterminer par la méthode du maximum de vraisemblance le résultat.
 
