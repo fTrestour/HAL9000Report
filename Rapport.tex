@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside]{report}
+\documentclass[a4paper,oneside]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -9,7 +9,9 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
-
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 \renewcommand{\contentsname}{Sommaire}
@@ -159,7 +161,7 @@
                     \caption{Fonction XOR à réaliser par le perceptron.}
                 \end{figure}
 
-                Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui définit par $s=1$, découle alors directement de l'équation \ref{eqNeur}:
+                Pour un tel problème, le neurone agit comme un séparateur linéaire de l'espace des entrées. L'équation de la droite séparant le demi-espace définit par $s=0$ de celui définit par $s=1$, découle alors directement de l'équation :
 
                 \begin{equation}w_{2}*x_{2}+w_{1}*x_{1}+w_{0}=0\end{equation}
 
@@ -407,8 +409,8 @@ Une étude statistique de l'apprentissage aurait pu être intéressane, malheure
 
             Les réseaux de Boltzmann sont des réseaux qui ont un fonctionnement
             particulier que nous allons présenter dans ce chapitre. Les machines de
-            Boltzmann constituent des réseaux neuronaux. La prinipale différence entre
-            les réseaux neuronnaux comme les réseaux neuronnaux de convolution (CNN) et
+            Boltzmann constituent des réseaux neuronaux. La principale différence entre
+            les réseaux neuronaux comme les réseaux neuronaux de convolution (CNN) et
             les  réseaux de Boltzmann va être le fait qu'un réseau de Boltzmann n'est
             pas \textit{feed-forward} ; comme l'était le perceptron, précédemment présenté dans ce
             rapport.
@@ -420,12 +422,12 @@ Une étude statistique de l'apprentissage aurait pu être intéressane, malheure
         \chapter{Les machines de Boltzmann restreintes}
 
             Les machines de Boltzmann restreintes, ou RBM, ont d'abord été
-            pensées par P. Smolensky (1986) mais réellement mise en oeuvres et
+            pensées par P. Smolensky (1986) mais réellement mise en œuvre et
             étudiées par G.
-            Hinton(2006). Nous allors présenter dans cette partie leur constitution et
+            Hinton (2006). Nous allons présenter dans cette partie leur constitution et
             leurs fonctionnement.
 
-            \section{Principe}
+            \section{Présentation et éléments de preuve}
 
                 Les RBM sont des réseaux neuronaux qui donnent une
                 probabilité d'activation de chaque neurone.\\
@@ -452,31 +454,149 @@ Une étude statistique de l'apprentissage aurait pu être intéressane, malheure
                 sont indépendantes.
                 
                 La probabilité qu'un neurone \begin{math}v_{i}\end{math} de la
-                couche visible soit activé est 
+                couche visible soit activé est \begin{equation}p( v_{i} =1 \mid H) = 
+\sigma(\sum_{j=1}^{m} w_{i,j} * h_{j} + b_{i}) \end{equation}
+
+				En notant \textit{$w_{i}$} le poids de la synapse reliant les neurones \textit{$v_{i}$} 
+à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.\\
+        
+					Puisque la probabilité  d'activation du neurone \textit{$v_{i}$} d'une couche dépend 
+uniquement de la valeur des états des neurones de l'autre couche et uniquement au 
+moment où l'on souhaite 
+échantillonner, l'ensemble des probabilité d'activation des neurones aux instants \textit{t} forme 
+un champ de Markov en prenant pour variables aléatoires la valeur de l'état de chaque neurones.\\
+
+
                 On introduit maintenant l'échantillonage de Gibbs, qui est un
                 algorithme de la classe des Metropolis-Hasting. Cet algorithme
-                est un Monte Carlo d'une chaine de Markov dont l'idée principale
-                est d'échantillonner les variables en se basant sur la valeur
-                des autres variables. C'est une marche aléatoire sur les chaînes
-                de Markov.
+               est un Monte-Carlo qui permet d'échantillonner un probabilité jointe dont l'idée principale
+                est d'échantillonner les états des variables en se basant sur la valeur des états
+                des autres variables grâce à la probabilité conditionnelle qui les relie. C'est une marche aléatoire sur les chaînes de Markov.
+Les neurones d'une même couche sont indépendants on peut donc mettre à jour une couche 
+entière d'un coup ce qui rend l'échantillonnage plus rapide et plus simple à réaliser. \\
 
-                A expliquer : MRF et les propriété --> chaine de Markov
-                Particularité et donc convergence --> contrastive divergence.
+           Par ailleurs on peut démontrer que tout les neurones peuvent prendre les valeur 0 ou 1
+ en un seul échantillonnage et que toutes les combinaisons d'état des neurones de la RBM 
+sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. Par ailleurs la la chaîne de Markov est apériodique. 
+Ces deux propriété d'apériodicité et de irréductibilité permettent de prouver que le RBM
+ possède une distribution stationnaire vers laquelle elle converge. 
 
-                La particularité de ce réseau est donc le fait qu'il n'est pas
+               Une preuve plus rigoureuse à été proposé par Fischer et Igel (\textit{An Introduction to Restricted Boltzmann Machines} (2012).\\
+
+ La particularité de ce réseau est donc le fait qu'il n'est pas
                 \textit{feed-forward}, même si l'on considère la couche cachée comme entrée du
-                réseau.
+               réseau, le réseau arrive à une distribution stationnaire qu'après des allers-retours (c'est-à-dire des échantillonnage) entre
+les deux couches.
 
+\section{Loi d'apprentissage}
 
+Pour faire l'apprentissage, on va entraîner le réseau sur les différents exemple, la première différence avec l'implémentation du perceptron est
+que l'on va  échantillonner les états des neurones à chaque fois, on travaille avec des données binaires et non réelles, nous avons décidé 
+d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel n'était pas blanc.
+On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire de probabilité
+ qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
+\begin{figure}[!h]
+                    \begin{center}
+                        \includegraphics[width=200pt]{Images/Gibbs.png}
+                    \end{center}
+                    \caption{Pas de Gibbs.}
+\end{figure}\\
+
+Une fois la distribution stationnaire atteintes on obtient deux ensembles de valeurs : l'état des couches \textit{V} et  \textit{H}
+qui correspond à l'\textit{input}, que l'on peut appeler \begin{math}<v_{i}h_{j}>_{data}\end{math} ou \begin{math}<v_{i}^{0}h_{j}^{0}>\end{math}, et l'état des couches \textit{V} et  \textit{H} une fois la distribution stationnaire atteinte notée \begin{math}<v_{i}h_{j}>_{model}\end{math} ou \begin{math}<v_{i}^{\infty}h_{j}^{\infty}>\end{math}. A partir de ces deux distribution, on peut modifier les poids et les biais du réseau selon la loi :
+                \begin{equation}
+                    \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
+                \end{equation}
+                où \begin{math}\alpha\end{math} est le \textit{learning rate}\\
+
+                Un point critique de l'implémentation d'une RBM est comme bien souvent la loi 
+d'apprentissage.
+                Si l'on trouve dans la littérature plusieurs solutions, la forme générale du calcul 
+est celle présentée ci-dessus.\\
+
+Dans ce calcul, on distingue l'échantillonnage de la machine à partir des données 
+(data), de l'échantillonnage de la machine après la reconstruction par pas de Gibbs, 
+\begin{math}<v_{i}h_{j}>_{model}\end{math}.\\
+                
+                Pour extraire des informations à partir de l'\textit{input}, il est important de ne 
+pas reconstruire les deux couches depuis les \textit{inputs}.
+                Ainsi le calcul du produit \begin{math}<v_{i}h_{j}>_{data}\end{math} s'obtient par 
+l'état de l'entité visible \begin{math}v_{i}\end{math} et l'évaluation de l'entité 
+cachée sous forme réelle 
+: \begin{math}p(h_{j}|v^{(0)})\end{math}.\\
+
+Une chaîne de Markov peut prendre du temps à converger et dans le cas des RBM qui peuvent 
+avoir plusieurs centaines de neurones par couche, les pas de Gibbs, c'est-à-dire l'échantillonnage
+ des états des neurones au sein d'une même couche, peut être très calculatoire. 
+
+Il est alors proposé par 
+Hinton en 2006 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
+ fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
+méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).
+Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
 				
 
         \chapter{Les Deep Belief Networks}
 
+\section{Principe des Deep Boltzmann Machines}
+
+		Nous avons présenté dans le chapitre précédent les \textit{restricted boltzmann machines} avec leur utilisation parallélisée. 
+		Nous verrons dans ce chapitre une nouvelle façon d'utiliser ses machines, en série. Après la description d'une configuration intéressante pour l'apprentissage, nous présenterons nos résultats obtenus sur la base MNIST.\\
+
+
+		En effet, le concept de \textit{Deep Boltzmann Machine}(DBM) repose sur l'utilisation en cascade des RBM(figure 6.1). La couche cachée de la première machine correspond à la couche visible de la suivante, et ainsi de suite. Nous avons vu qu'une RBM permet l'extraction des informations pertinentes de l'\textit{input}, ainsi l'intérêt majeur de cette structure est l'extraction successive des \textit{features} de l'\textit{input}, afin d'obtenir une identification de plus en plus fine.
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=200px]{Images/DBN.png}
+                    \end{center}
+                    \caption{Mise en cascade des RBM.}
+                \end{figure}
+
+
+	\section{Spécificité de l'apprentissage}
+
+
+		L'apprentissage d'une DBM se fait en deux étapes: d'abord non supervisé puis supervisé.
+		Contrairement au perceptron présenté précédemment, nous ne disposons pas pour une \textit{Deep Boltzmann Machine} d'une sortie nous donnant le label attendu. Il est donc nécessaire d'ajouter au bout des machines de 					Boltzmann en cascade une ou plusieurs\textit{ layers} en \textit{feed-forward} menant vers une \textit{output layer} de 10 neurones.\\
+
+L'apprentissage non-supervisé est destiné à entraîner les machines de Boltzmann. Pour se faire, il s'agit de faire l'apprentissage sur la première machine isolément, puis construire la couche cachée de la machine avec un pas de Gibbs depuis l'input. Ainsi, on obtient l'input nécessaire à l'apprentissage pour la machine suivante, et par itérations successives, il est possible de faire l'apprentissage sur toutes les machines.\\
+
+L'apprentissage supervisé fait office de \textit{fine-tuning}: il entraîne le perceptron situé à la fin de la chaîne, après les machines de Boltzmann. Il s'opère par rétro-propagation, dont nous avons décrit plus haut le fonctionnement.
+
+
+		\section{Résultats}
+
+	
+Le réseau que nous avons entraîné sur la base MNIST avait une configuration comportant 5 layers, dont l'output layer. Les entités sont réparties en 784, 500, 500, 2000 et enfin 10 entités, soit 3 RBM et 1 perceptron à deux couches.\\
+
+Les paramètres choisis sont les suivants:\\
+
+\begin{tabular}{ll}
+   \textit{Learning rate}: &0.1\\
+	\textit{Gibbs steps}: & 2\\
+	\textit{Number of sets of training}:& 5 (soit 300.000 exemples)\\
+\end{tabular}\\
+
+Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exception des biais de l'\textit{input layer}, initialisés à \begin{math}log[p_{i}/(1 - p_{i}]\end{math}, avec \begin{math}p_{i}\end{math} la proportion d'\textit{inputs} pour lesquels l'entité visible \begin{math}v_{i}\end{math} est activée.\\
+
+Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesure de l'apprentissage et sur une partie d'exemples de test. Les résultats figurent sur la figure 6.2.
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics[width=450px]{Images/courbeDBM.jpg}
+                    \end{center}
+                    \caption{Courbe d'apprentissage de la Deep Boltzmann Machine.}
+                \end{figure}
+
+On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide initialement, puis qui tend à diminuer après quelques époques. L'allure est conforme au résultat attendu, même si on l'on aurait pu souhaiter une meilleure convergence.
 
 
         \chapter{Aller plus loin}
 
             \section{La visualisation des spectres du réseau}
+
+\subsection{Cas de la RBM}
 
                 Lors du développement de la RBM, nous avons étés confrontés au problème de la quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux exemples qu'on lui a présenté ?\\
 
@@ -497,15 +617,37 @@ Une étude statistique de l'apprentissage aurait pu être intéressane, malheure
 
                 Au début de l'apprentissage, l'image sera exclusivement composée de bruit blanc (c'est une conséquence de l'algorithme d'apprentissage), tandis qu'à la fin elle ressemblera au négatif d'un des exemples de la base de donnée (toujours dans le cas d'un réseau à un seul neurone caché).
 
+\begin{figure}
+                    \begin{center}
+                        \includegraphics[width=75pt]{Images/spectres-01.png}
+                    \end{center}
+                    \caption{Spectre d'une RBM ayant apprise la "forme" 4.}
+                \end{figure}
+
+Pour faire cette visualisation, on cherche uniquement à connaître les neurones qui activent le neurone de la couche caché. 
+Une méthode de visualisation serait donc de chercher les valeurs binaires  des neurones de la couche visible pour 
+activer le neurone désiré. Puisque le réseau n'est pas orienté, on peut directement affecter la valeur 1 au neurone \textit{$h_{j}$} 
+de la couche caché qui correspond au filtre que l'on veut voir et 0 aux autres. On fait alors un pas de Gibbs vers la couche visible. Pour obtenir un meilleur résultat, 
+on peut directement travailler avec la valeur de la sigmoïde des neurones de la couche visible.
+
+\subsection{Cas du DBN}
+
+Dans le cas du DBN, il est plus compliqué d'obtenir une image du fait de l'architecture profonde. On va donc choisir le neurone de la couche dont  on veut observer le filtre ou ce qu'on pourrait appeler la carte d'activation. Pour cela on assigne la valeur 0 à tout les neurones du réseau et on va faire un unique pas de Gibbs jusqu'à la couche d'entrée du réseau en échantillonnant la valeur des neurones des couches par lesquelles on passe.\\
+
+Cette méthode a donc un inconvénient : on a une chance de perdre de l'information. Nous avons alors testé deux options : la première est de changer la nature du réseau et de travailler avec les probabilités comme valeur de l'état du réseau. Cette méthode n'a pas été concluante. Nous sommes alors venus à considérer une autre méthode, dans l'esprit du réseau. \\
+
+Cette méthode est la suivante : on initialise les valeurs des neurones du réseau entraîné à 0 sauf pour le filtre que l'on souhaite visualiser qui est à l'état 1. On va ensuite effectuer plusieurs pas de Gibbs au sein de la \textbf{même} RBM. Ainsi on va obtenir une distribution des états qui correspond à l'activation du filtre désiré mais aussi d'autres filtres. Ce procédé permet de réduire le nombre de neurones de la couche précédente qui ne serait pas dan l'état voulu. On procède ainsi jusqu'à la première RBM où l'on utilise la méthode exposée dans la partie correspondante.\\
+
+Cette méthode est simplement expérimentale mais produit des résultats plus probant. Dans la littérature les méthodes de visualisation sont peu détaillées mais semble être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est à dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
+
+
 \section{Discrimination grâce aux RBM}
 
-La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données Mnist, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
+La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données MNIST, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
 
-\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendemment les unes des autres. c'est à dire que chaque RBM ne sera entrainé que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
+\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. c'est à dire que chaque RBM ne sera entrainé que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
 
-\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exmple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.
-
-
+\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exmple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.\\
 
 \subsection{Résultats}
 
@@ -522,7 +664,77 @@ On aperçoit donc un plateau aux alentours des 42 pourcents au début de la cour
 
     \appendix
 
-        \chapter{La base MNIST.}
+    \chapter{La base MNIST}
+
+            \section{Présentation de la base de donées}
+
+                La base de données MNIST, Mixed Mixed National Institute of Standards and Technology, 
+est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. Lea base 
+est organisée de la manière 
+suivante:
+
+                \begin{itemize}
+                    \item La base d'apprentissage est constituée de 60000 images.
+                    \item La base de test est conctituée de 10000 images.
+                    \item Chaque image est constituée de 28*28 pixels en nuances de gris.
+                    \item Chaque image est normalisée.\\
+                \end{itemize}
+
+                Cette base est aujourd'hui devenue une référence permettant de tester les algorithmes 
+d'apprentissages ou de reconnaissance de forme divers et variés. Cet aspect facilite 
+ainsi la comparaison de nos 
+résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\   
+On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}
+
+                \begin{figure}
+                    \begin{center}
+                        \includegraphics{Images/mnist-01.png}
+                    \end{center}
+                    \caption{Exemples de chiffres de la base de donnée MNIST.}
+                \end{figure}
+
+
+            \section{Limites de cette base}
+
+                Cette base, malgré tous ses avantages, n'est cependant pas parfaite.\\
+
+                En effet, une première limite apparaît assez rapidement quand on travaille avec MNIST 
+: cette base n'est pas "universelle". Les caractères utilisés dans la base de donnée 
+sont fortement connotés 
+anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos RBM.
+
+                L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il 
+s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
+
+                \begin{figure}
+                    \centering
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-02.png}
+                        \caption{"1" en français}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[b]{0.3\textwidth}
+                        \centering
+                        \includegraphics{Images/mnist-03.png}
+                        \caption{"1" anglosaxon}
+                    \end{subfigure}
+                    \caption{Exemple d'une situation de litige entre notation anglosaxone et française.}
+                \end{figure}
+
+        Une autre limite apparaît aussi : c'est celle de la simplicité de la base de donnée.
+
+La reconnaissance de caractères est en effet une tâche simpliste en comparaison avec 
+certains des problèmes auxquels peuvent être confrontés les réseaux issus du deep 
+learning. Cela se constate par 
+les résultats très bons obtenus pour des réseaux peu complexes, tel que notre perceptron qui 
+atteignait les 3\% d'erreur sur MNIST.
+
+  Il devient alors nécessaire de trouver un test plus discriminatoire de la qualité des 
+réseaux.\\
+
+ Faute de temps nous n'avons pas eu la possiblité d'approfondir ce point de vue mais 
+semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
         \chapter{Présentation du code.}
         
