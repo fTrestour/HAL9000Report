@@ -25,8 +25,10 @@
 \BOOKMARK [0][-]{chapter.7}{Aller plus loin}{part.3}% 25
 \BOOKMARK [1][-]{section.7.1}{La visualisation des spectres du r\351seau}{chapter.7}% 26
 \BOOKMARK [1][-]{section.7.2}{Discrimination gr\342ce aux RBM}{chapter.7}% 27
-\BOOKMARK [0][-]{appendix.A}{La base MNIST}{part.3}% 28
-\BOOKMARK [1][-]{section.A.1}{Pr\351sentation de la base de don\351es}{appendix.A}% 29
-\BOOKMARK [1][-]{section.A.2}{Limites de cette base}{appendix.A}% 30
-\BOOKMARK [0][-]{appendix.B}{Pr\351sentation du code.}{part.3}% 31
-\BOOKMARK [1][-]{section.B.1}{Code du perceptron}{appendix.B}% 32
+\BOOKMARK [1][-]{section.7.3}{Reconnaissance d'image}{chapter.7}% 28
+\BOOKMARK [0][-]{appendix.A}{La base MNIST}{part.3}% 29
+\BOOKMARK [1][-]{section.A.1}{Pr\351sentation de la base de don\351es}{appendix.A}% 30
+\BOOKMARK [1][-]{section.A.2}{Limites de cette base}{appendix.A}% 31
+\BOOKMARK [0][-]{appendix.B}{Pr\351sentation du code.}{part.3}% 32
+\BOOKMARK [1][-]{section.B.1}{Code du perceptron}{appendix.B}% 33
+\BOOKMARK [1][-]{section.B.2}{Code de la RBM}{appendix.B}% 34

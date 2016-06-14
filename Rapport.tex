@@ -424,7 +424,7 @@ Une étude statistique de l'apprentissage aurait pu être intéressante, malheur
             Les machines de Boltzmann restreintes, ou RBM, ont d'abord été
             pensées par P. Smolensky (1986) mais réellement mise en œuvre et
             étudiées par G.
-            Hinton (2006). Nous allons présenter dans cette partie leur constitution et
+            Hinton (2005) Nous allons présenter dans cette partie leur constitution et
             leurs fonctionnement.
 
             \section{Présentation et éléments de preuve}
@@ -530,7 +530,7 @@ avoir plusieurs centaines de neurones par couche, les pas de Gibbs, c'est-à-dir
  des états des neurones au sein d'une même couche, peut être très calculatoire. 
 
 Il est alors proposé par 
-Hinton en 2006 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
+Hinton en 2005 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
  fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
 méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).
 Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
@@ -675,6 +675,12 @@ Une autre limitation pour cette application est aussi apparue : les exemples tra
 
 Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaîtrai pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est top imposant, le réseau ne parvient pas à le reconnaître.
 
+\nocite{hopfield_neural_1982}
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{RBMDBN}
+
+
     \appendix
 
     \chapter{La base MNIST}
@@ -763,7 +769,20 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
 \paragraph*{Pour déterminer la classe à laquelle appartient votre input:} Vous devez utiliser la fonction \texttt{public double[] getOutputs()} de Perceptron.java et déterminer par la méthode du maximum de vraisemblance le résultat.
 
-\section{Code de la RBM}
+\section{Code de la RBM et du DBN}
+
+\paragraph*{La classe Entity :} C'est la classe qui définit le neurone, qu'il soit d'entrée ou de sortie, ses attributs sont son état, l'erreur correspondant au neurone, son biais et son id.
+
+\paragraph*{La classe Sigmoid :} Singleton de la fonction sigmoïde.
+
+\paragraph*{La classe Restricted Boltzmann Machine :} Son constructeur est le suivant \texttt{public RestrictedBoltzmannMachine(Entity[] visibleEntities, Entity[] hiddenEntities, double weightWide, double learningRate)}. Elle fait correspondre à un tableau de neurone un tableau de synapse. L'attribut  \texttt{weightWide} correspond à la valeur maximum que peut prendre un poids, il définit l'intervalle dans lequel les poids prennent leur valeurs à l'initialisation par symétrie avec 0.
+
+\paragraph*{Pour faire l'apprentissage d'une RBM :} On utilise la methode \texttt{public double[][] unsupervisedLearning( int pasDeGibbs, int[] exemple)} puis on applique les fonctions \texttt{public double getLogProbabilityDerivativeSum(double[][] RBM)} et \texttt{public void applyLearningGradients()}.
+
+\paragraph*{La Classe Deep Belief Network :} Son constructeur est \texttt{public DeepBeliefNetwork(int[] inputData, int rbmLayerNumber, double weightWide, double biasWide, double learningRate, double backPropLearningRate)}, le tableau \texttt{inputData} correspond au nombre d'entités par \textit{layer}. 
+
+\paragraph*{Pour faire l'apprentissage d'un DBN :} On utilise la méthode \texttt{public void singleUnsupervisedLearning(int pasDeGibbs, int[] exemple, boolean instantLearning)} . Qui va faire l'apprentissage de chaque RBM qui compose le DBN en commençant par l'entrée et en remontant dans le réseau.\\
+Le booléen \texttt{instantLearning} permet de faire un apprentissage par batch.
 
 
 \end{document}
