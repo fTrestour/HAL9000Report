@@ -318,13 +318,13 @@ synapses vont évoluer de façon rapide. Encore une fois il y a un compromis à 
 
 \paragraph{Perceptron optimum dans notre cas}
 
-Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données Mnist, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1\% et de 2.6\% en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
+Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données MNIST, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1\% et de 2.6\% en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes_error_longue.jpg} 
-		\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnist nombre d'exemples vs pourcentage d'erreurs}
+		\includegraphics[scale=0.30]{Images/courbes_error_longue.jpg} 
 	\end{center}
+\caption{Réalisation longue du perceptron 784-90-10 neurones sur MNIST nombre d'exemples vs pourcentage d'erreurs}
 \end{figure}
 
 
@@ -332,10 +332,10 @@ On peut s'apercevoir que l'erreur de learning continue légèrement à décroitr
 (Voir figure 2)  
 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-	\includegraphics[width=17cm,height=10cm]{Images/courbes_quaderror_longue.jpg} 
-	\caption{Réalisation longue du perceptron 784-90-10 neurones sur Mnist - nombre d'exemples vs erreur quadratique} 
+	\includegraphics[scale=0.27]{Images/courbes_quaderror_longue.jpg} 
+	\caption{Réalisation longue du perceptron 784-90-10 neurones sur MNIST - nombre d'exemples vs erreur quadratique} 
 	\end{center}
 \end{figure}
 
@@ -343,9 +343,9 @@ On peut s'apercevoir que l'erreur de learning continue légèrement à décroitr
 \paragraph{étude de la variation de la structure}
 Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisamment bon en termes de rapidité de calcul mais ce perceptron reste à 3.4\% d'erreur en test soit près de 1\% de plus qu'un perceptron à 3 couches (voir figure 3). Nous avons aussi essayer un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats pas suffisamment intéressant pour continuer à élever le nombre de couches. 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes2couches.jpg} 
+		\includegraphics[scale=0.27]{Images/courbes2couches.jpg} 
 		\caption{Control with both motors(100$\%$-100$\%$)} 
 	\end{center}
 \end{figure}
@@ -353,15 +353,15 @@ Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc 
 \newpage
 En revenant au perceptron à 3 couches et vu que le nombre de neurones d'entrée et le nombre de neurones de sorties sont fixés par le problème  :
 \begin{itemize}
-\item 784 neurones d'entrées vu que c'est le nombre de pixel d'un image de la librairie mnist.
+\item 784 neurones d'entrées vu que c'est le nombre de pixel d'un image de la librairie MNIST.
 \item 10 neurones de sorties vu que c'est le nombre de classes.
 
 
 Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de learning au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu' à la fin plus la courbe à de neurones intermédiaires, meilleur est le taux d'erreur. L'erreur du perceptron avec 50 neurones est le plus élevé même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires à le meilleur taux d'erreur mais pour un temps de calcul accrus. On gardera donc celui avec 90 neurones intermédiaires au vu du fait qu'avec une initialisation plus favorable fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
 \end{itemize}
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes3couche.jpg} 
+		\includegraphics[scale=0.27]{Images/courbes3couche.jpg} 
 		\caption{Pourcentage d'erreurs de learning pour 3 couches intermédiaires différentes.}
 	\end{center}
 \end{figure}
@@ -371,15 +371,15 @@ Il est donc à noter que plus on augmente le nombre de neurones par rapport à l
 \newpage
 \paragraph{}
 On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus au moins similaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que au fur et à mesure de l'apprentissage l'erreur de test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter plus visiblement alors que celle de learning reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes3couches50.jpg} 
+		\includegraphics[scale=0.27]{Images/courbes3couches50.jpg} 
 		\caption{pourcentage d'erreur de learning(bleu) et de test(orange) lors de l'apprentissage} 
 	\end{center}
 \end{figure}
 \begin{figure}[!h]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes3couches50_quaderror.jpg} 
+		\includegraphics[scale=0.27]{Images/courbes3couches50_quaderror.jpg} 
 		\caption{erreur quadratique de learning(bleu) et de test(orange) lors de l'apprentissage}  
 	\end{center}
 \end{figure}
@@ -388,9 +388,9 @@ On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire
 
 Une étude statistique de l'apprentissage aurait pu être intéressante, malheureusement le temps nous a manqué pour la réaliser. A la figure 7, on peut apercevoir une courbe moyennés sur 4 trajectoires de l'apprentissage de notre perceptron. A partie d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiances, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=17cm,height=10cm]{Images/courbes_moyennes.jpg} 
+		\includegraphics[scale=0.27]{Images/courbes_moyennes.jpg} 
 		\caption{Courbes du pourcentage d'erreurs de test et de learning moyennées sur 4 exécutions} 
 	\end{center}
 \end{figure}
@@ -495,7 +495,7 @@ que l'on va  échantillonner les états des neurones à chaque fois, on travaill
 d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel n'était pas blanc.
 On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire de probabilité
  qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
-\begin{figure}[!h]
+\begin{figure}[!ht]
                     \begin{center}
                         \includegraphics[width=200pt]{Images/Gibbs.png}
                     \end{center}
@@ -582,9 +582,9 @@ Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exc
 
 Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesure de l'apprentissage et sur une partie d'exemples de test. Les résultats figurent sur la figure 6.2.
 
-                \begin{figure}
+                \begin{figure}[!ht]
                     \begin{center}
-                        \includegraphics[width=450px]{Images/courbeDBM.jpg}
+                        \includegraphics[scale=0.30]{Images/courbeDBM.jpg}
                     \end{center}
                     \caption{Courbe d'apprentissage de la Deep Boltzmann Machine.}
                 \end{figure}
@@ -653,7 +653,7 @@ La discrimination est un principe qui consiste à construire autant de Restricte
 
 Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courbe de l'erreur de learning en fonction du learning rate. On a exécuté 20 fois le programme pour un learning rate donné. On obtient la courbe à la figure 8.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
 	\end{center}
@@ -705,7 +705,7 @@ ainsi la comparaison de nos
 résultats avec ceux d'autres personnes ayant fait la même démarche que nous.\\   
 On peut trouver cette base à l'adresse : \url{http://yann.lecun.com/exdb/mnist/}\\
 
-                \begin{figure}[!h]
+                \begin{figure}[!ht]
                     \begin{center}
                         \includegraphics[width = 270pt]{Images/mnist-01.png}
                     \end{center}
@@ -725,7 +725,7 @@ anglosaxons. On peut constater cet aspect dans les spectres réalisés par nos R
                 L'image idéale de chaque chiffre a toujours une prédominante américaine, et quand il 
 s'agît ensuite d'entrer des données européenne, la limitation de la base se révèle.\\
 
-                \begin{figure}[!h]
+                \begin{figure}[!ht]
                     \centering
                     \begin{subfigure}[b]{0.3\textwidth}
                         \centering
@@ -759,7 +759,7 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
         
 \section{Code du perceptron}
 
-\paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur Mnist d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int
+\paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur MNIST d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int
 
 \paragraph*{la classe Perceptron} Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défaut. Il est à noté que un perceptron ne peut par marcher si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
 

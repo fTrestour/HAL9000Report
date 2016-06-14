@@ -47,4 +47,4 @@
 \contentsline {section}{\numberline {A.2}Limites de cette base}{36}{section.A.2}
 \contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{38}{appendix.B}
 \contentsline {section}{\numberline {B.1}Code du perceptron}{38}{section.B.1}
-\contentsline {section}{\numberline {B.2}Code de la RBM}{38}{section.B.2}
+\contentsline {section}{\numberline {B.2}Code de la RBM et du DBN}{38}{section.B.2}
