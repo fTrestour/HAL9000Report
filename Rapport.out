@@ -10,9 +10,9 @@
 \BOOKMARK [0][-]{chapter.2}{Algorithmes d'apprentissage}{part.2}% 10
 \BOOKMARK [1][-]{section.2.1}{L'objectif des algorithmes d'apprentissage}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.2}{La m\351thode de r\351tropropagation du gradient}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.3}{test}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Test}{chapter.2}% 13
 \BOOKMARK [0][-]{chapter.3}{Influence des param\350tres sur l'apprentissage.}{part.2}% 14
-\BOOKMARK [1][-]{section.3.1}{Param\350tres perceptron}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.1}{Param\350tres du perceptron}{chapter.3}% 15
 \BOOKMARK [-1][-]{part.3}{III Machines de Boltzmann}{}% 16
 \BOOKMARK [0][-]{chapter.4}{Introduction}{part.3}% 17
 \BOOKMARK [0][-]{chapter.5}{Les machines de Boltzmann restreintes}{part.3}% 18

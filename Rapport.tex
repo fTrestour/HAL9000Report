@@ -51,7 +51,7 @@
 
             Ce projet aborde le sujet du Deep Learning. Cette méthode spécifique de machine learning est dérivée du concept de réseau de neurones.
 
-            Les réseaux de neurone sont une modélisation simple du fonctionnement cérébral
+            Les réseaux de neurones sont une modélisation simple du fonctionnement cérébral
             à  l'échelle cellulaire. Cette approche a vu le jour avec les études de McCulloch et Pitts dès la fin des années 50. Malgré certains écueils dans les années 70, l'approche connexioniste des réseaux de neurones a su se développer et devenir un sujet de recherche populaire dans les dernières années, notamment grâce aux capacités d'adaptabilité et de généralisation de ces réseaux qui en font d'excellents candidats pour des applications telles que la reconnaissance d'image ou la classification.
 
 
@@ -59,7 +59,7 @@
 
             Tout d'abord, il s'agissait pour nous de comprendre le fonctionnement de ces structures et commencer à  coder des structures élémentaires afin de comprendre les enjeux du deep learning. Nous avons pour cela travaillé avec la base de données MNIST de Yann LeCun et en JAVA. Afin de travailler en groupe de manière efficace, nous avons aussi utilisé l'outil GIT.
 
-            Par la suite nous nous sommes intéressés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Belief Networks.
+            Par la suite nous nous sommes intéressés aux architectures profondes, chaque groupe se penchant sur une architecture spécifique. Notre équipe s'est en particulier intéressée aux machines de Boltzmann, en commençant par les machines de Boltzmann restreintes (RBM), puis la structure de Deep Learning associée, les Deep Boltzmann Machine.
 
             Cette étude a été encadrée par Joanna Tomasik et Arpad Rimmel, enseignants à  CentraleSupélec, campus de Gif-sur-Yvette.
 
@@ -132,7 +132,7 @@
 
             \section{Organisation des couches}
 
-                Il existe de nombreuses architectures de réseau de neurone. Elles peuvent être récurrentes ou non, entièrement connectées ou seulement partiellement, organisées en couches, ... De nombreuses propriétés permettent de caractériser une architecture de réseau de neurone.
+                Il existe de nombreuses architectures de réseaux de neurones. Elles peuvent être récurrentes ou non, entièrement connectées ou seulement partiellement, organisées en couches, ... De nombreuses propriétés permettent de caractériser une architecture de réseau de neurone.
 
                 Le Perceptron est un modèle assez élémentaire de réseau. Il est constitué en couches totalement connectées.
 
@@ -174,7 +174,7 @@
                     \caption{Intérêt de l'introduction d'un biais.}
                 \end{figure}
 
-                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affine, et le cas du XOR en est déjà  une illustration.\\
+                Les limites d'un neurone seul sont alors évidentes : toutes les séparations de l'espace des entrées ne sont pas affines, et le cas du XOR en est déjà  une illustration.\\
 
                 Il est alors nécessaire d'introduire la structure de réseau. En prenant une couche d'entrée, une couche cachée et une couche de sortie, respectivement composées de deux, deux et un neurone, on peut contourner le problème sus-cité. Cette structure permet en fait de générer deux séparations de l'espace des entrées.
 
@@ -236,7 +236,7 @@
                 La rétropropagation du gradient correspond à une descente de gradient dans l'espace des poids.\\
 
                 Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones sont ainsi corrigés en fonction de cette responsabilité.
-                \section{test}
+                \section{Test}
 
 
                 \subsection{Initialisation des poids}
@@ -295,10 +295,10 @@
         \chapter{Influence des paramètres sur l'apprentissage.}
 
 
-\section{Paramètres perceptron}
+\section{Paramètres du perceptron}
 
-\subsection{la méthode de la quantité de mouvement}
-La méthode de la quantité de mouvement est une méthode utile pour éviter que l'algorithme de backpropagation ne tombe dans un minimal local et n'en sorte pas. Un apprentissage efficace passera le minimum local et doit converger vers les poids idéaux de toutes les synapses pour que le réseau fasse le moins d'erreur possible. Cette méthode est donc parfois nécessaire pour améliorer les performances d'apprentissage du réseau. Cependant, elle ne devra pas être trop élevé afin de ne pas causer de trop grandes oscillations de valeur qui rendront la convergence impossible.
+\subsection{La méthode de la quantité de mouvement}
+La méthode de la quantité de mouvement est une méthode utile pour éviter que l'algorithme de backpropagation ne tombe dans un minimal local et n'en sorte pas. Un apprentissage efficace passera le minimum local et doit converger vers les poids idéaux de toutes les synapses pour que le réseau fasse le moins d'erreur possible. Cette méthode est donc parfois nécessaire pour améliorer les performances d'apprentissage du réseau. Cependant, elle ne devra pas être trop élevée afin de ne pas causer de trop grandes oscillations de valeur qui rendront la convergence impossible.
 L'équation d'update des poids est la suivante:
 \begin{equation}
 \Delta w_{ij}[n]= \Delta w_{ij}[n]+ \alpha \Delta w_{ij}[n-1]
@@ -309,7 +309,7 @@ L'équation d'update des poids est la suivante:
  Ici l'étude de cette méthode n'a pas été étudiée, néanmoins, il reste la possibilité dans notre code de pouvoir modifier la valeur du facteur $\alpha$ qui correspond à la variable \texttt{momentumfactor} 
  
  
- \subsection{le learning rate}
+ \subsection{Le learning rate}
  Le learning rate est le paramètre qui va le plus déterminer la tendance ou non d'un perceptron d'évoluer en fonction des exemples que l'on va lui mettre en entrée. Plus le learning rate sera grand, plus les poids des 
 synapses vont évoluer de façon rapide. Encore une fois il y a un compromis à faire entre vitesse d'apprentissage et la stabilité d'apprentissage. Dans notre code, nous avons choisi un learning rate de 0,1 qui semble être un bon compromis.
 
@@ -318,7 +318,7 @@ synapses vont évoluer de façon rapide. Encore une fois il y a un compromis à 
 
 \paragraph{Perceptron optimum dans notre cas}
 
-Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données MNIST, Nous constatons que nous arrivons à une erreur de learning juste en dessous de 1\% et de 2.6\% en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
+Une des meilleures structure du réseau que nous avons trouvé pour le perceptron qui satisfait en même temps des conditions de rapidité et de justesse est un perceptron à 3 couches dont le nombre de neurones décroit de façon géométrique au fur et à mesure des couches. Notre structure est donc constituée de 3 couches de 784, 90, 10 neurones respectivement. On peut donc s'apercevoir qu'il y a un facteur 9 entre le nombre de neurones de couches consécutives. A la figure suivante, nous avons la courbe d'une réalisation de ce perceptron pour la base de données MNIST, Nous constatons que nous arrivons à une erreur de \textit{learning} juste en dessous de 1\% et de 2.6\% en test. Deux millions d'exemples sont passés pour entrainer ce perceptron et avoir de tels résultats
 
 \begin{figure}[!ht]
 	\begin{center}
@@ -328,8 +328,8 @@ Une des meilleures structure du réseau que nous avons trouvé pour le perceptro
 \end{figure}
 
 
-On peut s'apercevoir que l'erreur de learning continue légèrement à décroitre tandis que l'erreur de test qui elle ne diminue plus et sature très vite à partir de 600.000 exemples. On peut confirmer cette impression par le graphe de l'erreur quadratique de test et de learning où le même phénomène se reproduit plus clairement.
-(Voir figure 2)  
+On peut s'apercevoir que l'erreur de \textit{learning} continue légèrement à décroitre tandis que l'erreur de test qui elle ne diminue plus et sature très vite à partir de 600.000 exemples. On peut confirmer cette impression par le graphe de l'erreur quadratique de test et de \textit{learning} où le même phénomène se reproduit plus clairement.
+(\textit{cf} figure 2)  
 
 
 \begin{figure}[!ht]
@@ -341,7 +341,7 @@ On peut s'apercevoir que l'erreur de learning continue légèrement à décroitr
 
 \newpage
 \paragraph{étude de la variation de la structure}
-Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisamment bon en termes de rapidité de calcul mais ce perceptron reste à 3.4\% d'erreur en test soit près de 1\% de plus qu'un perceptron à 3 couches (voir figure 3). Nous avons aussi essayer un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats pas suffisamment intéressant pour continuer à élever le nombre de couches. 
+Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc un perceptron à 784 puis 10 neurones pour la deuxième couche, nous obtenons des résultats suffisamment bon en termes de rapidité de calcul mais ce perceptron reste à 3.4\% d'erreur en test soit près de 1\% de plus qu'un perceptron à 3 couches (\textit{cf} figure 3). Nous avons aussi essayé un perceptron à 4 couches mais le temps de calcul était trop élevé et les résultats n'étaient pas suffisamment intéressants pour continuer à élever le nombre de couches. 
 
 \begin{figure}[!ht]
 	\begin{center}
@@ -351,47 +351,47 @@ Nous avons essayé de faire varier le nombre de couches. Avec 2 couches et donc 
 \end{figure}
 
 \newpage
-En revenant au perceptron à 3 couches et vu que le nombre de neurones d'entrée et le nombre de neurones de sorties sont fixés par le problème  :
+En revenant au perceptron à 3 couches et étant donné que le nombre de neurones d'entrée et le nombre de neurones de sorties sont fixés par le problème  :
 \begin{itemize}
-\item 784 neurones d'entrées vu que c'est le nombre de pixel d'un image de la librairie MNIST.
-\item 10 neurones de sorties vu que c'est le nombre de classes.
+\item 784 neurones d'entrées étant donné le nombre de pixel d'une image de la librairie MNIST.
+\item 10 neurones de sorties étant donné le nombre de classes.
 
 
-Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de learning au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu' à la fin plus la courbe à de neurones intermédiaires, meilleur est le taux d'erreur. L'erreur du perceptron avec 50 neurones est le plus élevé même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires à le meilleur taux d'erreur mais pour un temps de calcul accrus. On gardera donc celui avec 90 neurones intermédiaires au vu du fait qu'avec une initialisation plus favorable fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
+Nous avons décidé de faire varier le nombre de neurones de la couche intermédiaire. Nous avons tracé le pourcentage d'erreur de \textit{learning} au fur et à mesure de l'apprentissage (figure 4) pour une couche intermédiaire de 180 neurones (en orange), de 90 neurones (en jaune), de 50 neurones (en bleu). On remarque qu'à la fin plus le réseau a de neurones intermédiaires, meilleur est le résultat. L'erreur du perceptron avec 50 neurones est la plus élevée même si cela reste très faible. Celui avec 90 neurones intermédiaires, malgré une initialisation peu favorable arrive à avoir un taux d'erreur entre les 2. Finalement le perceptron avec le plus de neurones intermédiaires a le meilleur taux d'erreur mais pour un temps de calcul accru. On gardera donc celui avec 90 neurones intermédiaires sachant qu'avec une initialisation plus favorable, il fait jeu égal avec celui à 180 neurones pour un temps de calcul plus faible. 
 \end{itemize}
 \begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbes3couche.jpg} 
-		\caption{Pourcentage d'erreurs de learning pour 3 couches intermédiaires différentes.}
+		\caption{Pourcentage d'erreurs de \textit{learning} pour 3 couches intermédiaires différentes.}
 	\end{center}
 \end{figure}
 
-Il est donc à noter que plus on augmente le nombre de neurones par rapport à la loi géométrique déterminée précédemment, plus on augmente le temps de calcul sans améliorer nécessairement les résultats. Tandis que si on diminue le nombre de neurones intermédiaires en dessous de 50, plus on dégrade nos résultats, ce qui est forcément peu à notre avantage.
+Il est donc à noter que plus l'on augmente le nombre de neurones par rapport à la loi géométrique déterminée précédemment, plus l'on augmente le temps de calcul sans améliorer nécessairement les résultats. Tandis que si l'on diminue le nombre de neurones intermédiaires en dessous de 50, on dégrade d'autant nos résultats, ce qui n'est pas à notre avantage.
 
 \newpage
 \paragraph{}
-On peut tout de fois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus au moins similaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que au fur et à mesure de l'apprentissage l'erreur de test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter plus visiblement alors que celle de learning reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
+On peut toutefois se demander pourquoi ne pas garder la couche intermédiaire à 50 neurones puisque les résultats sont plus ou moins similaires que celui à 90 neurones. Pour répondre à cette question on peut regarder la figure 5 qui nous montre que, au fur et à mesure de l'apprentissage, l'erreur en test à tendance à remonter légèrement. Cela nous est confirmé à la figure 6, car nous voyons l'erreur quadratique de test augmenter sensiblement alors que celle de \textit{learning} reste constante. On préférera donc la structure que nous avons choisie pour son meilleur comportement lors de l'apprentissage.
 \begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbes3couches50.jpg} 
-		\caption{pourcentage d'erreur de learning(bleu) et de test(orange) lors de l'apprentissage} 
+		\caption{Pourcentage d'erreur de \textit{learning}(bleu) et de test(orange) lors de l'apprentissage} 
 	\end{center}
 \end{figure}
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbes3couches50_quaderror.jpg} 
-		\caption{erreur quadratique de learning(bleu) et de test(orange) lors de l'apprentissage}  
+		\caption{Erreur quadratique de \textit{learning}(bleu) et de test(orange) lors de l'apprentissage}  
 	\end{center}
 \end{figure}
 
 \paragraph{étude supplémentaire possible}
 
-Une étude statistique de l'apprentissage aurait pu être intéressante, malheureusement le temps nous a manqué pour la réaliser. A la figure 7, on peut apercevoir une courbe moyennés sur 4 trajectoires de l'apprentissage de notre perceptron. A partie d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiances, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
+Une étude statistique de l'apprentissage aurait pu être intéressante, malheureusement le temps nous a manqué pour la réaliser. Dans la figure 7, on peut voir une courbe moyennée sur 4 trajectoires de l'apprentissage de notre perceptron. A partir d'un plus grand nombre de réalisation, nous aurions pu calculer les écarts types, les intervalles de confiance, les moyennes des taux d'erreurs,... Nous constatons sur cette même figure que les courbes ont déjà tendance à se lisser.
 
 \begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbes_moyennes.jpg} 
-		\caption{Courbes du pourcentage d'erreurs de test et de learning moyennées sur 4 exécutions} 
+		\caption{Courbes du pourcentage d'erreurs de test et de \textit{learning} moyennées sur 4 exécutions} 
 	\end{center}
 \end{figure}
 
@@ -422,7 +422,7 @@ Une étude statistique de l'apprentissage aurait pu être intéressante, malheur
         \chapter{Les machines de Boltzmann restreintes}
 
             Les machines de Boltzmann restreintes, ou RBM, ont d'abord été
-            pensées par P. Smolensky (1986) mais réellement mise en œuvre et
+            pensées par P. Smolensky (1986) mais réellement mises en œuvre et
             étudiées par G.
             Hinton (2005) Nous allons présenter dans cette partie leur constitution et
             leurs fonctionnement.
@@ -436,7 +436,7 @@ Une étude statistique de l'apprentissage aurait pu être intéressante, malheur
                 de couche visible et l'autre de couche cachée.
                 La couche visible correspond à l'entrée de notre réseau, ce sont
                 les neurones de la couche d'entrée. On va leur assigner les
-                valeurs des exemples de notre jeu de données pour entrainer le
+                valeurs des exemples de notre jeu de données pour entraîner le
                 réseau.\\
 
                 Au sein d'une même couche, aucun neurone n'est relié à un
@@ -584,7 +584,7 @@ Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesur
 
                 \begin{figure}[!ht]
                     \begin{center}
-                        \includegraphics[scale=0.30]{Images/courbeDBM.jpg}
+                        \centerline{\includegraphics[scale=0.45]{Images/courbeDBM.jpg}}
                     \end{center}
                     \caption{Courbe d'apprentissage de la Deep Boltzmann Machine.}
                 \end{figure}

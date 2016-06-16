@@ -11,40 +11,40 @@
 \contentsline {chapter}{\numberline {2}Algorithmes d'apprentissage}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}L'objectif des algorithmes d'apprentissage}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}La m\IeC {\'e}thode de r\IeC {\'e}tropropagation du gradient}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}test}{12}{section.2.3}
+\contentsline {section}{\numberline {2.3}Test}{12}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Initialisation des poids}{12}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Calcul des variations de poids}{12}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Potentielle modification de l'algorithme}{13}{subsection.2.3.3}
 \contentsline {chapter}{\numberline {3}Influence des param\IeC {\`e}tres sur l'apprentissage.}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Param\IeC {\`e}tres perceptron}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}la m\IeC {\'e}thode de la quantit\IeC {\'e} de mouvement}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}le learning rate}{14}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.1}Param\IeC {\`e}tres du perceptron}{14}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}La m\IeC {\'e}thode de la quantit\IeC {\'e} de mouvement}{14}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Le learning rate}{14}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Structure du r\IeC {\'e}seau}{15}{subsection.3.1.3}
 \contentsline {paragraph}{Perceptron optimum dans notre cas}{15}{section*.6}
 \contentsline {paragraph}{\IeC {\'e}tude de la variation de la structure}{16}{section*.9}
-\contentsline {paragraph}{}{19}{section*.12}
+\contentsline {paragraph}{}{18}{section*.12}
 \contentsline {paragraph}{\IeC {\'e}tude suppl\IeC {\'e}mentaire possible}{19}{section*.15}
-\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{22}{part.3}
-\contentsline {chapter}{\numberline {4}Introduction}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1}Pr\IeC {\'e}sentation et \IeC {\'e}l\IeC {\'e}ments de preuve}{24}{section.5.1}
-\contentsline {section}{\numberline {5.2}Loi d'apprentissage}{25}{section.5.2}
-\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Principe des Deep Boltzmann Machines}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Sp\IeC {\'e}cificit\IeC {\'e} de l'apprentissage}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{28}{section.6.3}
-\contentsline {chapter}{\numberline {7}Aller plus loin}{30}{chapter.7}
-\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{30}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Cas de la RBM}{30}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Cas du DBN}{32}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Discrimination gr\IeC {\^a}ce aux RBM}{32}{section.7.2}
-\contentsline {paragraph}{}{32}{section*.22}
-\contentsline {paragraph}{}{33}{section*.23}
-\contentsline {subsection}{\numberline {7.2.1}R\IeC {\'e}sultats}{33}{subsection.7.2.1}
-\contentsline {section}{\numberline {7.3}Reconnaissance d'image}{34}{section.7.3}
-\contentsline {chapter}{\numberline {A}La base MNIST}{35}{appendix.A}
-\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{35}{section.A.1}
-\contentsline {section}{\numberline {A.2}Limites de cette base}{36}{section.A.2}
-\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{38}{appendix.B}
-\contentsline {section}{\numberline {B.1}Code du perceptron}{38}{section.B.1}
-\contentsline {section}{\numberline {B.2}Code de la RBM et du DBN}{38}{section.B.2}
+\contentsline {part}{III\hspace {1em}Machines de Boltzmann}{20}{part.3}
+\contentsline {chapter}{\numberline {4}Introduction}{21}{chapter.4}
+\contentsline {chapter}{\numberline {5}Les machines de Boltzmann restreintes}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pr\IeC {\'e}sentation et \IeC {\'e}l\IeC {\'e}ments de preuve}{22}{section.5.1}
+\contentsline {section}{\numberline {5.2}Loi d'apprentissage}{23}{section.5.2}
+\contentsline {chapter}{\numberline {6}Les Deep Belief Networks}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}Principe des Deep Boltzmann Machines}{25}{section.6.1}
+\contentsline {section}{\numberline {6.2}Sp\IeC {\'e}cificit\IeC {\'e} de l'apprentissage}{25}{section.6.2}
+\contentsline {section}{\numberline {6.3}R\IeC {\'e}sultats}{26}{section.6.3}
+\contentsline {chapter}{\numberline {7}Aller plus loin}{28}{chapter.7}
+\contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{28}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Cas de la RBM}{28}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Cas du DBN}{30}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Discrimination gr\IeC {\^a}ce aux RBM}{30}{section.7.2}
+\contentsline {paragraph}{}{30}{section*.22}
+\contentsline {paragraph}{}{31}{section*.23}
+\contentsline {subsection}{\numberline {7.2.1}R\IeC {\'e}sultats}{31}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Reconnaissance d'image}{32}{section.7.3}
+\contentsline {chapter}{\numberline {A}La base MNIST}{33}{appendix.A}
+\contentsline {section}{\numberline {A.1}Pr\IeC {\'e}sentation de la base de don\IeC {\'e}es}{33}{section.A.1}
+\contentsline {section}{\numberline {A.2}Limites de cette base}{34}{section.A.2}
+\contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{35}{appendix.B}
+\contentsline {section}{\numberline {B.1}Code du perceptron}{35}{section.B.1}
+\contentsline {section}{\numberline {B.2}Code de la RBM et du DBN}{35}{section.B.2}
