@@ -469,15 +469,15 @@ un champ de Markov en prenant pour variables aléatoires la valeur de l'état de
 
                 On introduit maintenant l'échantillonnage de Gibbs, qui est un
                 algorithme de la classe des Metropolis-Hasting. Cet algorithme
-               est un Monte-Carlo qui permet d'échantillonner un probabilité jointe dont l'idée principale
+               est un Monte-Carlo qui permet d'échantillonner une probabilité jointe dont l'idée principale
                 est d'échantillonner les états des variables en se basant sur la valeur des états
                 des autres variables grâce à la probabilité conditionnelle qui les relie. C'est une marche aléatoire sur les chaînes de Markov.
 Les neurones d'une même couche sont indépendants on peut donc mettre à jour une couche 
 entière d'un coup ce qui rend l'échantillonnage plus rapide et plus simple à réaliser. \\
 
-           Par ailleurs on peut démontrer que tout les neurones peuvent prendre les valeur 0 ou 1
- en un seul échantillonnage et que toutes les combinaisons d'état des neurones de la RBM 
-sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. Par ailleurs la la chaîne de Markov est apériodique. 
+           Par ailleurs on peut démontrer que tous les neurones peuvent prendre les valeur 0 ou 1
+ en un seul échantillonnage et que toutes les combinaisons d'états des neurones de la RBM 
+sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. Par ailleurs la chaîne de Markov est apériodique. 
 Ces deux propriété d'apériodicité et de irréductibilité permettent de prouver que le RBM
  possède une distribution stationnaire vers laquelle elle converge. 
 
@@ -492,7 +492,7 @@ les deux couches.
 
 Pour faire l'apprentissage, on va entraîner le réseau sur les différents exemple, la première différence avec l'implémentation du perceptron est
 que l'on va  échantillonner les états des neurones à chaque fois, on travaille avec des données binaires et non réelles, nous avons décidé 
-d'affecter, dans le cas de la base de données MNIST, la valeur 1 si le pixel n'était pas blanc.
+d'affecter, dans le cas de la base de données MNIST, la valeur 1 pour un pixel noir.
 On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire de probabilité
  qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
 \begin{figure}[!ht]
@@ -502,7 +502,7 @@ On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire d
                     \caption{Pas de Gibbs.}
 \end{figure}\\
 
-Une fois la distribution stationnaire atteintes on obtient deux ensembles de valeurs : l'état des couches \textit{V} et  \textit{H}
+Une fois la distribution stationnaire atteinte on obtient deux ensembles de valeurs : l'état des couches \textit{V} et  \textit{H}
 qui correspond à l'\textit{input}, que l'on peut appeler \begin{math}<v_{i}h_{j}>_{data}\end{math} ou \begin{math}<v_{i}^{0}h_{j}^{0}>\end{math}, et l'état des couches \textit{V} et  \textit{H} une fois la distribution stationnaire atteinte notée \begin{math}<v_{i}h_{j}>_{model}\end{math} ou \begin{math}<v_{i}^{\infty}h_{j}^{\infty}>\end{math}. A partir de ces deux distribution, on peut modifier les poids et les biais du réseau selon la loi :
                 \begin{equation}
                     \Delta w_{i,j} = \alpha (<v_{i}h_{j}>_{data} - <v_{i}h_{j}>_{model} )
@@ -598,7 +598,7 @@ On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide
 
 \subsection{Cas de la RBM}
 
-                Lors du développement de la RBM, nous avons étés confrontés au problème de la quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux exemples qu'on lui a présenté ?\\
+                Lors du développement de la RBM, nous avons été confrontés au problème de la quantification de l'apprentissage. Comment savoir si oui ou non le réseau s'adapte aux exemples qu'on lui a présenté ?\\
 
                 Suite à l'absence de réelle mesure de cette notion, l'idée nous est venue d'implémenter une mesure bien plus qualitative du phénomène : l'objectif était de visualiser l'importance que le réseau accorde à chaque pixel de l'image.\\
 
@@ -624,56 +624,56 @@ On obtient un pourcentage d'erreur autour de 11\%, avec une décroissance rapide
                     \caption{Spectre d'une RBM ayant apprise la "forme" 4.}
                 \end{figure}
 
-Pour faire cette visualisation, on cherche uniquement à connaître les neurones qui activent le neurone de la couche caché. 
+Pour faire cette visualisation, on cherche uniquement à connaître les neurones qui activent le neurone de la couche cachée. 
 Une méthode de visualisation serait donc de chercher les valeurs binaires  des neurones de la couche visible pour 
 activer le neurone désiré. Puisque le réseau n'est pas orienté, on peut directement affecter la valeur 1 au neurone \textit{$h_{j}$} 
 de la couche caché qui correspond au filtre que l'on veut voir et 0 aux autres. On fait alors un pas de Gibbs vers la couche visible. Pour obtenir un meilleur résultat, 
 on peut directement travailler avec la valeur de la sigmoïde des neurones de la couche visible.
 
-\subsection{Cas du DBN}
+\subsection{Cas de la DBM}
 
-Dans le cas du DBN, il est plus compliqué d'obtenir une image du fait de l'architecture profonde. On va donc choisir le neurone de la couche dont  on veut observer le filtre ou ce qu'on pourrait appeler la carte d'activation. Pour cela on assigne la valeur 0 à tout les neurones du réseau et on va faire un unique pas de Gibbs jusqu'à la couche d'entrée du réseau en échantillonnant la valeur des neurones des couches par lesquelles on passe.\\
+Dans le cas de la DBM, il est plus compliqué d'obtenir une image du fait de l'architecture profonde. On va donc choisir le neurone de la couche dont  on veut observer le filtre ou ce qu'on pourrait appeler la carte d'activation. Pour cela on assigne la valeur 0 à tout les neurones du réseau et on va faire un unique pas de Gibbs jusqu'à la couche d'entrée du réseau en échantillonnant la valeur des neurones des couches par lesquelles on passe.\\
 
 Cette méthode a donc un inconvénient : on a une chance de perdre de l'information. Nous avons alors testé deux options : la première est de changer la nature du réseau et de travailler avec les probabilités comme valeur de l'état du réseau. Cette méthode n'a pas été concluante. Nous sommes alors venus à considérer une autre méthode, dans l'esprit du réseau. \\
 
 Cette méthode est la suivante : on initialise les valeurs des neurones du réseau entraîné à 0 sauf pour le filtre que l'on souhaite visualiser qui est à l'état 1. On va ensuite effectuer plusieurs pas de Gibbs au sein de la \textbf{même} RBM. Ainsi on va obtenir une distribution des états qui correspond à l'activation du filtre désiré mais aussi d'autres filtres. Ce procédé permet de réduire le nombre de neurones de la couche précédente qui ne serait pas dan l'état voulu. On procède ainsi jusqu'à la première RBM où l'on utilise la méthode exposée dans la partie correspondante.\\
 
-Cette méthode est simplement expérimentale mais produit des résultats plus probant. Dans la littérature les méthodes de visualisation sont peu détaillées mais semble être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est à dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
+Cette méthode est simplement expérimentale mais produit des résultats plus probants. Dans la littérature les méthodes de visualisation sont peu détaillées mais semblent être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est-à-dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
 
 
 \section{Discrimination grâce aux RBM}
 
 La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données MNIST, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
 
-\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. c'est à dire que chaque RBM ne sera entrainé que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
+\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. C'est-à-dire que chaque RBM ne sera entrainée que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
 
-\paragraph{} Maintenant que les machines sont entrainées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entrainer. On considérera dés lors que l'exemple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus on sera certain de cette prédiction.\\
+\paragraph{} Maintenant que les machines sont entraînées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entraîner. On considérera dès lors que l'exemple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus l'on sera certain de cette prédiction.\\
 
 \subsection{Résultats}
 
-Après une campagne de calcul lancé sur ordinateur, nous avons obtenu une courbe de l'erreur de learning en fonction du learning rate. On a exécuté 20 fois le programme pour un learning rate donné. On obtient la courbe à la figure 8.
+Après une campagne de calcul lancée sur ordinateur, nous avons obtenu une courbe de l'erreur de \textit{learning} en fonction du \textit{learning rate}. On a exécuté 20 fois le programme pour un \textit{learning rate} donné, les résultats sont présentés la courbe à la figure 8.
 
 \begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
 	\end{center}
-\caption{erreur de learning en fonction du learning rate} 
+\caption{Erreur de \textit{learning} en fonction du \textit{learning rate}} 
 \end{figure}
 
-On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le learning rate a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minimums à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de learning. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.\\
+On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le \textit{learning rate} a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minima à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de \textit{learning}. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.\\
 
 \newpage
 
 \section{Reconnaissance d'image}
 
-Dans le cadre de la présentation des projets longs, dont fait partie ce projet, aux élèves de première année, nous avons proposé une application ludique de notre code : la reconnaissance d'image. En partant de notre réseau déjà entraîné, on place en entrée une image de même type que les exemples qui ont servi à entrainer le DBN : des images de $28 \times 28$ pixel en niveaux de gris. Ces images sont tracées à l'aide de l'application Paint avec un pinceau de taille 1. En utilisant une dalle tactile, on peut obtenir des exemples de chiffres proches de ceux qu'aurait tracé la même personne avec un stylo.\\
-Proposer de nouveaux exemples au réseau est une manière de le tester et de prendre connaissance des limites de l'entraînement : si la base de données est peu importantes, les résultats sur des exemples qui n'ont pas été traités comme ceux des ensembles d'apprentissage ou de test vont être peu probant.\\
+Dans le cadre de la présentation des projets longs, dont fait partie ce projet, aux élèves de première année, nous avons proposé une application ludique de notre code : la reconnaissance d'image. En partant de notre réseau déjà entraîné, on place en entrée une image de même type que les exemples qui ont servi à entraîner la DBM : des images de $28 \times 28$ pixel en niveaux de gris. Ces images sont tracées à l'aide de l'application Paint avec un pinceau de taille 1. En utilisant une dalle tactile, on peut obtenir des exemples de chiffres proches de ceux qu'aurait tracé la même personne avec un stylo.\\
+Proposer de nouveaux exemples au réseau est une manière de le tester et de prendre connaissance des limites de l'entraînement : si la base de données est peu importante, les résultats sur des exemples qui n'ont pas été traités comme ceux des ensembles d'apprentissage ou de test vont être peu probants.\\
 
-Les résultats n'ont pas été très concluant, le réseau a montré des difficultés à reconnaître des chiffres pourtant pu ambigus. En observant les erreurs, on a pu s'apercevoir que certaines de ces erreurs sont dues à la base de données. Parmi ces erreurs on a mettre en avant le fait que des pays différents peuvent avoir des graphies bien distinctes sur certains chiffres comme les 1 ou les 7. Cet aspect est aussi développé dans l'annexe A.\\
+Les résultats n'ont pas été très concluant, le réseau a montré des difficultés à reconnaître des chiffres pourtant peu ambigus. En observant les erreurs, on a pu s'apercevoir que certaines de ces erreurs sont dues à la base de données. Parmi ces erreurs on a mettre en avant le fait que des pays différents peuvent avoir des graphies bien distinctes sur certains chiffres comme les 1 ou les 7. Cet aspect est développé dans l'annexe A.\\
 
 Une autre limitation pour cette application est aussi apparue : les exemples tracés à la main étaient parfois trop différents de ceux des ensembles de la base de données mais cette fois-ci en terme de position et de taille. Les fichiers de la base MNIST étant donné en byte, nous n'avons pas cherché à les afficher pour prendre connaissance des exemples. 
 
-Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaîtrai pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est top imposant, le réseau ne parvient pas à le reconnaître.
+Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaissait pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est top imposant, le réseau ne parvient pas à le reconnaître.
 
 \nocite{hopfield_neural_1982}
 \nocite{*}
@@ -687,8 +687,8 @@ Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que l
 
             \section{Présentation de la base de donées}
 
-                La base de données MNIST, Mixed Mixed National Institute of Standards and Technology, 
-est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. Lea base 
+                La base de données MNIST, Mixed National Institute of Standards and Technology, 
+est un ensemble de chiffres manuscrits extraits d'une base antérieure, NIST. La base 
 est organisée de la manière 
 suivante:
 
@@ -744,8 +744,8 @@ s'agît ensuite d'entrer des données européenne, la limitation de la base se r
         Une autre limite apparaît aussi : c'est celle de la simplicité de la base de donnée.
 
 La reconnaissance de caractères est en effet une tâche simpliste en comparaison avec 
-certains des problèmes auxquels peuvent être confrontés les réseaux issus du deep 
-learning. Cela se constate par 
+certains des problèmes auxquels peuvent être confrontés les réseaux issus du \textit{deep 
+learning}. Cela se constate par 
 les résultats très bons obtenus pour des réseaux peu complexes, tel que notre perceptron qui 
 atteignait les 3\% d'erreur sur MNIST.
 
@@ -759,9 +759,10 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
         
 \section{Code du perceptron}
 
-\paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur MNIST d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int
+\paragraph*{La classe Test} La classe Test.java réalise la courbe d'apprentissage sur MNIST d'un perceptron dont la structure en terme de neurones a été construite grâce à un tableau de int.
 
-\paragraph*{la classe Perceptron} Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défaut. Il est à noté que un perceptron ne peut par marcher si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
+\paragraph*{la classe Perceptron} 
+Son constructeur est le suivant \texttt{public Perceptron(int[] inputData, boolean randomWeight)}. Le tableau de int spécifie le nombre de neurones de chaque couche, le boolean quant à lui veut savoir si les poids des synapses sont initialisés aléatoirement sinon ils auront tous une valeur par défaut. Il est à noté qu'un perceptron ne peut par fonctionner si toutes les synapses ont un même poids. Il vous sera donc nécessaire d'attribuer vous-même le poids des synapses avec la fonction \texttt{public void setWeight(double w)} de la classe Synapse.java
 
 \paragraph*{Pour faire passer un exemple:} Il suffit d'utiliser la fonction \texttt{public void setNormalizedInputs (double[] x, double max)} pour mettre les entrées normalisées à l'entrée du perceptron puis d'utiliser la fonction \texttt{fire} pour calculer les sorties liées à l'exemple.
 
@@ -769,7 +770,7 @@ semble nécessaire pour tester les réseaux dans un domaine plus complexe.
 
 \paragraph*{Pour déterminer la classe à laquelle appartient votre input:} Vous devez utiliser la fonction \texttt{public double[] getOutputs()} de Perceptron.java et déterminer par la méthode du maximum de vraisemblance le résultat.
 
-\section{Code de la RBM et du DBN}
+\section{Code de la RBM et de la DBM}
 
 \paragraph*{La classe Entity :} C'est la classe qui définit le neurone, qu'il soit d'entrée ou de sortie, ses attributs sont son état, l'erreur correspondant au neurone, son biais et son id.
 

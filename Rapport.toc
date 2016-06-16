@@ -36,7 +36,7 @@
 \contentsline {chapter}{\numberline {7}Aller plus loin}{28}{chapter.7}
 \contentsline {section}{\numberline {7.1}La visualisation des spectres du r\IeC {\'e}seau}{28}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Cas de la RBM}{28}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Cas du DBN}{30}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.2}Cas de la DBM}{30}{subsection.7.1.2}
 \contentsline {section}{\numberline {7.2}Discrimination gr\IeC {\^a}ce aux RBM}{30}{section.7.2}
 \contentsline {paragraph}{}{30}{section*.22}
 \contentsline {paragraph}{}{31}{section*.23}
@@ -47,4 +47,4 @@
 \contentsline {section}{\numberline {A.2}Limites de cette base}{34}{section.A.2}
 \contentsline {chapter}{\numberline {B}Pr\IeC {\'e}sentation du code.}{35}{appendix.B}
 \contentsline {section}{\numberline {B.1}Code du perceptron}{35}{section.B.1}
-\contentsline {section}{\numberline {B.2}Code de la RBM et du DBN}{35}{section.B.2}
+\contentsline {section}{\numberline {B.2}Code de la RBM et de la DBM}{35}{section.B.2}
