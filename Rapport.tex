@@ -233,11 +233,9 @@
 
             \section{La méthode de rétropropagation du gradient}
 
-                La rétropropagation du gradient correspond à une descente de gradient dans l'espace des poids.\\
+                La rétropropagation du gradient correspond à une descente de gradient dans l'espace des poids. On pourra aussi désigner cette méthode sous son nom anglais : \textit{backpropagation}\\
 
                 Le principe de l'algorithme est en fait d'assigner à chaque neurone sa responsabilité dans l'erreur commise dans le calcul de la sortie. Les poids individuels des neurones sont ainsi corrigés en fonction de cette responsabilité.
-                \section{Test}
-
 
                 \subsection{Initialisation des poids}
 
@@ -289,7 +287,7 @@
 
                     Le coefficient $\alpha$ est le coefficient d'inertie. Il est dans l'intervalle [0;1] et ajoute ainsi une influence des variations de poids précédentes sur les variations de poids actuelles.\\
 
-                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélérer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisit.
+                    Cette technique permet d'éviter certains minima locaux et de se stabiliser dans des configurations plus optimales. Cela peut aussi accélérer la convergence de l'apprentissage si le coefficient $\alpha$ est bien choisi.
 
 
         \chapter{Influence des paramètres sur l'apprentissage.}
@@ -301,7 +299,7 @@
 La méthode de la quantité de mouvement est une méthode utile pour éviter que l'algorithme de backpropagation ne tombe dans un minimal local et n'en sorte pas. Un apprentissage efficace passera le minimum local et doit converger vers les poids idéaux de toutes les synapses pour que le réseau fasse le moins d'erreur possible. Cette méthode est donc parfois nécessaire pour améliorer les performances d'apprentissage du réseau. Cependant, elle ne devra pas être trop élevée afin de ne pas causer de trop grandes oscillations de valeur qui rendront la convergence impossible.
 L'équation d'update des poids est la suivante:
 \begin{equation}
-\Delta w_{ij}[n]= \Delta w_{ij}[n]+ \alpha \Delta w_{ij}[n-1]
+\Delta w_{ij}^{(n)}= \Delta w_{ij}^{(n)}+ \alpha \Delta w_{ij}^{(n-1)}
 \end{equation}
 
 
@@ -448,17 +446,17 @@ Une étude statistique de l'apprentissage aurait pu être intéressante, malheur
                 
                 On forme alors un graphe, non orienté, qui est un
                 modèle de la distribution de probabilité. Chaque neurone est une variable aléatoire
-                qui prend sa valeur dans \begin{math}{0;1}\end{math}. Le fait
+                qui prend sa valeur dans \begin{math}{\{0 ; 1\}}\end{math}. Le fait
                 qu'aucun neurone \textit{v} ne soit connecté aux autres de la
                 couche traduit le fait que les variables aléatoires associées
                 sont indépendantes.
                 
                 La probabilité qu'un neurone \begin{math}v_{i}\end{math} de la
-                couche visible soit activé est \begin{equation}p( v_{i} =1 \mid H) = 
+                couche visible soit activé en connaissant l'état des neurones $h_{j}$ de la couche cachée \textit{H} est \begin{equation}p( v_{i} =1 \mid H) = 
 \sigma(\sum_{j=1}^{m} w_{i,j} * h_{j} + b_{i}) \end{equation}
 
 				En notant \textit{$w_{i}$} le poids de la synapse reliant les neurones \textit{$v_{i}$} 
-à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurones \textit{$v_{i}$}.\\
+à \textit{$h_{j}$} et \textit{$b_{i}$} le biais du neurone \textit{$v_{i}$}.\\
         
 					Puisque la probabilité  d'activation du neurone \textit{$v_{i}$} d'une couche dépend 
 uniquement de la valeur des états des neurones de l'autre couche et uniquement au 
@@ -477,7 +475,7 @@ entière d'un coup ce qui rend l'échantillonnage plus rapide et plus simple à 
 
            Par ailleurs on peut démontrer que tous les neurones peuvent prendre les valeur 0 ou 1
  en un seul échantillonnage et que toutes les combinaisons d'états des neurones de la RBM 
-sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. Par ailleurs la chaîne de Markov est apériodique. 
+sont atteignables en un nombre fini d'échantillonnage ce qui montre que la chaîne est irréductible. De plus la chaîne de Markov est apériodique . 
 Ces deux propriété d'apériodicité et de irréductibilité permettent de prouver que le RBM
  possède une distribution stationnaire vers laquelle elle converge. 
 
@@ -497,7 +495,7 @@ On va ensuite faire des pas de Gibbs pour obtenir la distribution stationnaire d
  qui correspond à l'exemple et aux paramètres (poids et biais) fixés.
 \begin{figure}[!ht]
                     \begin{center}
-                        \includegraphics[width=200pt]{Images/Gibbs.png}
+                        \includegraphics[width=175pt]{Images/Gibbs.png}
                     \end{center}
                     \caption{Pas de Gibbs.}
 \end{figure}\\
@@ -533,7 +531,30 @@ Il est alors proposé par
 Hinton en 2005 une méthode pour approximer la distribution stationnaire : au lieu de faire un nombre
  fini de pas de Gibbs jusqu'à avoir cette stationnarité, on se limite qu'à peu de pas de Gibbs. Cette 
 méthode s'est révélée efficace lors de l'apprentissage des RBM. On se limite à quelques pas de Gibbs (de l'ordre de l'unité).
-Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
+Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs (considérer que $<v_{i}h_{j}>_{model}$ est atteint à $t=1$ dans la figure 5.1).
+
+\section{Discrimination grâce aux RBM}
+
+La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données MNIST, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
+
+\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. C'est-à-dire que chaque RBM ne sera entrainée que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
+
+\paragraph{} Maintenant que les machines sont entraînées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entraîner. On considérera dès lors que l'exemple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus l'on sera certain de cette prédiction.\\
+
+\subsection{Résultats}
+
+Après une campagne de calcul lancée sur ordinateur, nous avons obtenu une courbe de l'erreur de \textit{learning} en fonction du \textit{learning rate}. On a exécuté 20 fois le programme pour un \textit{learning rate} donné, les résultats sont présentés la courbe à la figure 8.
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
+	\end{center}
+\caption{Erreur de \textit{learning} en fonction du \textit{learning rate}} 
+\end{figure}
+
+On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le \textit{learning rate} a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minima à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de \textit{learning}. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.\\
+
+\newpage
 				
 
         \chapter{Les Deep Belief Networks}
@@ -541,10 +562,10 @@ Hinton propose d'ailleurs de ne faire qu'un seul pas de Gibbs.
 \section{Principe des Deep Boltzmann Machines}
 
 		Nous avons présenté dans le chapitre précédent les \textit{restricted boltzmann machines} avec leur utilisation parallélisée. 
-		Nous verrons dans ce chapitre une nouvelle façon d'utiliser ses machines, en série. Après la description d'une configuration intéressante pour l'apprentissage, nous présenterons nos résultats obtenus sur la base MNIST.\\
+		Nous verrons dans ce chapitre une nouvelle façon d'utiliser ces machines, en série. Après la description d'une configuration intéressante pour l'apprentissage, nous présenterons nos résultats obtenus sur la base MNIST.\\
 
 
-		En effet, le concept de \textit{Deep Boltzmann Machine}(DBM) repose sur l'utilisation en cascade des RBM(figure 6.1). La couche cachée de la première machine correspond à la couche visible de la suivante, et ainsi de suite. Nous avons vu qu'une RBM permet l'extraction des informations pertinentes de l'\textit{input}, ainsi l'intérêt majeur de cette structure est l'extraction successive des \textit{features} de l'\textit{input}, afin d'obtenir une identification de plus en plus fine.
+		En effet, le concept de \textit{Deep Boltzmann Machine}(DBM) repose sur l'utilisation en cascade des RBM (figure 6.1). La couche cachée de la première machine correspond à la couche visible de la suivante, et ainsi de suite. Nous avons vu qu'une RBM permet l'extraction des informations pertinentes de l'\textit{input}, ainsi l'intérêt majeur de cette structure est l'extraction successive des \textit{features} de l'\textit{input}, afin d'obtenir une identification de plus en plus fine.
 
                 \begin{figure}
                     \begin{center}
@@ -578,7 +599,7 @@ Les paramètres choisis sont les suivants:\\
 	\textit{Number of sets of training}:& 5 (soit 300.000 exemples)\\
 \end{tabular}\\
 
-Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exception des biais de l'\textit{input layer}, initialisés à \begin{math}log[p_{i}/(1 - p_{i}]\end{math}, avec \begin{math}p_{i}\end{math} la proportion d'\textit{inputs} pour lesquels l'entité visible \begin{math}v_{i}\end{math} est activée.\\
+Tous les poids et les biais du réseau ont été initialisés à zéro, à l'exception des biais de l'\textit{input layer}, initialisés à \begin{math}log[p_{i}/(1 - p_{i})]\end{math}, avec \begin{math}p_{i}\end{math} la proportion d'\textit{inputs} pour lesquels l'entité visible \begin{math}v_{i}\end{math} est activée.\\
 
 Nous avons ensuite observé les résultats de l'apprentissage au fur-et-à-mesure de l'apprentissage et sur une partie d'exemples de test. Les résultats figurent sur la figure 6.2.
 
@@ -640,30 +661,6 @@ Cette méthode est la suivante : on initialise les valeurs des neurones du rése
 
 Cette méthode est simplement expérimentale mais produit des résultats plus probants. Dans la littérature les méthodes de visualisation sont peu détaillées mais semblent être le résultat d'un apprentissage à partir d'une entrée quelconque afin d'avoir le neurone dont on veut observer la carte d'activation activé. C'est-à-dire que l'on ferait un apprentissage supervisé mais on ne modifierait que la valeur d'entrée du réseau.
 
-
-\section{Discrimination grâce aux RBM}
-
-La discrimination est un principe qui consiste à construire autant de Restricted Bolztmann machine que de classes à différencier. Par exemple, pour la base de données MNIST, on fonctionne avec 10 RBM vu qu'il y a 10 chiffres à reconnaitre.
-
-\paragraph{} Après l'initialisation des 10 RBM, on entraine les machines indépendamment les unes des autres. C'est-à-dire que chaque RBM ne sera entrainée que par les exemples d'une seule classe. Chaque machine se voit donc une classe avec les exemples correspondant à cette classe.
-
-\paragraph{} Maintenant que les machines sont entraînées, il reste à savoir comment on détermine à quelle classe appartient un exemple. Pour cela, on passe l'exemple dans chaque machine sans l'entraîner. On considérera dès lors que l'exemple appartient à la classe associée à la machine qui aura l'énergie libre la plus basse. Plus la différence entre l'énergie libre minimum et les autres est grande, plus l'on sera certain de cette prédiction.\\
-
-\subsection{Résultats}
-
-Après une campagne de calcul lancée sur ordinateur, nous avons obtenu une courbe de l'erreur de \textit{learning} en fonction du \textit{learning rate}. On a exécuté 20 fois le programme pour un \textit{learning rate} donné, les résultats sont présentés la courbe à la figure 8.
-
-\begin{figure}[!ht]
-	\begin{center}
-		\includegraphics[scale=0.27]{Images/courbe_discriminative.jpg} 
-	\end{center}
-\caption{Erreur de \textit{learning} en fonction du \textit{learning rate}} 
-\end{figure}
-
-On aperçoit donc un plateau aux alentours des 42\% au début de la courbe. On remarque que le \textit{learning rate} a un effet plus important par la suite. Cependant on obtient des comportements étranges avec des minima à différent endroits (en $8 \ 10^{-3}$ et en 0.1). On tourne alors aux alentours des 25\% d'erreur de \textit{learning}. On peut donc dire que cette méthode est moins avantageuse que celle du perceptron.\\
-
-\newpage
-
 \section{Reconnaissance d'image}
 
 Dans le cadre de la présentation des projets longs, dont fait partie ce projet, aux élèves de première année, nous avons proposé une application ludique de notre code : la reconnaissance d'image. En partant de notre réseau déjà entraîné, on place en entrée une image de même type que les exemples qui ont servi à entraîner la DBM : des images de $28 \times 28$ pixel en niveaux de gris. Ces images sont tracées à l'aide de l'application Paint avec un pinceau de taille 1. En utilisant une dalle tactile, on peut obtenir des exemples de chiffres proches de ceux qu'aurait tracé la même personne avec un stylo.\\
@@ -673,7 +670,7 @@ Les résultats n'ont pas été très concluant, le réseau a montré des difficu
 
 Une autre limitation pour cette application est aussi apparue : les exemples tracés à la main étaient parfois trop différents de ceux des ensembles de la base de données mais cette fois-ci en terme de position et de taille. Les fichiers de la base MNIST étant donné en byte, nous n'avons pas cherché à les afficher pour prendre connaissance des exemples. 
 
-Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaissait pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est top imposant, le réseau ne parvient pas à le reconnaître.
+Ainsi lorsque l'on traçait un chiffre on pouvait être confronté au fait que le réseau ne le reconnaissait pas à cause de sa position : si le chiffre n'est pas centré, la RBM n'étant pas invariable par translation des pixels ne peut reconnaître l'image. De même si le chiffre ne prend pas une place suffisante, ou au contraire est trop imposant, le réseau ne parvient pas à le reconnaître.
 
 \nocite{hopfield_neural_1982}
 \nocite{*}
